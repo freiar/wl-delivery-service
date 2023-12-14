@@ -1,0 +1,18 @@
+{
+    "products": [
+        {
+            "code": "cof-cap-mik",
+            "name": "Cappuccino",
+            "category": "coffee",
+            "store": "Mikel",
+            "img": "assets/images/cappuccino.jpeg"
+        },
+        {
+            "code": "cof-cap-br",
+            "name": "Cappuccino",
+            "category": "coffee",
+            "store": "Bruno",
+            "img": "assets/images/cappuccino.jpeg"
+        }
+    ]
+}
