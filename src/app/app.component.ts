@@ -13,17 +13,5 @@ import { SearchbarComponent } from './searchbar/searchbar.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  productList:any;
-  name: any;
-  category: any;
-
-  service = inject(ProductService);
-  
-
-  getProducts() {
-    this.service.getProducts().subscribe({
-      next: res => this.productList = res
-    });
-  }
   
 }

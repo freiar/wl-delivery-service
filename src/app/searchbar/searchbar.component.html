@@ -1,13 +1,8 @@
 <div class="container">
     <button (click)="getProducts()" class="btn btn-primary">Search bar</button>
 
-    @for (product of productList; track $index) {
-        <app-product 
-                     [category]="product.category"
-                     [code]="product.code"
-                     [name]="product.name"
-                     [store]="product.store"
-                     [img]="product.img">
-        </app-product>
-    }
+   
 </div>
+<app-store
+[productList]="productList">
+</app-store>

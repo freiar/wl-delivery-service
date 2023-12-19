@@ -5,16 +5,23 @@ import { Injectable, inject } from '@angular/core';
   providedIn: 'root'
 })
 export class ProductService {
+   
+    private http = inject(HttpClient);
+    private endpointUrl = "../assets/sample-data/products.json";
+  
+    constructor() { }
+  
+    getProducts(){
+      return this.http.get(this.endpointUrl);
+    }
+  
+    getProductsById(id:number){
+      return this.http.get(this.endpointUrl + "/" + id);
+    }
+  }
 
-  constructor() { }
 
-  http = inject(HttpClient)
 
-  url = "http://localhost:3000/products"
+
   
 
-  getProducts() {
-    return this.http.get(this.url);
-
-  }
-}
