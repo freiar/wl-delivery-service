@@ -9,11 +9,14 @@ import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 @Component({
   selector: 'app-store',
   standalone: true,
-  imports: [ProductComponent, StoreProductsComponent, RouterLink,RouterLinkActive],
+  imports: [ProductComponent, StoreProductsComponent, RouterLink, RouterLinkActive],
   templateUrl: './store.component.html',
   styleUrl: './store.component.css'
 })
 export class StoreComponent {
+  getProducts() {
+    throw new Error('Method not implemented.');
+  }
   storeService = inject(StoreService);
   router: Router = inject(Router);
   store: Store[] = [];
@@ -21,21 +24,15 @@ export class StoreComponent {
   productService: any;
   products: any;
 
-  ngOnInit(){
-    this.getStores()
-  }
-
-  getStores() {
-    return this.storeService.getStores().subscribe({
+  ngOnInit() {
+    this.storeService.getStores().subscribe({
       next: res => this.storeList = res
     })
   }
-  
-  
-  viewStoreProducts(){
-    this.productService.getProducts()
-     .subscribe({
-       next:(data:any) => this.products = data
-     })
-}
+
+
+  viewStoreProducts(id: number) {
+    console.log("hello");
+    this.router.navigate(["storeProducts", id]);
+  }
 }

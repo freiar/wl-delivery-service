@@ -8,18 +8,12 @@ import { Product } from '../interfaces/product';
 export class ProductService {
    
     private http = inject(HttpClient);
-    private endpointUrl = "../assets/sample-data/products.json";
-  
-    constructor() { }
-  
-    getProducts(){
-      return this.http.get<Product[]>(this.endpointUrl);
+
+    constructor() { }    
+
+    getProductsById(id: number) {
+      let path = "../assets/sample-data/store." + id + ".products.json";
+      return this.http.get<Product[]>(path);
     }
-
   }
-
-
-
-
   
-

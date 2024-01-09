@@ -12,17 +12,25 @@ import { Product } from '../../../interfaces/product';
   styleUrl: './store-products.component.css'
 })
 export class StoreProductsComponent {
+  activatedRoute = inject(ActivatedRoute);
+  productService: ProductService = inject(ProductService);
+  products: Product[] = [];
 
-
-  // activatedRoute = inject(ActivatedRoute);
-  productService : ProductService = inject(ProductService);
-  products: Product[]=[];
-  ProductList:any;
 
   category: any;
   name: any;
   price: any;
 
 
+  ngOnInit() {
+    this.activatedRoute.params
+      .subscribe({
+        next: (params: any) => {
+          this.productService.getProductsById(params.id)
+          .subscribe(
+            r => this.products = r
+          )
+        }
+      })
+  }
 }
-
