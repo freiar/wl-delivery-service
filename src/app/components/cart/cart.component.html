@@ -1,0 +1,14 @@
+<div class="container">
+    <p>Cart</p>
+    <p>products: {{cartProducts.length}}</p>
+    <ul>
+        @for (p of cartProducts; track $index) {
+            <li>
+                {{p.name}} 
+                <span class="float-right">{{p.price}}</span>
+                <button (click)="removeProduct(p.id)">x</button>
+            </li>
+        }
+    </ul>
+    <strong>TOTAL: {{getTotal()}}</strong>
+</div>

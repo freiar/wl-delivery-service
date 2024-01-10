@@ -7,27 +7,29 @@ import { SearchbuttonComponent } from './components/searchbutton/searchbutton.co
 import { HomeComponent } from './components/home/home.component';
 import { Error404Component } from './components/error-404/error-404.component';
 import { StoreComponent } from './components/store/store.component';
-import { HeaderComponent } from './components/header/header.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { StoreProductsComponent } from './components/store/store-products/store-products.component';
+import { NavigationBarComponent } from './components/navigation-bar/navigation-bar.component';
+import { CartComponent } from './components/cart/cart.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule,
-             RouterOutlet,
-             ProductComponent, 
-             SearchbuttonComponent,
-             HomeComponent, 
-             Error404Component,
-             StoreComponent,
-            HeaderComponent,
-            AboutUsComponent,
-            StoreProductsComponent],
+    RouterOutlet,
+    ProductComponent,
+    SearchbuttonComponent,
+    HomeComponent,
+    Error404Component,
+    StoreComponent,
+    NavigationBarComponent,
+    AboutUsComponent,
+    StoreProductsComponent,
+    CartComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  
+
 }
