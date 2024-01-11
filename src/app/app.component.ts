@@ -9,14 +9,14 @@ import { Error404Component } from './components/error-404/error-404.component';
 import { StoreComponent } from './components/store/store.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { StoreProductsComponent } from './components/store/store-products/store-products.component';
-import { NavigationBarComponent } from './components/navigation-bar/navigation-bar.component';
+import { NavigationBarComponent } from './core/navigation-bar/navigation-bar.component';
 import { CartComponent } from './components/cart/cart.component';
-
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule,
+  imports: [
+    CommonModule,
     RouterOutlet,
     ProductComponent,
     SearchbuttonComponent,
@@ -26,10 +26,9 @@ import { CartComponent } from './components/cart/cart.component';
     NavigationBarComponent,
     AboutUsComponent,
     StoreProductsComponent,
-    CartComponent],
+    CartComponent,
+  ],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
-
-}
+export class AppComponent {}

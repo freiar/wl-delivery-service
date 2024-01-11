@@ -6,21 +6,16 @@ import { StoreComponent } from '../store/store.component';
 @Component({
   selector: 'app-searchbutton',
   standalone: true,
-  imports: [ProductComponent,StoreComponent],
+  imports: [ProductComponent, StoreComponent],
   templateUrl: './searchbutton.component.html',
-  styleUrl: './searchbutton.component.css'
+  styleUrl: './searchbutton.component.css',
 })
 export class SearchbuttonComponent {
-
-//   productService = inject(ProductService);
-
-//   productList: any;
-
-//   getProducts() {
-//      return this.productService.getProducts().subscribe({
-//       next: res => this.productList = res
-//  })
-
-//   }
-
+  //   productService = inject(ProductService);
+  //   productList: any;
+  //   getProducts() {
+  //      return this.productService.getProducts().subscribe({
+  //       next: res => this.productList = res
+  //  })
+  //   }
 }
