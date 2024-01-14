@@ -6,6 +6,7 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
 import { StoreProductsComponent } from './components/store/store-products/store-products.component';
 
 
+
 export const routes: Routes = [
    
     {path: "", redirectTo: "home", pathMatch: "full"},
