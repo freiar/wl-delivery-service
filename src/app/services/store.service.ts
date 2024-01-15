@@ -22,7 +22,7 @@ export class StoreService {
   private endpointGetTop8StoresPerFoodCategory =
   "assets/sample-data/most_famous_stores_per_food_category.json";
   private endpointGetTop8StoresPerDrinkCategory =
-  "assets/sample-data/most_famous_stores_per_drinks_category.json";
+  "assets/sample-data/most_famous_stores_per_drink_category.json";
 
 
   getStores(){
