@@ -1,8 +1,9 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ProductService } from '../../../services/product.service';
 import { Product } from '../../../interfaces/product';
 import { AddToCartPublisherService } from '../../../services/add.to.cart.publisher.service';
+import { map } from 'rxjs';
+import { StoreService } from '../../../services/store.service';
 
 @Component({
   selector: 'app-store-products',
@@ -12,8 +13,9 @@ import { AddToCartPublisherService } from '../../../services/add.to.cart.publish
   styleUrl: './store-products.component.css'
 })
 export class StoreProductsComponent {
-  activatedRoute = inject(ActivatedRoute);
-  productService: ProductService = inject(ProductService);
+  activatedRoute: ActivatedRoute = inject(ActivatedRoute);
+  storeService : StoreService = inject(StoreService)
+
   products: Product[] = [];
   addToCartPublisherService = inject(AddToCartPublisherService);
 
@@ -21,9 +23,9 @@ export class StoreProductsComponent {
     this.activatedRoute.params
       .subscribe({
         next: (params: any) => {
-          this.productService.getProductsById(params.id)
+          this.storeService.getStoreById(params.id)
             .subscribe(
-              r => this.products = r
+              r => this.products = r.products
             )
         }
       })

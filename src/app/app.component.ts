@@ -1,9 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { ProductComponent } from './components/product/product.component';
-import { ProductService } from './services/product.service';
-import { SearchbuttonComponent } from './components/searchbutton/searchbutton.component';
 import { HomeComponent } from './components/home/home.component';
 import { Error404Component } from './components/error-404/error-404.component';
 import { StoreComponent } from './components/store/store.component';
@@ -18,8 +15,6 @@ import { CartComponent } from './components/cart/cart.component';
   imports: [
     CommonModule,
     RouterOutlet,
-    ProductComponent,
-    SearchbuttonComponent,
     HomeComponent,
     Error404Component,
     StoreComponent,

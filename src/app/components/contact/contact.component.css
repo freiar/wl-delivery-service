@@ -1,0 +1,152 @@
+* {
+  background-color: #13482f;
+}
+
+.container {
+  margin-top: 75px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+body::before {
+  display: block;
+  content: "";
+  height: 60px;
+}
+
+#map {
+  width: 100%;
+  height: 400px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-left: 23px;
+}
+
+h1 {
+  margin-top: 100px;
+  padding-top: 100px;
+  padding-bottom: 70px;
+  color: white;
+}
+
+.contact-map {
+  margin-top: 150px;
+}
+
+button {
+  color: #13482f;
+  background: white;
+  box-shadow: 9px 9px 10px rgba(15, 15, 15, 0.5);
+}
+
+.accordion-body {
+  color: #e5ad05;
+}
+
+.text-center {
+  color: #e5ad05;
+  margin-bottom: 35px;
+  margin-top: -10px;
+}
+
+span {
+  color: grey;
+}
+
+.list-group-item {
+  color: white;
+}
+
+/* Media Queries for Extra Small, Small, and Medium Screens */
+@media screen and (max-width: 575px) {
+  #map {
+    /* margin-right: 100px; */
+    margin-right: 53px;
+    margin-left: auto;
+  }
+}
+
+/* Media Queries for Large and Extra Large Screens */
+@media screen and (min-width: 576px) and (max-width: 991px) {
+  #map {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+* {
+  background-color: #13482f;
+}
+
+.container {
+  margin-top: 75px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+body::before {
+  display: block;
+  content: "";
+  height: 60px;
+}
+
+#map {
+  width: 100%;
+  height: 400px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-left: 23px;
+}
+
+h1 {
+  margin-top: 100px;
+  padding-top: 100px;
+  padding-bottom: 70px;
+  color: white;
+}
+
+.contact-map {
+  margin-top: 150px;
+}
+
+button {
+  color: #13482f;
+  background: white;
+  box-shadow: 9px 9px 10px rgba(15, 15, 15, 0.5);
+}
+
+.accordion-body {
+  color: #e5ad05;
+}
+
+.text-center {
+  color: #e5ad05;
+  margin-bottom: 35px;
+  margin-top: -10px;
+}
+
+span {
+  color: grey;
+}
+
+.list-group-item {
+  color: white;
+}
+
+/* Media Queries for Extra Small, Small, and Medium Screens */
+@media screen and (max-width: 575px) {
+  #map {
+    /* margin-right: 100px; */
+    margin-right: 53px;
+    margin-left: auto;
+  }
+}
+
+/* Media Queries for Large and Extra Large Screens */
+@media screen and (min-width: 576px) and (max-width: 991px) {
+  #map {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
