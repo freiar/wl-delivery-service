@@ -1,0 +1,14 @@
+<div class="search-container">
+  <form [formGroup]="form" (submit)="onSubmit()">
+    <input
+      formControlName="searchData"
+      placeholder="Search Stores"
+      class="search-input"
+    />
+    <img
+      src="assets/img/magnifying-glass-solid.svg"
+      alt="mangifying glass icon"
+      class="search-icon"
+    />
+  </form>
+</div>
