@@ -1,12 +1,29 @@
 <div class="container">
+  <h5>Most famous stores</h5>
+
+  <div class="row">
+    @for (store of famousStoreList; track $index) {
+
+    <div class="col-md-4 col-sm-6">
+      <div class="card mt-3" style="width: 18rem;" (click)="viewStoreProducts(store.id)" title="View more">
+        <div class="card-body">
+          <h5 class="card-title">{{store.name}}</h5>
+          <p class="card-text">{{store.category}}</p>
+          <p class="card-text">{{store.address}}</p>
+          <button class="btn btn-primary">View more</button>
+        </div>
+      </div>
+    </div>
+    }
+
+
   <h5>Stores</h5>
 
   <div class="row">
     @for (store of storeList; track $index) {
 
     <div class="col-md-4 col-sm-6">
-      <div class="card" style="width: 18rem;" (click)="viewStoreProducts(store.id)" title="View more">
-        <img src="./assets/images/cappuccino.jpeg" alt="img">
+      <div class="card mt-3" style="width: 18rem;" (click)="viewStoreProducts(store.id)" title="View more">
         <div class="card-body">
           <h5 class="card-title">{{store.name}}</h5>
           <p class="card-text">{{store.category}}</p>
@@ -18,3 +35,4 @@
     }
 
   </div>
+  
