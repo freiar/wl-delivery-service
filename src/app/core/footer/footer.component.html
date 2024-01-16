@@ -1,1 +1,98 @@
-<p>footer works!</p>
+<footer class="container">
+  <div class="footer">
+    <div class="footer-logo">
+      <div class="text-center">
+        <p class="mt-5">Foodies</p>
+        <hr class="my-4 bg-dark white-hr" style="width: 500px" />
+      </div>
+    </div>
+    <div class="col-md-6">
+      <h4>Customer Service</h4>
+      <ul class="footer-links list-block">
+        <li class="d-block">
+          <a
+            (click)="scrollToTop()"
+            class="link-offset-1 link-underline link-underline-opacity-0"
+            routerLink="/contact"
+            routerLinkActive="active"
+            >Contact us</a
+          >
+        </li>
+        <li class="d-block">
+          <a
+            (click)="scrollToTop()"
+            class="link-offset-1 link-underline link-underline-opacity-0"
+            routerLink="/register"
+            routerLinkActive="active"
+            >Sign up</a
+          >
+        </li>
+
+        <li class="d-block">
+          <a
+            (click)="scrollToTop()"
+            class="link-offset-1 link-underline link-underline-opacity-0"
+            routerLink="/account"
+            routerLinkActive="active"
+            >My Account</a
+          >
+        </li>
+
+        <li class="d-block">
+          <a
+            (click)="scrollToTop()"
+            class="link-offset-1 link-underline link-underline-opacity-0"
+            routerLink="/stores"
+            routerLinkActive="active"
+            >View All Stores</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <h4>Get to know us</h4>
+      <ul class="footer-links list-block">
+        <li class="d-block about">
+          <a
+            (click)="scrollToTop()"
+            class="link-offset-1 link-underline link-underline-opacity-0"
+            routerLink="/about"
+            routerLinkActive="active"
+            >About us</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="footer-social-icon">
+      <div class="footer-icons-container">
+        <a href="https://www.facebook.com" target="_blank">
+          <img src="./assets/img/facebook.png" alt="facebook icon" />
+        </a>
+      </div>
+      <div class="footer-icons-container">
+        <a href="https://www.instagram.com" target="_blank">
+          <img src="./assets/img/square-instagram.svg" alt="instagram icon" />
+        </a>
+      </div>
+      <div class="footer-icons-container">
+        <a href="https://www.twitter.com" target="_blank">
+          <img src="./assets/img/x-twitter.svg" alt="x-twitter icon" />
+        </a>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <hr />
+      <p class="copyright-color">
+        Copyright &copy; 2023 - All Rights Reserved.
+      </p>
+      <div class="text-center"></div>
+      <a (click)="scrollToTop()">
+        <img
+          src="../assets/img/arrow2.png"
+          alt="Scroll to top"
+          class="green-background"
+        />
+      </a>
+    </div>
+  </div>
+</footer>
