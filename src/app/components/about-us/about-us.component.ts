@@ -1,14 +1,16 @@
-import { CommonModule, DOCUMENT } from '@angular/common';
+
 import { Component, Inject } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { RouterLink, RouterOutlet, RouterLinkActive  } from '@angular/router';
+import { CommonModule, DOCUMENT } from '@angular/common';
 
 @Component({
-  selector: 'app-about-us',
+  selector: 'app-about',
   standalone: true,
-  imports: [CommonModule, RouterLink, RouterLinkActive],
+  imports: [RouterOutlet, RouterLink, CommonModule, RouterLinkActive],
   templateUrl: './about-us.component.html',
   styleUrl: './about-us.component.css',
 })
+
 export class AboutUsComponent {
   constructor(@Inject(DOCUMENT) private document: Document) {}
 
