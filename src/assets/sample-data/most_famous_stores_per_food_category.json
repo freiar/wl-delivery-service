@@ -1,8 +1,8 @@
 [
   {
-    "storeId": 1,
-    "storeName": "The Best",
-    "storeCategory": "Food",
+    "id": 1,
+    "name": "The Best",
+    "category": "Food",
     "address": "Syntagma 15",
     "rate": 5,
     "photo": "/assets/images/famous-stores-food-card.jpg",
@@ -70,9 +70,9 @@
     ]
   },
   {
-    "storeId": 2,
-    "storeName": "StreetWok",
-    "storeCategory": "Food",
+    "id": 2,
+    "name": "StreetWok",
+    "category": "Food",
     "rate": 5,
     "photo": "/assets/images/famous-stores-food-card.jpg",
     "address": "Glyfada Str. 203",
@@ -116,9 +116,9 @@
     ]
   },
   {
-    "storeId": 3,
-    "storeName": "Nanou Donuts House",
-    "storeCategory": "Food",
+    "id": 3,
+    "name": "Nanou Donuts House",
+    "category": "Food",
     "rate": 5,
     "photo": "/assets/images/famous-stores-food-card.jpg",
     "address": "Ampelokipous 23rd Av.",
@@ -162,9 +162,9 @@
     ]
   },
   {
-    "storeId": 4,
-    "storeName": "Lora's House",
-    "storeCategory": "Food",
+    "id": 4,
+    "name": "Lora's House",
+    "category": "Food",
     "rate": 5,
     "photo": "/assets/images/famous-stores-food-card.jpg",
     "address": "Ampelokipous 23rd Av.",
@@ -208,9 +208,9 @@
     ]
   },
   {
-    "storeId": 5,
-    "storeName": "Yummies",
-    "storeCategory": "Food",
+    "id": 5,
+    "name": "Yummies",
+    "category": "Food",
     "rate": 5,
     "photo": "/assets/images/famous-stores-food-card.jpg",
     "address": "Ampelokipous 23rd Av.",
@@ -254,9 +254,9 @@
     ]
   },
   {
-    "storeId": 6,
-    "storeName": "Steak House",
-    "storeCategory": "Food",
+    "id": 6,
+    "name": "Steak House",
+    "category": "Food",
     "rate": 5,
     "photo": "/assets/images/famous-stores-food-card.jpg",
     "address": "Ampelokipous 23rd Av.",
@@ -300,9 +300,9 @@
     ]
   },
   {
-    "storeId": 7,
-    "storeName": "Pizza World",
-    "storeCategory": "Food",
+    "id": 7,
+    "name": "Pizza World",
+    "category": "Food",
     "rate": 5,
     "photo": "/assets/images/famous-stores-food-card.jpg",
     "address": "Ampelokipous 23rd Av.",
@@ -346,9 +346,9 @@
     ]
   },
   {
-    "storeId": 8,
-    "storeName": "Pasta and All",
-    "storeCategory": "Food",
+    "id": 8,
+    "name": "Pasta and All",
+    "category": "Food",
     "rate": 5,
     "photo": "/assets/images/famous-stores-food-card.jpg",
     "address": "Ampelokipous 23rd Av.",
