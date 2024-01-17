@@ -5,7 +5,7 @@
     "storeCategory": "Food",
     "address": "Syntagma 15",
     "rate": 5,
-    "photo": "/assets/img/food.carousel4.jpg",
+    "photo": "/assets/images/famous-stores-food-card.jpg",
     "products": [
       {
         "id": "1",
@@ -74,7 +74,7 @@
     "storeName": "StreetWok",
     "storeCategory": "Food",
     "rate": 5,
-    "photo": "/assets/img/food.carousel4.jpg",
+    "photo": "/assets/images/famous-stores-food-card.jpg",
     "address": "Glyfada Str. 203",
     "products": [
       {
@@ -120,7 +120,7 @@
     "storeName": "Nanou Donuts House",
     "storeCategory": "Food",
     "rate": 5,
-    "photo": "/assets/img/food.carousel4.jpg",
+    "photo": "/assets/images/famous-stores-food-card.jpg",
     "address": "Ampelokipous 23rd Av.",
     "products": [
       {
@@ -166,7 +166,7 @@
     "storeName": "Lora's House",
     "storeCategory": "Food",
     "rate": 5,
-    "photo": "/assets/img/food.carousel4.jpg",
+    "photo": "/assets/images/famous-stores-food-card.jpg",
     "address": "Ampelokipous 23rd Av.",
     "products": [
       {
@@ -212,7 +212,7 @@
     "storeName": "Yummies",
     "storeCategory": "Food",
     "rate": 5,
-    "photo": "/assets/img/food.carousel4.jpg",
+    "photo": "/assets/images/famous-stores-food-card.jpg",
     "address": "Ampelokipous 23rd Av.",
     "products": [
       {
@@ -258,7 +258,7 @@
     "storeName": "Steak House",
     "storeCategory": "Food",
     "rate": 5,
-    "photo": "/assets/img/food.carousel4.jpg",
+    "photo": "/assets/images/famous-stores-food-card.jpg",
     "address": "Ampelokipous 23rd Av.",
     "products": [
       {
@@ -304,7 +304,7 @@
     "storeName": "Pizza World",
     "storeCategory": "Food",
     "rate": 5,
-    "photo": "/assets/img/food.carousel4.jpg",
+    "photo": "/assets/images/famous-stores-food-card.jpg",
     "address": "Ampelokipous 23rd Av.",
     "products": [
       {
@@ -350,7 +350,7 @@
     "storeName": "Pasta and All",
     "storeCategory": "Food",
     "rate": 5,
-    "photo": "/assets/img/food.carousel4.jpg",
+    "photo": "/assets/images/famous-stores-food-card.jpg",
     "address": "Ampelokipous 23rd Av.",
     "products": [
       {
