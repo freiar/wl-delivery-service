@@ -19,7 +19,7 @@
         cursor: pointer;
       "
       routerLinkActive="active"
-      [routerLink]="['/store-main', store.storeId]"
+      [routerLink]="['/store-main', store.id]"
     >
       <img
         [src]="store.photo"
@@ -32,13 +32,13 @@
         class="card-body"
         style="height: 40%; display: flex; flex-direction: column"
       >
-        <h5 class="card-title">{{ store.storeName }}</h5>
+        <h5 class="card-title">{{ store.name }}</h5>
         <div style="display: flex; background-color: white">
           <p
             class="card-store-category"
             style="padding-right: 10px; background-color: white"
           >
-            {{ store.storeCategory }}
+            {{ store.category }}
           </p>
           <p class="card-rating">
             <svg
