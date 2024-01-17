@@ -1,0 +1,102 @@
+* {
+  background-color: #13482f;
+}
+
+.container {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-top: 25px;
+}
+
+.categories {
+  padding-bottom: 10px;
+  margin-right: 10px;
+  margin-top: 220px;
+  text-align: center;
+  color: #e5ad05;
+}
+
+h1 {
+  font-size: 45px;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 100px;
+  margin-top: 100px;
+  color: white;
+}
+
+a img {
+  border-radius: 10px;
+  display: inline;
+  margin-bottom: 220px;
+  cursor: pointer;
+  gap: 5px;
+  margin-right: 10px;
+  margin-left: 153px;
+  border: 2px solid white;
+}
+
+/* Media Queries for Extra Small, Small, and Medium Screens */
+@media screen and (max-width: 575px) {
+  a img {
+    margin-left: 40px;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  a img {
+    margin-left: 30px;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  a img {
+    margin-left: 150px;
+
+    margin-bottom: 30px;
+  }
+}
+
+/* Media Queries for Large and Extra Large Screens */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  a img {
+    margin-left: 40px;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  a img {
+    margin-left: 100px;
+    margin-bottom: 30px;
+  }
+}
+/* Media Queries for Extra Large Screens */
+@media screen and (min-width: 1400px) {
+  a img {
+    margin-left: 150px;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  a img {
+    margin-left: 150px;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  a img {
+    margin-left: 150px;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  a img {
+    margin-left: 150px;
+    margin-bottom: 30px;
+  }
+}
