@@ -1,3 +1,4 @@
+import { FoodStoresComponent } from './components/food-stores/food-stores.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
@@ -9,6 +10,7 @@ import { Error403Component } from './components/error-403/error-403.component';
 import { StoreMainComponent } from './components/store-main/store-main.component';
 import { TopStoresFoodComponent } from './components/top-stores-food/top-stores-food.component';
 import { TopStoresDrinkComponent } from './components/top-stores-drink/top-stores-drink.component';
+import { DrinkStoresComponent } from './components/drink-stores/drink-stores.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -20,6 +22,8 @@ export const routes: Routes = [
   { path: 'storeProducts/:id', component: StoreProductsComponent },
   { path: 'topStoresFood', component: TopStoresFoodComponent },
   { path: 'topStoresDrink', component: TopStoresDrinkComponent },
+  { path: 'drinkStores', component: DrinkStoresComponent },
+  { path: 'foodStores', component: FoodStoresComponent },
   { path: 'error403', component: Error403Component },
   { path: 'error404/:name', component: Error404Component },
   { path: 'error404', component: Error404Component },

@@ -25,6 +25,8 @@ export class StoreService {
   private storeByIdEndpointUrl = '../assets/sample-data/store.json';
   private mostFamousStoresEndpointUrl =
     '../assets/sample-data/most_famous_stores_in_general.json';
+  private endpointGetDrinkStores = 'assets/sample-data/drinkStores.json';
+  private endpointGetFoodStores = 'assets/sample-data/foodStores.json';
 
   getStores(): Observable<Store[]> {
     return this.http.get<Store[]>(this.EndpointUrl);
@@ -74,6 +76,14 @@ export class StoreService {
     return this.http.get<Store[]>(this.endpointGetTop8StoresPerDrinkCategory, {
       headers,
     });
+  }
+
+  getDrinkStores(): Observable<Store[]> {
+    return this.http.get<Store[]>(this.endpointGetDrinkStores);
+  }
+
+  getFoodStores(): Observable<Store[]> {
+    return this.http.get<Store[]>(this.endpointGetFoodStores);
   }
 
   private handleError(error: HttpErrorResponse): Observable<never> {

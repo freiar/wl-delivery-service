@@ -1,11 +1,11 @@
 [
   {
-    "storeId": 1,
-    "storeName": "The Best",
-    "storeCategory": "Beverages",
+    "id": 1,
+    "name": "The Best",
+    "category": "Drink",
     "address": "Syntagma 15",
     "rate": 5,
-    "photo": "/assets/img/beverages-top-stores-card.jpg",
+    "photo": "/assets/images/famous-drink-stores-card.jpg",
     "products": [
       {
         "id": "1",
@@ -70,11 +70,11 @@
     ]
   },
   {
-    "storeId": 2,
-    "storeName": "Drink it",
-    "storeCategory": "Beverages",
+    "id": 2,
+    "name": "Drink it",
+    "category": "Drink",
     "rate": 5,
-    "photo": "/assets/img/beverages-top-stores-card.jpg",
+    "photo": "/assets/images/famous-drink-stores-card.jpg",
     "address": "Glyfada Str. 203",
     "products": [
       {
@@ -116,11 +116,11 @@
     ]
   },
   {
-    "storeId": 3,
-    "storeName": "Drinks House",
-    "storeCategory": "Beverages",
+    "id": 3,
+    "name": "Drinks House",
+    "category": "Drink",
     "rate": 5,
-    "photo": "/assets/img/beverages-top-stores-card.jpg",
+    "photo": "/assets/images/famous-drink-stores-card.jpg",
     "address": "Ampelokipous 23rd Av.",
     "products": [
       {
@@ -162,11 +162,11 @@
     ]
   },
   {
-    "storeId": 4,
-    "storeName": "Street Drinks",
-    "storeCategory": "Beverages",
+    "id": 4,
+    "name": "Street Drinks",
+    "category": "Drink",
     "rate": 5,
-    "photo": "/assets/img/beverages-top-stores-card.jpg",
+    "photo": "/assets/images/famous-drink-stores-card.jpg",
     "address": "Ampelokipous 23rd Av.",
     "products": [
       {
@@ -208,11 +208,11 @@
     ]
   },
   {
-    "storeId": 5,
-    "storeName": "Fedra's Bar",
-    "storeCategory": "Beverages",
+    "id": 5,
+    "name": "Fedra's Bar",
+    "category": "Drink",
     "rate": 5,
-    "photo": "/assets/img/beverages-top-stores-card.jpg",
+    "photo": "/assets/images/famous-drink-stores-card.jpg",
     "address": "Ampelokipous 23rd Av.",
     "products": [
       {
@@ -254,11 +254,11 @@
     ]
   },
   {
-    "storeId": 6,
-    "storeName": "Smoothies World",
-    "storeCategory": "Beverages",
+    "id": 6,
+    "name": "Smoothies World",
+    "category": "Drink",
     "rate": 5,
-    "photo": "/assets/img/beverages-top-stores-card.jpg",
+    "photo": "/assets/images/famous-drink-stores-card.jpg",
     "address": "Ampelokipous 23rd Av.",
     "products": [
       {
@@ -300,11 +300,11 @@
     ]
   },
   {
-    "storeId": 7,
-    "storeName": "Juices House",
-    "storeCategory": "Beverages",
+    "id": 7,
+    "name": "Juices House",
+    "category": "Drink",
     "rate": 5,
-    "photo": "/assets/img/beverages-top-stores-card.jpg",
+    "photo": "/assets/images/famous-drink-stores-card.jpg",
     "address": "Ampelokipous 23rd Av.",
     "products": [
       {
@@ -346,11 +346,11 @@
     ]
   },
   {
-    "storeId": 8,
-    "storeName": "Drink it Like You Mean It",
-    "storeCategory": "Beverages",
+    "id": 8,
+    "name": "Drink it Like You Mean It",
+    "category": "Drink",
     "rate": 5,
-    "photo": "/assets/img/beverages-top-stores-card.jpg",
+    "photo": "/assets/images/famous-drink-stores-card.jpg",
     "address": "Ampelokipous 23rd Av.",
     "products": [
       {
