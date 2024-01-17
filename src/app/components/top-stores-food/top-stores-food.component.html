@@ -1,12 +1,12 @@
 <div class="container">
   <img
-    src="./assets/img/food-top-stores.jpg"
+    src="./assets/images/famous-food-stores.jpg"
     alt="food photo"
     height="250px"
     width="100%"
     class="main-photo"
   />
-  <h1>Top Food Stores</h1>
+  <h1>Most Famous Food Stores</h1>
   <div style="display: flex; gap: 20px; flex-wrap: wrap">
     <div
       *ngFor="let store of stores; let i = index"
@@ -24,7 +24,7 @@
       <img
         [src]="store.photo"
         class="card-img-top"
-        alt="top food store image"
+        alt="food store image"
         style="width: 100%; height: 60%; object-fit: cover"
       />
 
