@@ -2,6 +2,7 @@ import { RouterLink } from '@angular/router';
 import { Component, Inject } from '@angular/core';
 import { CommonModule, DOCUMENT } from '@angular/common';
 
+
 @Component({
   selector: 'app-footer',
   standalone: true,

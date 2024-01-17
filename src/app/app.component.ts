@@ -1,3 +1,5 @@
+import { ContactComponent } from './components/contact/contact.component';
+import { FooterComponent } from './core/footer/footer.component';
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
@@ -22,6 +24,8 @@ import { CartComponent } from './components/cart/cart.component';
     AboutUsComponent,
     StoreProductsComponent,
     CartComponent,
+    FooterComponent,
+    ContactComponent,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],

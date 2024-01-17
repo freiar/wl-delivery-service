@@ -1,15 +1,17 @@
+
 import { Component, Inject } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet, RouterLinkActive  } from '@angular/router';
 import { CommonModule, DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, CommonModule],
-  templateUrl: '../about-us/about-us.component.html',
+  imports: [RouterOutlet, RouterLink, CommonModule, RouterLinkActive],
+  templateUrl: './about-us.component.html',
   styleUrl: './about-us.component.css',
 })
-export class AboutComponent {
+
+export class AboutUsComponent {
   constructor(@Inject(DOCUMENT) private document: Document) {}
 
   scrollToTop() {
