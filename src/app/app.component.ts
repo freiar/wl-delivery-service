@@ -1,3 +1,4 @@
+import { RegisterComponent } from './components/register/register.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { Component, inject } from '@angular/core';
@@ -26,6 +27,7 @@ import { CartComponent } from './components/cart/cart.component';
     CartComponent,
     FooterComponent,
     ContactComponent,
+    RegisterComponent,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],

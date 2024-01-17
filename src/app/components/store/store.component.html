@@ -1,38 +1,47 @@
 <div class="container">
-  <h5>Most famous stores</h5>
+  <h1>Most famous stores</h1>
 
   <div class="row">
     @for (store of famousStoreList; track $index) {
 
     <div class="col-md-4 col-sm-6">
-      <div class="card mt-3" style="width: 18rem;" (click)="viewStoreProducts(store.id)" title="View more">
+      <div
+        class="card mt-3"
+        style="width: 18rem"
+        (click)="viewStoreProducts(store.id)"
+        title="View more"
+      >
         <div class="card-body">
-          <h5 class="card-title">{{store.name}}</h5>
-          <p class="card-text">{{store.category}}</p>
-          <p class="card-text">{{store.address}}</p>
+          <h5 class="card-title">{{ store.name }}</h5>
+          <p class="card-text">{{ store.category }}</p>
+          <p class="card-text">{{ store.address }}</p>
           <button class="btn btn-primary">View more</button>
         </div>
       </div>
     </div>
     }
 
+    <h1>Stores</h1>
 
-  <h5>Stores</h5>
+    <div class="row">
+      @for (store of storeList; track $index) {
 
-  <div class="row">
-    @for (store of storeList; track $index) {
-
-    <div class="col-md-4 col-sm-6">
-      <div class="card mt-3" style="width: 18rem;" (click)="viewStoreProducts(store.id)" title="View more">
-        <div class="card-body">
-          <h5 class="card-title">{{store.name}}</h5>
-          <p class="card-text">{{store.category}}</p>
-          <p class="card-text">{{store.address}}</p>
-          <button class="btn btn-primary">View more</button>
+      <div class="col-md-4 col-sm-6">
+        <div
+          class="card mt-3"
+          style="width: 18rem"
+          (click)="viewStoreProducts(store.id)"
+          title="View more"
+        >
+          <div class="card-body">
+            <h5 class="card-title">{{ store.name }}</h5>
+            <p class="card-text">{{ store.category }}</p>
+            <p class="card-text">{{ store.address }}</p>
+            <button class="btn btn-primary">View more</button>
+          </div>
         </div>
       </div>
+      }
     </div>
-    }
-
   </div>
-  
+</div>
