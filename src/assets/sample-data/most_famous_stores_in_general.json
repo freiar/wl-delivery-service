@@ -3,66 +3,77 @@
         "id": 1,
         "name": "McDonald's",
         "category": "FAST_FOOD",
-        "address": "Syntagma 15" 
+        "address": "Syntagma 15",
+        "image": "/assets/images/goodys.jpg"
     },
     {
         "id": 12,
         "name": "Pizza Fan",
         "category": "PIZZA",
-        "address": "Ippokrateiou 35" 
+        "address": "Ippokrateiou 35" ,
+        "image": "/assets/images/goodys.jpg"
     },
     {
         "id": 8,
         "name": "Roma Pizza",
         "category": "PIZZA",
-        "address": "Menelaou 22" 
+        "address": "Menelaou 22" ,
+        "image": "/assets/images/goodys.jpg"
     },
     {
         "id": 105,
         "name": "Goodys Burger House",
         "category": "FAST_FOOD",
-        "address": "Ampelokipous 23rd Av."
+        "address": "Ampelokipous 23rd Av.",
+        "image": "/assets/images/goodys.jpg"
     },
     {
         "id": 80,
         "name": "The Big Bad Wolf",
         "category": "SOUVLAKI",
-        "address": "Agioi Anargiroi 98" 
+        "address": "Agioi Anargiroi 98" ,
+        "image": "/assets/images/goodys.jpg"
     },
     {
         "id": 34,
         "name": "Mikel",
         "category": "COFFEE",
-        "address": "Ampelokipoi 72" 
+        "address": "Ampelokipoi 72" ,
+        "image": "/assets/images/goodys.jpg"
     },
     {
         "id": 2,
         "name": "StreetWok",
         "category": "ASIAN",
-        "address": "Glyfada Str. 203"
+        "address": "Glyfada Str. 203",
+        "image": "/assets/images/goodys.jpg"
     },
     {
         "id": 4,
         "name": "Coffee Lab",
         "category": "COFFEE",
-        "address": "Athinaion 15" 
+        "address": "Athinaion 15" ,
+        "image": "/assets/images/goodys.jpg"
     },
     {
         "id": 5,
         "name": "Gregory",
         "category": "COFFEE",
-        "address": "Agisilaou 222" 
+        "address": "Agisilaou 222" ,
+        "image": "/assets/images/goodys.jpg"
     },
     {
         "id": 3,
         "name": "Nanou Donuts House",
         "category": "DONUTS",
-        "address": "Ampelokipous 23rd Av."
+        "address": "Ampelokipous 23rd Av.",
+        "image": "/assets/images/goodys.jpg"
     },
     {
         "id": 18,
         "name": "FoodTek",
         "category": "OTHER",
-        "address": "Ioanninon 14" 
+        "address": "Ioanninon 14" ,
+        "image": "/assets/images/goodys.jpg"
     }
 ]

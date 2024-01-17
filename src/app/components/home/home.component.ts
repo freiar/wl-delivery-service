@@ -5,6 +5,7 @@ import { DOCUMENT } from '@angular/common';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { TopStoresFoodComponent } from '../top-stores-food/top-stores-food.component';
 
+
 @Component({
   selector: 'app-home',
   standalone: true,
