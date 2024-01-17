@@ -38,8 +38,14 @@ export class StoreService {
     );
   }
 
-  getStoreById(id: number) {
-    return this.http.get<Store>(this.storeByIdEndpointUrl);
+  getStoreById(id: number): Observable<Store> {
+    return this.http.get<Store[]>(this.EndpointUrl).pipe(
+      map(
+        stores => {
+          return stores.find(s => s.id == id)!
+        }
+      )
+    );
   }
 
   getStoreByName(name: string): Observable<Store | undefined> {
