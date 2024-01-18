@@ -4,13 +4,14 @@ import { Product } from '../../../interfaces/product';
 import { AddToCartPublisherService } from '../../../services/add.to.cart.publisher.service';
 import { map } from 'rxjs';
 import { StoreService } from '../../../services/store.service';
+import { CartComponent } from "../../cart/cart.component";
 
 @Component({
-  selector: 'app-store-products',
-  standalone: true,
-  imports: [],
-  templateUrl: './store-products.component.html',
-  styleUrl: './store-products.component.css'
+    selector: 'app-store-products',
+    standalone: true,
+    templateUrl: './store-products.component.html',
+    styleUrl: './store-products.component.css',
+    imports: [CartComponent]
 })
 export class StoreProductsComponent {
   activatedRoute: ActivatedRoute = inject(ActivatedRoute);
