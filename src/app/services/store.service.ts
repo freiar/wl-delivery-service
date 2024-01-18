@@ -22,7 +22,6 @@ export class StoreService {
     'assets/sample-data/most_famous_stores_per_food_category.json';
   private endpointGetTop8StoresPerDrinkCategory =
     'assets/sample-data/most_famous_stores_per_drink_category.json';
-  private storeByIdEndpointUrl = '../assets/sample-data/store.json';
   private mostFamousStoresEndpointUrl =
     '../assets/sample-data/most_famous_stores_in_general.json';
   private endpointGetDrinkStores = 'assets/sample-data/drinkStores.json';
