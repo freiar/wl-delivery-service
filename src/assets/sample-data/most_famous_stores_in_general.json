@@ -7,6 +7,20 @@
         "image": "/assets/images/goodys.jpg"
     },
     {
+        "id": 2,
+        "name": "StreetWok",
+        "category": "ASIAN",
+        "address": "Glyfada Str. 203",
+        "image": "/assets/images/goodys.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Nanou Donuts House",
+        "category": "DONUTS",
+        "address": "Ampelokipous 23rd Av.",
+        "image": "/assets/images/goodys.jpg"
+    },
+    {
         "id": 12,
         "name": "Pizza Fan",
         "category": "PIZZA",
@@ -25,55 +39,6 @@
         "name": "Goodys Burger House",
         "category": "FAST_FOOD",
         "address": "Ampelokipous 23rd Av.",
-        "image": "/assets/images/goodys.jpg"
-    },
-    {
-        "id": 80,
-        "name": "The Big Bad Wolf",
-        "category": "SOUVLAKI",
-        "address": "Agioi Anargiroi 98" ,
-        "image": "/assets/images/goodys.jpg"
-    },
-    {
-        "id": 34,
-        "name": "Mikel",
-        "category": "COFFEE",
-        "address": "Ampelokipoi 72" ,
-        "image": "/assets/images/goodys.jpg"
-    },
-    {
-        "id": 2,
-        "name": "StreetWok",
-        "category": "ASIAN",
-        "address": "Glyfada Str. 203",
-        "image": "/assets/images/goodys.jpg"
-    },
-    {
-        "id": 4,
-        "name": "Coffee Lab",
-        "category": "COFFEE",
-        "address": "Athinaion 15" ,
-        "image": "/assets/images/goodys.jpg"
-    },
-    {
-        "id": 5,
-        "name": "Gregory",
-        "category": "COFFEE",
-        "address": "Agisilaou 222" ,
-        "image": "/assets/images/goodys.jpg"
-    },
-    {
-        "id": 3,
-        "name": "Nanou Donuts House",
-        "category": "DONUTS",
-        "address": "Ampelokipous 23rd Av.",
-        "image": "/assets/images/goodys.jpg"
-    },
-    {
-        "id": 18,
-        "name": "FoodTek",
-        "category": "OTHER",
-        "address": "Ioanninon 14" ,
         "image": "/assets/images/goodys.jpg"
     }
 ]

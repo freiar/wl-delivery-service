@@ -9,61 +9,61 @@
                 "id": "1",
                 "name": "Big Mac",
                 "category": "BURGERS",
-                "price" : 4.99
+                "price": 4.99
             },
             {
                 "id": "2",
                 "name": "Crispy McBacon",
                 "category": "BURGERS",
-                "price" : 3.99
+                "price": 3.99
             },
             {
                 "id": "3",
                 "name": "Deluxe Burger",
                 "category": "BURGERS",
-                "price" : 2.99
+                "price": 2.99
             },
             {
                 "id": "4",
                 "name": "Single Big Tasty Chicken Bacon",
                 "category": "BURGERS",
-                "price" : 2.79
+                "price": 2.79
             },
             {
                 "id": "5",
                 "name": "Chicken McNuggets",
                 "category": "NUGGETS",
-                "price" : 3.99
+                "price": 3.99
             },
             {
                 "id": "6",
                 "name": "Caesar Salad with crispy chicken",
                 "category": "SALADS",
-                "price" : 4.50
+                "price": 4.50
             },
             {
                 "id": "7",
                 "name": "Caesar Salad with grilled chicken",
                 "category": "SALADS",
-                "price" : 4.50
+                "price": 4.50
             },
             {
                 "id": "8",
                 "name": "Side Salad",
                 "category": "SALADS",
-                "price" : 2.50
+                "price": 2.50
             },
             {
                 "id": "9",
                 "name": "Onion Rings",
                 "category": "FRIES_&_SIDES",
-                "price" : 0.99
+                "price": 0.99
             },
             {
                 "id": "10",
                 "name": "Deluxe Fries",
                 "category": "FRIES_&_SIDES",
-                "price" : 1.20
+                "price": 1.20
             }
         ],
         "image": "/assets/images/goodys.jpg"
@@ -78,37 +78,37 @@
                 "id": "11",
                 "name": "Pork Noodles with teriyaki",
                 "category": "NOODLES",
-                "price" : 7.20
+                "price": 7.20
             },
             {
                 "id": "12",
                 "name": "Chicken Egg Noodles with sweet chili",
                 "category": "NOODLES",
-                "price" : 8.20
+                "price": 8.20
             },
             {
                 "id": "13",
                 "name": "Beef Rice Noodles with cantonese",
                 "category": "NOODLES",
-                "price" : 7.20
+                "price": 7.20
             },
             {
                 "id": "14",
                 "name": "Shrimp White Rice with Coconut Curry",
                 "category": "RICE",
-                "price" : 8.20
+                "price": 8.20
             },
             {
                 "id": "15",
                 "name": "Mushroom Brown Rice with satay",
                 "category": "RICE",
-                "price" : 7.20
+                "price": 7.20
             },
             {
                 "id": "16",
                 "name": "Mixed ingredients with pineapple, brocoli, baby corn and black mushrooms",
                 "category": "OTHER",
-                "price" : 5.20
+                "price": 5.20
             }
         ],
         "image": "/assets/images/goodys.jpg"
@@ -123,198 +123,406 @@
                 "id": "17",
                 "name": "Cinnamon Donut",
                 "category": "DONUT",
-                "price" : 2.20
+                "price": 2.20
             },
             {
                 "id": "18",
                 "name": "Donut Bavaria",
                 "category": "DONUT",
-                "price" : 1.99
+                "price": 1.99
             },
             {
                 "id": "19",
                 "name": "Blackberry Cronut",
                 "category": "CRONUT",
-                "price" : 1.50
+                "price": 1.50
             },
             {
                 "id": "20",
                 "name": "Nanou Burger",
                 "category": "BURGER",
-                "price" : 4.30
+                "price": 4.30
             },
             {
                 "id": "21",
                 "name": "Donut Delizioso",
                 "category": "DONUT",
-                "price" : 2.50
+                "price": 2.50
             },
             {
                 "id": "22",
                 "name": "Donut Oreo",
                 "category": "DONUT",
-                "price" : 1.99
+                "price": 1.99
             }
         ],
         "image": "/assets/images/goodys.jpg"
     },
     {
-        "id": 1,
-        "name": "McDonald's",
-        "category": "FAST FOOD",
-        "address": "Syntagma 15",
+        "id": 4,
+        "name": "Coffee Lab",
+        "category": "COFFEE",
+        "address": "Athinaion 15",
         "products": [
             {
                 "id": "1",
                 "name": "Big Mac",
                 "category": "BURGERS",
-                "price" : 4.99
+                "price": 4.99
             },
             {
                 "id": "2",
                 "name": "Crispy McBacon",
                 "category": "BURGERS",
-                "price" : 3.99
+                "price": 3.99
             },
             {
                 "id": "3",
                 "name": "Deluxe Burger",
                 "category": "BURGERS",
-                "price" : 2.99
+                "price": 2.99
             },
             {
                 "id": "4",
                 "name": "Single Big Tasty Chicken Bacon",
                 "category": "BURGERS",
-                "price" : 2.79
+                "price": 2.79
             },
             {
                 "id": "5",
                 "name": "Chicken McNuggets",
                 "category": "NUGGETS",
-                "price" : 3.99
+                "price": 3.99
             },
             {
                 "id": "6",
                 "name": "Caesar Salad with crispy chicken",
                 "category": "SALADS",
-                "price" : 4.50
+                "price": 4.50
             },
             {
                 "id": "7",
                 "name": "Caesar Salad with grilled chicken",
                 "category": "SALADS",
-                "price" : 4.50
+                "price": 4.50
             },
             {
                 "id": "8",
                 "name": "Side Salad",
                 "category": "SALADS",
-                "price" : 2.50
+                "price": 2.50
             },
             {
                 "id": "9",
                 "name": "Onion Rings",
                 "category": "FRIES_&_SIDES",
-                "price" : 0.99
+                "price": 0.99
             },
             {
                 "id": "10",
                 "name": "Deluxe Fries",
                 "category": "FRIES_&_SIDES",
-                "price" : 1.20
+                "price": 1.20
             }
         ],
         "image": "/assets/images/goodys.jpg"
     },
     {
-        "id": 2,
-        "name": "StreetWok",
-        "category": "ASIAN",
-        "address": "Glyfada Str. 203",
+        "id": 5,
+        "name": "Gregory",
+        "category": "COFFEE",
+        "address": "Agisilaou 222",
         "products": [
             {
                 "id": "11",
                 "name": "Pork Noodles with teriyaki",
                 "category": "NOODLES",
-                "price" : 7.20
+                "price": 7.20
             },
             {
                 "id": "12",
                 "name": "Chicken Egg Noodles with sweet chili",
                 "category": "NOODLES",
-                "price" : 8.20
+                "price": 8.20
             },
             {
                 "id": "13",
                 "name": "Beef Rice Noodles with cantonese",
                 "category": "NOODLES",
-                "price" : 7.20
+                "price": 7.20
             },
             {
                 "id": "14",
                 "name": "Shrimp White Rice with Coconut Curry",
                 "category": "RICE",
-                "price" : 8.20
+                "price": 8.20
             },
             {
                 "id": "15",
                 "name": "Mushroom Brown Rice with satay",
                 "category": "RICE",
-                "price" : 7.20
+                "price": 7.20
             },
             {
                 "id": "16",
                 "name": "Mixed ingredients with pineapple, brocoli, baby corn and black mushrooms",
                 "category": "OTHER",
-                "price" : 5.20
+                "price": 5.20
             }
         ],
         "image": "/assets/images/goodys.jpg"
     },
     {
-        "id": 3,
-        "name": "Nanou Donuts House",
-        "category": "DONUTS",
-        "address": "Ampelokipous 23rd Av.",
+        "id": 12,
+        "name": "Pizza Fan",
+        "category": "PIZZA",
+        "address": "Ippokrateiou 35",
         "products": [
             {
                 "id": "17",
                 "name": "Cinnamon Donut",
                 "category": "DONUT",
-                "price" : 2.20
+                "price": 2.20
             },
             {
                 "id": "18",
                 "name": "Donut Bavaria",
                 "category": "DONUT",
-                "price" : 1.99
+                "price": 1.99
             },
             {
                 "id": "19",
                 "name": "Blackberry Cronut",
                 "category": "CRONUT",
-                "price" : 1.50
+                "price": 1.50
             },
             {
                 "id": "20",
                 "name": "Nanou Burger",
                 "category": "BURGER",
-                "price" : 4.30
+                "price": 4.30
             },
             {
                 "id": "21",
                 "name": "Donut Delizioso",
                 "category": "DONUT",
-                "price" : 2.50
+                "price": 2.50
             },
             {
                 "id": "22",
                 "name": "Donut Oreo",
                 "category": "DONUT",
-                "price" : 1.99
+                "price": 1.99
+            }
+        ],
+        "image": "/assets/images/goodys.jpg"
+    },
+    {
+        "id": 105,
+        "name": "Goodys Burger House",
+        "category": "FAST_FOOD",
+        "address": "Ampelokipous 23rd Av.",
+        "products": [
+            {
+                "id": "1",
+                "name": "Big Mac",
+                "category": "BURGERS",
+                "price": 4.99
+            },
+            {
+                "id": "2",
+                "name": "Crispy McBacon",
+                "category": "BURGERS",
+                "price": 3.99
+            },
+            {
+                "id": "3",
+                "name": "Deluxe Burger",
+                "category": "BURGERS",
+                "price": 2.99
+            },
+            {
+                "id": "4",
+                "name": "Single Big Tasty Chicken Bacon",
+                "category": "BURGERS",
+                "price": 2.79
+            },
+            {
+                "id": "5",
+                "name": "Chicken McNuggets",
+                "category": "NUGGETS",
+                "price": 3.99
+            },
+            {
+                "id": "6",
+                "name": "Caesar Salad with crispy chicken",
+                "category": "SALADS",
+                "price": 4.50
+            },
+            {
+                "id": "7",
+                "name": "Caesar Salad with grilled chicken",
+                "category": "SALADS",
+                "price": 4.50
+            },
+            {
+                "id": "8",
+                "name": "Side Salad",
+                "category": "SALADS",
+                "price": 2.50
+            },
+            {
+                "id": "9",
+                "name": "Onion Rings",
+                "category": "FRIES_&_SIDES",
+                "price": 0.99
+            },
+            {
+                "id": "10",
+                "name": "Deluxe Fries",
+                "category": "FRIES_&_SIDES",
+                "price": 1.20
+            }
+        ],
+        "image": "/assets/images/goodys.jpg"
+    },
+    {
+        "id": 34,
+        "name": "Mikel",
+        "category": "COFFEE",
+        "address": "Ampelokipoi 72",
+        "products": [
+            {
+                "id": "1",
+                "name": "Big Mac",
+                "category": "BURGERS",
+                "price": 4.99
+            },
+            {
+                "id": "2",
+                "name": "Crispy McBacon",
+                "category": "BURGERS",
+                "price": 3.99
+            },
+            {
+                "id": "3",
+                "name": "Deluxe Burger",
+                "category": "BURGERS",
+                "price": 2.99
+            },
+            {
+                "id": "4",
+                "name": "Single Big Tasty Chicken Bacon",
+                "category": "BURGERS",
+                "price": 2.79
+            },
+            {
+                "id": "5",
+                "name": "Chicken McNuggets",
+                "category": "NUGGETS",
+                "price": 3.99
+            },
+            {
+                "id": "6",
+                "name": "Caesar Salad with crispy chicken",
+                "category": "SALADS",
+                "price": 4.50
+            },
+            {
+                "id": "7",
+                "name": "Caesar Salad with grilled chicken",
+                "category": "SALADS",
+                "price": 4.50
+            },
+            {
+                "id": "8",
+                "name": "Side Salad",
+                "category": "SALADS",
+                "price": 2.50
+            },
+            {
+                "id": "9",
+                "name": "Onion Rings",
+                "category": "FRIES_&_SIDES",
+                "price": 0.99
+            },
+            {
+                "id": "10",
+                "name": "Deluxe Fries",
+                "category": "FRIES_&_SIDES",
+                "price": 1.20
+            }
+        ],
+        "image": "/assets/images/goodys.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Roma Pizza",
+        "category": "PIZZA",
+        "address": "Menelaou 22" ,
+        "products": [
+            {
+                "id": "1",
+                "name": "Big Mac",
+                "category": "BURGERS",
+                "price": 4.99
+            },
+            {
+                "id": "2",
+                "name": "Crispy McBacon",
+                "category": "BURGERS",
+                "price": 3.99
+            },
+            {
+                "id": "3",
+                "name": "Deluxe Burger",
+                "category": "BURGERS",
+                "price": 2.99
+            },
+            {
+                "id": "4",
+                "name": "Single Big Tasty Chicken Bacon",
+                "category": "BURGERS",
+                "price": 2.79
+            },
+            {
+                "id": "5",
+                "name": "Chicken McNuggets",
+                "category": "NUGGETS",
+                "price": 3.99
+            },
+            {
+                "id": "6",
+                "name": "Caesar Salad with crispy chicken",
+                "category": "SALADS",
+                "price": 4.50
+            },
+            {
+                "id": "7",
+                "name": "Caesar Salad with grilled chicken",
+                "category": "SALADS",
+                "price": 4.50
+            },
+            {
+                "id": "8",
+                "name": "Side Salad",
+                "category": "SALADS",
+                "price": 2.50
+            },
+            {
+                "id": "9",
+                "name": "Onion Rings",
+                "category": "FRIES_&_SIDES",
+                "price": 0.99
+            },
+            {
+                "id": "10",
+                "name": "Deluxe Fries",
+                "category": "FRIES_&_SIDES",
+                "price": 1.20
             }
         ],
         "image": "/assets/images/goodys.jpg"
     }
-]
+    
+    ]

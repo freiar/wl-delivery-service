@@ -4,14 +4,15 @@ import { TopStoresDrinkComponent } from '../top-stores-drink/top-stores-drink.co
 import { DOCUMENT } from '@angular/common';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { TopStoresFoodComponent } from '../top-stores-food/top-stores-food.component';
+import { HeaderComponent } from "../../core/header/header.component";
 
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css',
-  imports: [StoreComponent, RouterLink, RouterOutlet],
+    selector: 'app-home',
+    standalone: true,
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.css',
+    imports: [StoreComponent, RouterLink, RouterOutlet, HeaderComponent]
 })
 export class HomeComponent {
   constructor(@Inject(DOCUMENT) private document: Document) {}
