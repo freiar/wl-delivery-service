@@ -17,7 +17,7 @@
             src="assets/images/menu-card.jpg"
           />
           <!-- Product Details -->
-          <div class="product-details ml-3">
+          <div class="product-details">
             <h5 class="card-title">{{ product.name }}</h5>
             <p class="card-text">{{ product.category }}</p>
             <p class="card-text">{{ product.price }}</p>
@@ -25,13 +25,15 @@
 
           <!-- Counter Button -->
           <button class="btn" (click)="productButtonClicked(product)">
-            <app-counter class="counter" />
+            <app-counter />
           </button>
         </div>
       </div>
     </div>
     }
   </div>
+
+  <app-cart />
 
   <button class="order-button" (click)="goToOrderPage()">
     Review and Submit Order

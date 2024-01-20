@@ -12,7 +12,6 @@ img {
   box-shadow: 5px 5px 10px rgba(22, 22, 22, 0.5);
   margin-top: 20px;
   object-fit: cover;
-  margin-right: 20px;
 }
 
 .menu-img {
@@ -20,6 +19,15 @@ img {
   height: 70px;
   border-radius: 10px;
   margin-left: 15px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 3px solid white;
+  box-shadow: 5px 5px 10px rgba(22, 22, 22, 0.5);
+  margin-top: 20px;
+  object-fit: cover;
+  margin-right: 20px;
 }
 
 h1 {
@@ -31,7 +39,6 @@ h1 {
 
 .product-details {
   background-color: white;
-  margin-top: 40px;
 }
 
 .card-body {
@@ -39,6 +46,7 @@ h1 {
   box-shadow: 5px 5px 10px rgba(22, 22, 22, 0.5);
   border-radius: 5px;
   height: 200px;
+  width: auto;
 }
 
 .card-title {
