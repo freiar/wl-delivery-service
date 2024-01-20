@@ -5,6 +5,7 @@ import { DOCUMENT } from '@angular/common';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { TopStoresFoodComponent } from '../top-stores-food/top-stores-food.component';
 import { HeaderComponent } from "../../core/header/header.component";
+import { FamousStoresGeneralComponent } from "../famous-stores-general/famous-stores-general.component";
 
 
 @Component({
@@ -12,7 +13,7 @@ import { HeaderComponent } from "../../core/header/header.component";
     standalone: true,
     templateUrl: './home.component.html',
     styleUrl: './home.component.css',
-    imports: [StoreComponent, RouterLink, RouterOutlet, HeaderComponent]
+    imports: [StoreComponent, RouterLink, RouterOutlet, HeaderComponent, FamousStoresGeneralComponent]
 })
 export class HomeComponent {
   constructor(@Inject(DOCUMENT) private document: Document) {}

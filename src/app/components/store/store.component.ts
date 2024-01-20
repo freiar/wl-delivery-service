@@ -25,10 +25,6 @@ export class StoreComponent {
     this.storeService.getStores().subscribe({
       next: res => this.storeList = res
     })
-
-    this.storeService.getMostFamousStores().subscribe({
-      next: res => this.famousStoreList = res
-    })
   }
 
   viewStoreProducts(id: number) {
