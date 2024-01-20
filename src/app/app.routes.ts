@@ -11,6 +11,7 @@ import { StoreMainComponent } from './components/store-main/store-main.component
 import { TopStoresFoodComponent } from './components/top-stores-food/top-stores-food.component';
 import { TopStoresDrinkComponent } from './components/top-stores-drink/top-stores-drink.component';
 import { DrinkStoresComponent } from './components/drink-stores/drink-stores.component';
+import { AllPlacedOrdersComponent } from './components/all-placed-orders/all-placed-orders.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -24,6 +25,10 @@ export const routes: Routes = [
   { path: 'topStoresDrink', component: TopStoresDrinkComponent },
   { path: 'drinkStores', component: DrinkStoresComponent },
   { path: 'foodStores', component: FoodStoresComponent },
+  { path: 'order/1/all-placed-orders', component: AllPlacedOrdersComponent },
+  { path: 'order/2/all-placed-orders', component: AllPlacedOrdersComponent },
+  { path: 'order/3/all-placed-orders', component: AllPlacedOrdersComponent },
+  { path: 'all-placed-orders', component: AllPlacedOrdersComponent },
   { path: 'error403', component: Error403Component },
   { path: 'error404/:name', component: Error404Component },
   { path: 'error404', component: Error404Component },
