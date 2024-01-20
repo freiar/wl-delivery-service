@@ -1,14 +1,16 @@
-<div class="container">
-    <p>Cart</p>
-    <p>products: {{cartProducts.length}}</p>
-    <ul>
-        @for (p of cartProducts; track $index) {
-            <li>
-                {{p.name}} 
-                <span class="float-right">{{p.price}}</span>
-                <button (click)="removeProduct(p.id)">x</button>
-            </li>
-        }
-    </ul>
-    <strong>TOTAL: {{getTotal()}}</strong>
+<div class="container-fluid">
+  <div class="cart-container">
+    <h1>Cart</h1>
+    <!-- <p>products: {{ cartProducts.length }}</p> -->
+    <div *ngFor="let p of cartProducts; let i = index">
+      <h5>{{ p.name }}</h5>
+      <span> Price: $ {{ p.price }}</span>
+      <p>Product Quantity: {{ cartProducts.length }}</p>
+      <hr class="hr" />
+
+      <!-- <button (click)="removeProduct(p.id)">x</button> -->
+    </div>
+
+    <strong>Total Price: $ {{ getTotal() }}</strong>
+  </div>
 </div>

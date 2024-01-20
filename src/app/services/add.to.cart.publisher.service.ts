@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Observable, Subject, throwError } from 'rxjs';
+import { Observable, Subject, catchError, throwError } from 'rxjs';
 import { Product } from '../interfaces/product';
-import { HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
 
 @Injectable({
@@ -14,11 +14,16 @@ export class AddToCartPublisherService {
     this.publisher.next(data);
   }
 
-  listenForProduct() {
-    return this.publisher.asObservable();
+  listenForProduct(): Observable<any> {
+    return this.publisher.asObservable().pipe(
+      catchError((error: any) => {
+        this.handleError(error);
+        return throwError(() => new Error('Error listening for product'));
+      })
+    );
   }
 
-  constructor(private router: Router) {}
+  constructor(private http: HttpClient, private router: Router) {}
 
   private handleError(error: HttpErrorResponse): Observable<never> {
     let errorMessage = 'Something went wrong';

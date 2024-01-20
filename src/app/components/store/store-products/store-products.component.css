@@ -35,6 +35,7 @@ h1 {
   font-weight: 600;
   margin-top: 100px;
   margin-bottom: 50px;
+  font-size: 55px;
 }
 
 .product-details {
@@ -46,7 +47,6 @@ h1 {
   box-shadow: 5px 5px 10px rgba(22, 22, 22, 0.5);
   border-radius: 5px;
   height: 200px;
-  width: auto;
 }
 
 .card-title {

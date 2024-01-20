@@ -16,7 +16,7 @@ export class CounterComponent {
 
   // Output property to emit changes in count back to the parent component.
   @Output() countChange = new EventEmitter<{
-    productId: number;
+    id: number;
     count: number;
   }>();
 
@@ -39,7 +39,7 @@ export class CounterComponent {
   // Private method to emit the count change event with the productId and the updated count.
   private emitCountChange() {
     this.countChange.emit({
-      productId: this.product?.id || 0,
+      id: this.product?.id || 0,
       count: this.count,
     });
   }
