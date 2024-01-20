@@ -12,9 +12,18 @@ h1 {
   margin-bottom: 100px;
 }
 
-.product-card {
+.store-card {
   margin: 20px 10px;
   cursor: pointer;
+  margin-bottom: 10px;
+  box-shadow: 8px 8px 10px rgba(22, 22, 22, 0.5);
+  cursor: pointer;
+  border: 3px solid white;
+}
+
+.star-icon {
+  position: relative;
+  top: -2px;
 }
 
 .star-fill {
