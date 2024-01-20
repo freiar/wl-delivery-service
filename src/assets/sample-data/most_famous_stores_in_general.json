@@ -2,43 +2,49 @@
     {
         "id": 1,
         "name": "McDonald's",
-        "category": "FAST_FOOD",
+        "category": "Fast Food",
         "address": "Syntagma 15",
-        "image": "/assets/images/goodys.jpg"
+        "image": "/assets/images/goodys.jpg",
+        "rate": 5
     },
     {
         "id": 2,
         "name": "StreetWok",
-        "category": "ASIAN",
+        "category": "Asian",
         "address": "Glyfada Str. 203",
-        "image": "/assets/images/goodys.jpg"
+        "image": "/assets/images/goodys.jpg",
+        "rate": 5
     },
     {
         "id": 3,
         "name": "Nanou Donuts House",
-        "category": "DONUTS",
+        "category": "Donuts",
         "address": "Ampelokipous 23rd Av.",
-        "image": "/assets/images/goodys.jpg"
+        "image": "/assets/images/goodys.jpg",
+        "rate": 5
     },
     {
         "id": 12,
         "name": "Pizza Fan",
-        "category": "PIZZA",
+        "category": "Pizza",
         "address": "Ippokrateiou 35" ,
-        "image": "/assets/images/goodys.jpg"
+        "image": "/assets/images/goodys.jpg",
+        "rate": 5
     },
     {
         "id": 8,
         "name": "Roma Pizza",
-        "category": "PIZZA",
+        "category": "Pizza",
         "address": "Menelaou 22" ,
-        "image": "/assets/images/goodys.jpg"
+        "image": "/assets/images/goodys.jpg",
+        "rate": 5
     },
     {
         "id": 105,
         "name": "Goodys Burger House",
-        "category": "FAST_FOOD",
+        "category": "Fast Food",
         "address": "Ampelokipous 23rd Av.",
-        "image": "/assets/images/goodys.jpg"
+        "image": "/assets/images/goodys.jpg",
+        "rate": 5
     }
 ]

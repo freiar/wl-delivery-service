@@ -3,5 +3,6 @@ export interface StoreWithoutProducts {
     name: string;
     category: string;
     address: string;
+    rate: number;
 }
 

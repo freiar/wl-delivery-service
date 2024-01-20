@@ -275,7 +275,7 @@
     {
         "id": 12,
         "name": "Pizza Fan",
-        "category": "PIZZA",
+        "category": "Pizza",
         "address": "Ippokrateiou 35",
         "products": [
             {
@@ -320,7 +320,7 @@
     {
         "id": 105,
         "name": "Goodys Burger House",
-        "category": "FAST_FOOD",
+        "category": "Fast Food",
         "address": "Ampelokipous 23rd Av.",
         "products": [
             {
@@ -389,7 +389,7 @@
     {
         "id": 34,
         "name": "Mikel",
-        "category": "COFFEE",
+        "category": "Coffee",
         "address": "Ampelokipoi 72",
         "products": [
             {
@@ -458,7 +458,7 @@
     {
         "id": 8,
         "name": "Roma Pizza",
-        "category": "PIZZA",
+        "category": "Pizza",
         "address": "Menelaou 22" ,
         "products": [
             {

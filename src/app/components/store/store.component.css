@@ -16,3 +16,7 @@ h1 {
   margin: 20px 10px;
   cursor: pointer;
 }
+
+.star-fill {
+  fill: green;
+}
