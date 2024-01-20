@@ -1,0 +1,62 @@
+[
+  {
+    "storeId": 1,
+    "productName": "Product1",
+    "ProductId": "1",
+    "category": "BURGERS",
+    "price": 4.99,
+    "descpription": "lorem ipsum....",
+    "ingredients": "lorem ipsum...",
+    "available": true,
+    "photo": "/assets/img/food.carousel3.jpg",
+    "storeName": "McDonald's"
+  },
+  {
+    "storeId": 1,
+    "productName": "Product2",
+    "ProductId": "2",
+    "category": "BURGERS",
+    "price": 4.99,
+    "descpription": "lorem ipsum....",
+    "ingredients": "lorem ipsum...",
+    "available": true,
+    "photo": "/assets/img/food.carousel3.jpg",
+    "storeName": "McDonald's"
+  },
+  {
+    "storeId": 1,
+    "productName": "Product3",
+    "ProductId": "3",
+    "category": "BURGERS",
+    "price": 4.99,
+    "descpription": "lorem ipsum....",
+    "ingredients": "lorem ipsum...",
+    "available": true,
+    "photo": "/assets/img/food.carousel3.jpg",
+    "storeName": "McDonald's"
+  },
+  {
+    "storeId": 1,
+    "productName": "Product4",
+    "ProductId": "4",
+    "category": "BURGERS",
+    "price": 4.99,
+    "descpription": "lorem ipsum....",
+    "ingredients": "lorem ipsum...",
+    "available": true,
+    "photo": "/assets/img/food.carousel3.jpg",
+    "storeName": "McDonald's"
+  },
+  {
+    "storeId": 1,
+    "productName": "Product5",
+    "ProductId": "5",
+    "category": "BURGERS",
+    "price": 4.99,
+    "descpription": "lorem ipsum....",
+    "ingredients": "lorem ipsum...",
+    "available": true,
+    "photo": "/assets/img/food.carousel3.jpg",
+    "storeName": "McDonald's"
+  }
+]

@@ -1,19 +1,39 @@
-<div class="container-fluid">
-  <br>
-  <h4>Our menu</h4>
-      <div class="row">
-        @for (product of products; track $index) {
-        <div class="col-md-4 col-xs-6">
-          <div class="card" style="margin-top: 30px;">
-
-            <div class="card-body">
-              <h5 class="card-title">{{product.name}}</h5>
-              <p class="card-text">{{product.category}}</p>
-              <p class="card-text">{{product.price}}</p>
-              <button class="btn btn-success" (click)="productButtonClicked(product)">Add to cart</button>
-            </div>
+<div class="container-fluid d-flex flex-column align-items-center">
+  <img
+    src="/assets/images/store-main-page.jpg"
+    alt="Store Main page Photo"
+    height="250px"
+  />
+  <br />
+  <h1>Our Menu</h1>
+  <div class="row">
+    @for (product of products; track $index) {
+    <div class="col-md-4 col-xs-6">
+      <div class="card" style="margin-top: 30px">
+        <div class="card-body d-flex align-items-center">
+          <img
+            class="menu-img"
+            alt="menu image"
+            src="assets/images/menu-card.jpg"
+          />
+          <!-- Product Details -->
+          <div class="product-details ml-3">
+            <h5 class="card-title">{{ product.name }}</h5>
+            <p class="card-text">{{ product.category }}</p>
+            <p class="card-text">{{ product.price }}</p>
           </div>
+
+          <!-- Counter Button -->
+          <button class="btn" (click)="productButtonClicked(product)">
+            <app-counter class="counter" />
+          </button>
         </div>
-        }
       </div>
     </div>
+    }
+  </div>
+
+  <button class="order-button" (click)="goToOrderPage()">
+    Review and Submit Order
+  </button>
+</div>
