@@ -30,7 +30,7 @@ export class AllPlacedOrdersComponent {
     });
   }
 
-  viewOrderDetails(OrderId: number) {
-    this.router.navigate(['/order', OrderId]);
+  viewOrderDetails(orderId: number) {
+    this.router.navigate(['/order', orderId]);
   }
 }
