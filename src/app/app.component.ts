@@ -13,6 +13,7 @@ import { NavigationBarComponent } from './core/navigation-bar/navigation-bar.com
 import { CartComponent } from './components/cart/cart.component';
 import { UserComponent } from './components/user/user.component';
 import { RegisterComponent } from './components/register/register.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -30,7 +31,10 @@ import { RegisterComponent } from './components/register/register.component';
     StoreProductsComponent,
     CartComponent,
     UserComponent,
-    RegisterComponent
+    RegisterComponent,
+    FormsModule,
+    ReactiveFormsModule,
+    
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],

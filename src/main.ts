@@ -11,15 +11,15 @@ bootstrapApplication(AppComponent, appConfig)
 
 @NgModule({
   declarations: [
-    AppComponent,
-    RegisterComponent
+   
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    ReactiveFormModule
+    AppComponent,
+    RegisterComponent
+   
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  
 })
 export class AppModule{}

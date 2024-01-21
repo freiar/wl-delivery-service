@@ -1,27 +1,37 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Injectable, inject } from '@angular/core';
 
+import { Injectable } from '@angular/core';
+import { Registration } from '../interfaces/registration';
 @Injectable({
   providedIn: 'root'
 })
-export class UserService {
-  private http = inject(HttpClient);
-  private endpointUrl = "https://reqres.in/api/users";
+export class RegistrationService {
+  
+  private registrations : Registration[] = [];
 
-  constructor() { }
-
-  getUsers() {
-    return this.http.get(this.endpointUrl);
+  // CRUD
+  getRegistrations(): Registration[] {
+    return this.registrations;
   }
 
-  getMostFamousUsers() {
-    let customHeaders = new HttpHeaders({
-      'fetch-type': 'most-famous-stores-in-general',
-    });
-    return this.http.get(this.endpointUrl, {headers: customHeaders});
+  getRegistration(id: number): Registration | undefined {
+    return this.registrations.find(res => res.id === id);
   }
 
-  getUserById(id: number) {
-    return this.http.get(this.endpointUrl + "/" + id);
+  addRegistration(registration: Registration): void {
+    this.registrations.push(registration);
   }
+
+  deleteRegistration(id:number): void {
+    let index = this.registrations.findIndex(res=> res.id === id);
+    this.registrations.splice(index,1)
+  }
+
+  updateRegistration(updatedRegistration: Registration): void {
+    let index = this.registrations.findIndex(res => res.id === updatedRegistration.id);
+    this.registrations[index] = updatedRegistration;
+  }
+
+  
+
+  
 }
