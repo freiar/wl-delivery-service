@@ -87,18 +87,27 @@ h1 {
   margin-bottom: 30px;
 }
 
-
-@media screen and (max-width: 575px) {
-
+@media screen and (max-width: 991px) {
   .card h5 {
     font-size: 1.1rem;
   }
+
+  .card-text {
+    font-size: .9rem;
+  }
+
+  .product-details {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 575px) {
 
   .product-details {
     width: 50%;
   }
 
-  .card-text {
-    font-size: .9rem;
+  .card-body {
+    height: auto;
   }
 }
