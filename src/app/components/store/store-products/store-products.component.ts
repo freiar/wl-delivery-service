@@ -1,11 +1,13 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, Input, OnInit, inject } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { Product } from '../../../interfaces/product';
 import { AddToCartPublisherService } from '../../../services/add.to.cart.publisher.service';
-import { map } from 'rxjs';
 import { StoreService } from '../../../services/store.service';
 import { CartComponent } from '../../cart/cart.component';
-import { CounterComponent } from '../../counter/counter.component';
+import {
+  CounterComponent,
+  CounterUpdate,
+} from '../../counter/counter.component';
 
 @Component({
   selector: 'app-store-products',
@@ -14,14 +16,18 @@ import { CounterComponent } from '../../counter/counter.component';
   styleUrl: './store-products.component.css',
   imports: [CartComponent, RouterLink, CounterComponent],
 })
-export class StoreProductsComponent {
+export class StoreProductsComponent implements OnInit {
   activatedRoute: ActivatedRoute = inject(ActivatedRoute);
   storeService: StoreService = inject(StoreService);
 
-  products: Product[] = [];
-  addToCartPublisherService = inject(AddToCartPublisherService);
+  @Input() products: Product[] = [];
+  @Input() isOrderPage: boolean = false;
+  @Input() isOrder: boolean = false;
 
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private addToCartPublisherService: AddToCartPublisherService
+  ) {}
 
   ngOnInit() {
     this.activatedRoute.params.subscribe({
@@ -33,7 +39,13 @@ export class StoreProductsComponent {
     });
   }
 
-  productButtonClicked(product: Product) {
+  // Handle the count change event from the CounterComponent
+  onCounterChange(
+    product: Product,
+    event: { productId: number; count: number }
+  ): void {
+    // Update the count of the specific product and publish the changes
+    product.count = event.count;
     this.addToCartPublisherService.publishProduct(product);
   }
 

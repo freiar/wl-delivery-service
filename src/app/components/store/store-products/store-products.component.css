@@ -11,6 +11,7 @@ img {
   border: 3px solid white;
   box-shadow: 5px 5px 10px rgba(22, 22, 22, 0.5);
   object-fit: cover;
+  margin-top: 20px;
 }
 
 .menu-img {
@@ -74,7 +75,7 @@ h1 {
   color: #e5ad05;
 }
 
-.btn {
+.counter {
   background-color: white;
   border: none;
 }
@@ -93,7 +94,7 @@ h1 {
   }
 
   .card-text {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 
   .product-details {
@@ -102,7 +103,6 @@ h1 {
 }
 
 @media screen and (max-width: 575px) {
-
   .product-details {
     width: 50%;
   }

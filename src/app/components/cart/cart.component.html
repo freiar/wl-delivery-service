@@ -1,14 +1,15 @@
-<div class="cart-container">
-  <h1>Cart</h1>
-  <!-- <p>products: {{ cartProducts.length }}</p> -->
-  <div *ngFor="let p of cartProducts; let i = index">
-    <h5>{{ p.name }}</h5>
-    <span> Price: $ {{ p.price }}</span>
-    <p>Product Quantity: {{ cartProducts.length }}</p>
-    <hr class="hr" />
-
-    <!-- <button (click)="removeProduct(p.id)">x</button> -->
+<div class="container-fluid cart-container">
+  <h1 [ngClass]="{ 'order-page': isOrderPage }">Cart</h1>
+  <div *ngIf="cartProducts && cartProducts.length > 0">
+    <div *ngFor="let cartItem of cartProducts; let i = index">
+      <h5>{{ cartItem.name }}</h5>
+      <span> Price: $ {{ cartItem.price }}</span>
+      <p>Product Quantity: {{ cartItem.count || 1 }}</p>
+      <hr class="hr" />
+    </div>
+    <strong>Total Price: $ {{ totalPrice }}</strong>
   </div>
-
-  <strong>Total Price: $ {{ getTotal() }}</strong>
+  <div class="empty" *ngIf="!cartProducts || cartProducts.length === 0">
+    Your cart is empty.
+  </div>
 </div>

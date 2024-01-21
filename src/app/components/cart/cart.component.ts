@@ -1,7 +1,8 @@
-import { Component, inject } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { AddToCartPublisherService } from '../../services/add.to.cart.publisher.service';
 import { Product } from '../../interfaces/product';
 import { CommonModule } from '@angular/common';
+import { CartOrderPageService } from '../../services/cart-order-page.service';
 
 @Component({
   selector: 'app-cart',
@@ -11,23 +12,61 @@ import { CommonModule } from '@angular/common';
   styleUrl: './cart.component.css',
 })
 export class CartComponent {
-  addToCartPublisherService = inject(AddToCartPublisherService);
+  @Input() isOrderPage: boolean = false;
+
   cartProducts: Product[] = [];
+  totalPrice: number = 0;
 
-  constructor() {
-    this.addToCartPublisherService.listenForProduct().subscribe((data) => {
-      this.cartProducts.push(data);
+  constructor(
+    private addToCartPublisherService: AddToCartPublisherService,
+    private cartOrderPage: CartOrderPageService
+  ) {}
+
+  ngOnInit(): void {
+    this.cartOrderPage.cart$.subscribe((cart: any) => {
+      this.cartProducts = cart;
+      this.calculateTotalPrice();
     });
+
+    this.addToCartPublisherService
+      .listenForProduct()
+      .subscribe((product: Product) => {
+        this.defineProductAction(product);
+      });
   }
 
-  getTotal() {
-    let total: number = 0;
-    this.cartProducts.forEach((p) => (total += p.price));
+  private defineProductAction(product: Product) {
+    let productIndex = this.findIndexOfProductInCart(product);
+    if (productIndex >= 0) {
+      let existingProduct = this.cartProducts[productIndex];
+      existingProduct.count = product.count;
+      if (existingProduct.count === 0) {
+        this.cartProducts.splice(productIndex, 1);
+      }
+    } else {
+      this.cartProducts.push(product);
+    }
+    this.calculateTotalPrice();
 
-    return Math.round(total * 100) / 100;
+    // Update the service only after modifying the array
+    this.cartOrderPage.updateCart(this.cartProducts);
   }
 
-  removeProduct(id: number) {
-    this.cartProducts = this.cartProducts.filter((p) => p.id != id);
+  private findIndexOfProductInCart(product: Product): number {
+    return this.cartProducts.findIndex(
+      (cartProduct) => cartProduct.id === product.id
+    );
+  }
+
+  calculateTotalPrice() {
+    let price = 0;
+    for (let cartProduct of this.cartProducts) {
+      if (cartProduct.count !== undefined) {
+        price += cartProduct.price * cartProduct.count;
+      }
+    }
+
+    // Round the total price to two decimal places
+    this.totalPrice = Number(price.toFixed(2));
   }
 }
