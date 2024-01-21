@@ -7,15 +7,11 @@
   <br />
   <h1>Our Menu</h1>
   <div class="row">
-    @for (product of products; track $index) {
-    <div class="col-md-6 col-xs-2">
-      <div class="card" style="margin-top: 30px">
+    <div class="col-md-9">
+      @for (product of products; track $index) {
+      <div class="card">
         <div class="card-body d-flex align-items-center">
-          <img
-            class="menu-img"
-            alt="menu image"
-            src="assets/images/menu-card.jpg"
-          />
+          <img class="menu-img" alt="menu image" src="assets/images/menu-card.jpg" />
           <!-- Product Details -->
           <div class="product-details">
             <h5 class="card-title">{{ product.name }}</h5>
@@ -29,11 +25,13 @@
           </button>
         </div>
       </div>
+      }
     </div>
-    }
+    <div class="col-md-3">
+      <app-cart />
+    </div>
   </div>
 
-  <app-cart />
 
   <button class="order-button" (click)="goToOrderPage()">
     Review and Submit Order
