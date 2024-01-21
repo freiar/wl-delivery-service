@@ -11,18 +11,7 @@ import {
   import { RegistrationService } from '../../services/registration.service';
 
 import { Registration } from '../../interfaces/registration';
-/*
-@NgModule({
-  declarations: [
-    RegisterComponent
-  ],
-  imports: [
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    
-  ] 
-}),*/
+
 
 
 @Component({
@@ -43,10 +32,10 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
       this.registerForm = this.fromBuilder.group({
-        firstname: ['', [Validators.required, Validators.email, Validators.pattern('[a-zA-Z]+$')]],
+        firstname: ['', Validators.required],
         lastname: ['', Validators.required],
         email: ['', [Validators.required, Validators.email]],
-        telephone: ['', [Validators.required, Validators.pattern('0-9')]]
+        mobile: ['', [Validators.required, Validators.pattern("^((\\+91-?) |0)?[0-9]{10}$")]]
       })
   }
   onSubmit() {
@@ -58,57 +47,5 @@ export class RegisterComponent implements OnInit {
     }
   } }
   
-  
 
-  
-  /*ngOnInit(): void {
-    this.userService
-      .getUsers()
-      .pipe(map((response: any) => response.data))
-      .subscribe({
-        next: (response) => {
-          setTimeout(() => {
-            console.log(response);
-            this.users = response;
-            this.hasLoaded = true;
-          }, 200);
-        },
-      });
-  } */
-
-
-  
-
- /* register(registerForm: NgForm) {
-    console.log(registerForm);
-  }
-
-  viewUserDetails(id: number) {
-    console.log('hello');
-    this.router.navigate(['users', id]);
-  }
-
-  onLastnameChange(change: any) {
-    console.log(change);
-  }
-
-  submit() {
-    console.warn(this.registerForm.value);
-  }
-
-  firstname() {
-    return this.registerForm.get('firstname');
-  }
-  lastname() {
-    return this.registerForm.get('lastname');
-  }
-  email() {
-    return this.registerForm.get('email');
-  }
-  mobile() {
-    return this.registerForm.get('mobile');
-  }
-  registerSubmited() {
-    console.log(this.registerForm.value);
-  }*/
 

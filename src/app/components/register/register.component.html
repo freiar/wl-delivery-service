@@ -20,11 +20,11 @@
           class="form-control"
           id="firstname"
           formControlName="firstname"
-          ngModel
+          
          
           required
         />
-        <br />
+        
         <div *ngIf="registerForm.get('firstname')?.invalid && registerForm.get('firstname')?.touched">
         Firstname is required</div>
 
@@ -61,7 +61,7 @@
             class="form-control"
             id="email"
             formControlName="email"
-            ngModel
+            
             
             required
           />
@@ -73,12 +73,12 @@
           <div>
             <label for="mobile" form="form-label">Telephone</label>
             <input
-            type="text"
+            type="number"
             placeholder="Enter phone number"
             class="form-control"
             id="mobile"
             formControlName="mobile"
-            ngModel
+            
             
             required>
             <div *ngIf="registerForm.get('mobile')?.invalid && registerForm.get('mobile')?.touched">
