@@ -1,5 +1,17 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  Output,
+  SimpleChanges,
+} from '@angular/core';
 import { Product } from '../../interfaces/product';
+
+export interface CounterUpdate {
+  id: number;
+  count: number;
+  index?: number;
+}
 
 @Component({
   selector: 'app-counter',
@@ -16,11 +28,9 @@ export class CounterComponent {
 
   // Output property to emit changes in count back to the parent component.
   @Output() countChange = new EventEmitter<{
-    id: number;
+    productId: number;
     count: number;
   }>();
-
-  constructor() {}
 
   // Method to increment the count and emit the updated count to the parent component.
   increment(): void {
@@ -29,6 +39,7 @@ export class CounterComponent {
   }
 
   // Method to decrement the count (if it's greater than 0) and emit the updated count to the parent component.
+
   decrement(): void {
     if (this.count > 0) {
       this.count--;
@@ -39,7 +50,7 @@ export class CounterComponent {
   // Private method to emit the count change event with the productId and the updated count.
   private emitCountChange() {
     this.countChange.emit({
-      id: this.product?.id || 0,
+      productId: this.product?.id || 0,
       count: this.count,
     });
   }

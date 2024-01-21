@@ -1,30 +1,32 @@
-import { Product } from './../interfaces/product';
 import { Injectable } from '@angular/core';
-import { Observable, Subject, catchError, throwError } from 'rxjs';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { BehaviorSubject, Observable, throwError } from 'rxjs';
+import { Product } from '../interfaces/product';
+import { HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { CartUpdate } from '../interfaces/cart-update';
 
 @Injectable({
   providedIn: 'root',
 })
-export class AddToCartPublisherService {
-  private addToCartPublisher = new Subject<Product>();
-  private cartSubject = new Subject<CartUpdate>();
+export class CartOrderPageService {
+  // Subject to manage the state of the shopping cart
+  private cartSubject = new BehaviorSubject<Product[]>([]);
+  // Observable exposed for components to subscribe to changes in the cart
+  public cart$: Observable<Product[]> = this.cartSubject.asObservable();
 
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(private router: Router) {}
 
-  publishProduct(data: Product) {
-    this.addToCartPublisher.next(data);
+  // Getter function to retrieve the current state of the cart
+  getCart(): Product[] {
+    return this.cartSubject.getValue();
   }
 
-  listenForProduct(): Observable<Product> {
-    return this.addToCartPublisher.asObservable();
-  }
+  // Function to update the cart state and notify subscribers
+  updateCart(products: Product | Product[]): void {
+    // Check if it's a single product or an array of products
+    const updatedCart = Array.isArray(products) ? products : [products];
 
-  updateCart(update: CartUpdate): void {
-    console.log('Updating cart:', update);
-    this.cartSubject.next(update);
+    // Update the cart state
+    this.cartSubject.next(updatedCart);
   }
 
   private handleError(error: HttpErrorResponse): Observable<never> {
