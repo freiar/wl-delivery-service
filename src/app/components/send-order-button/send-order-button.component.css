@@ -6,45 +6,13 @@ button {
   padding-right: 15px;
   padding-top: 10px;
   padding-bottom: 10px;
-  margin-left: 550px;
   margin-top: 100px;
   border: none;
+  font-size: 20px;
+  width: 250px;
 }
 
 button:hover {
   background-color: grey;
   color: #e5ad05;
-}
-
-/* Media Queries for Extra Small, Small, and Medium Screens */
-@media screen and (max-width: 575px) {
-  button {
-    margin-left: 140px;
-  }
-}
-
-@media screen and (min-width: 576px) and (max-width: 767px) {
-  button {
-    margin-left: 170px;
-  }
-}
-
-/* Media Queries for Large and Extra Large Screens */
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  button {
-    margin-left: 250px;
-  }
-}
-
-@media screen and (min-width: 992px) and (max-width: 1199px) {
-  button {
-    margin-left: 350px;
-  }
-}
-
-/* Media Queries for Extra Large Screens */
-@media screen and (min-width: 1200px) {
-  button {
-    margin-left: 550px;
-  }
 }
