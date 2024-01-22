@@ -1,1 +1,107 @@
-<p>register works!</p>
+<div class="container">
+  <form
+    [formGroup]="registerForm"
+    
+    (ngSubmit)="onSubmit()"
+    class="border p-3 rounded-3"
+  >
+    <div class="row g-0">
+      <div class="col text-center p-2 mb-3 bg-light">
+        <span class="fs-3">Register</span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <label for="firstname" form="label">First Name</label>
+        <input
+          type="text"
+          placeholder="Enter firstname"
+          class="form-control"
+          id="firstname"
+          formControlName="firstname"
+          
+         
+          required
+        />
+        
+        <div *ngIf="registerForm.get('firstname')?.invalid && registerForm.get('firstname')?.touched">
+        Firstname is required</div>
+
+       
+
+       
+      </div>
+      <div class="col">
+        <label for="lastname" form="label">Last Name</label>
+        <input
+          type="text"
+          placeholder="Enter lastname"
+          class="form-control"
+          id="lastname"
+          formControlName="lastname"
+          
+          required
+        />
+        
+
+        <div *ngIf="registerForm.get('lastname')?.invalid && registerForm.get('lastname')?.touched">
+          Lastname is required</div>
+
+        
+        
+      </div>
+
+      <div class="row">
+        <div class="col mb-3">
+          <label for="email" form="form-label">Email Address</label>
+          <input
+            type="email"
+            placeholder="Enter email"
+            class="form-control"
+            id="email"
+            formControlName="email"
+            
+            
+            required
+          />
+          <div *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched">
+            Email is required</div>
+
+          <div class="form-text"></div>
+
+          <div>
+            <label for="mobile" form="form-label">Telephone</label>
+            <input
+            type="number"
+            placeholder="Enter phone number"
+            class="form-control"
+            id="mobile"
+            formControlName="mobile"
+            
+            
+            required>
+            <div *ngIf="registerForm.get('mobile')?.invalid && registerForm.get('mobile')?.touched">
+            Telephone is required </div>
+          </div>
+
+          <div class="form-text"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-6-offset-3">
+        <div class="d-grid">
+          <button 
+            type="submit"
+            [disabled]="registerForm.invalid"
+      
+            class="btn btn-primary">
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

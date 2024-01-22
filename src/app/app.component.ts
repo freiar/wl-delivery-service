@@ -11,7 +11,13 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
 import { StoreProductsComponent } from './components/store/store-products/store-products.component';
 import { NavigationBarComponent } from './core/navigation-bar/navigation-bar.component';
 import { CartComponent } from './components/cart/cart.component';
+
+import { UserComponent } from './components/user/user.component';
+import { RegisterComponent } from './components/register/register.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { HeaderComponent } from "./core/header/header.component";
+
 
 @Component({
   selector: 'app-root',
@@ -26,10 +32,18 @@ import { HeaderComponent } from "./core/header/header.component";
     AboutUsComponent,
     StoreProductsComponent,
     CartComponent,
+
+    UserComponent,
+    RegisterComponent,
+    FormsModule,
+    ReactiveFormsModule,
+    
+
     FooterComponent,
     ContactComponent,
     RegisterComponent,
     HeaderComponent
+
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
