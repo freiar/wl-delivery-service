@@ -1,4 +1,7 @@
-<div class="container-fluid">
-  <app-cart class="cart" [isOrderPage]="true" />
+<div class="container-fluid align-items-center">
+  <h1 class="order">Order</h1>
+  <div class="cart-container">
+    <app-cart class="cart col-md-10 col-sm-12" [isOrderPage]="true" />
+  </div>
   <app-send-order-button class="button" />
 </div>

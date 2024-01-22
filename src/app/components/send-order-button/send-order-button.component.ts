@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Product } from '../../interfaces/product';
 import { Order } from '../../interfaces/order';
 import { Store } from '../../interfaces/store';
@@ -11,7 +11,7 @@ import { CartService } from '../../services/cart.service';
   templateUrl: './send-order-button.component.html',
   styleUrl: './send-order-button.component.css',
 })
-export class SendOrderButtonComponent {
+export class SendOrderButtonComponent implements OnInit {
   product: Product[] = [];
   order: Order[] = [];
   store: Store[] = [];
