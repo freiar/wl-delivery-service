@@ -1,7 +1,7 @@
 import { RegisterComponent } from './components/register/register.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './core/footer/footer.component';
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
@@ -11,7 +11,7 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
 import { StoreProductsComponent } from './components/store/store-products/store-products.component';
 import { NavigationBarComponent } from './core/navigation-bar/navigation-bar.component';
 import { CartComponent } from './components/cart/cart.component';
-import { HeaderComponent } from "./core/header/header.component";
+import { HeaderComponent } from './core/header/header.component';
 
 @Component({
   selector: 'app-root',
@@ -29,7 +29,7 @@ import { HeaderComponent } from "./core/header/header.component";
     FooterComponent,
     ContactComponent,
     RegisterComponent,
-    HeaderComponent
+    HeaderComponent,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],

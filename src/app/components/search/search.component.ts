@@ -50,7 +50,7 @@ export class SearchComponent implements OnDestroy {
       .subscribe({
         next: (store) => {
           if (store) {
-            this.router.navigate(['/store-main', name]); // Navigate to store if found
+            this.router.navigate(['/storeProducts', store.id]); // Navigate to store if found
           } else {
             this.router.navigate(['/error404']); // Navigate to error404 if store not found
           }
