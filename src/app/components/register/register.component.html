@@ -1,7 +1,6 @@
 <div class="container">
   <form
     [formGroup]="registerForm"
-    
     (ngSubmit)="onSubmit()"
     class="border p-3 rounded-3"
   >
@@ -20,17 +19,17 @@
           class="form-control"
           id="firstname"
           formControlName="firstname"
-          
-         
           required
         />
-        
-        <div *ngIf="registerForm.get('firstname')?.invalid && registerForm.get('firstname')?.touched">
-        Firstname is required</div>
 
-       
-
-       
+        <div
+          *ngIf="
+            registerForm.get('firstname')?.invalid &&
+            registerForm.get('firstname')?.touched
+          "
+        >
+          Firstname is required
+        </div>
       </div>
       <div class="col">
         <label for="lastname" form="label">Last Name</label>
@@ -40,16 +39,17 @@
           class="form-control"
           id="lastname"
           formControlName="lastname"
-          
           required
         />
-        
 
-        <div *ngIf="registerForm.get('lastname')?.invalid && registerForm.get('lastname')?.touched">
-          Lastname is required</div>
-
-        
-        
+        <div
+          *ngIf="
+            registerForm.get('lastname')?.invalid &&
+            registerForm.get('lastname')?.touched
+          "
+        >
+          Lastname is required
+        </div>
       </div>
 
       <div class="row">
@@ -61,28 +61,36 @@
             class="form-control"
             id="email"
             formControlName="email"
-            
-            
             required
           />
-          <div *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched">
-            Email is required</div>
+          <div
+            *ngIf="
+              registerForm.get('email')?.invalid &&
+              registerForm.get('email')?.touched
+            "
+          >
+            Email is required
+          </div>
 
           <div class="form-text"></div>
 
           <div>
             <label for="mobile" form="form-label">Telephone</label>
             <input
-            type="number"
-            placeholder="Enter phone number"
-            class="form-control"
-            id="mobile"
-            formControlName="mobile"
-            
-            
-            required>
-            <div *ngIf="registerForm.get('mobile')?.invalid && registerForm.get('mobile')?.touched">
-            Telephone is required </div>
+              placeholder="Enter phone number"
+              class="form-control"
+              id="mobile"
+              formControlName="mobile"
+              required
+            />
+            <div
+              *ngIf="
+                registerForm.get('mobile')?.invalid &&
+                registerForm.get('mobile')?.touched
+              "
+            >
+              Telephone is required
+            </div>
           </div>
 
           <div class="form-text"></div>
@@ -93,11 +101,11 @@
     <div class="row">
       <div class="col-6-offset-3">
         <div class="d-grid">
-          <button 
+          <button
             type="submit"
             [disabled]="registerForm.invalid"
-      
-            class="btn btn-primary">
+            class="btn btn-primary"
+          >
             Submit
           </button>
         </div>
