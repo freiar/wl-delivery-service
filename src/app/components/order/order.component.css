@@ -5,15 +5,14 @@
 
 .heading {
   text-align: center;
-  margin-top: 30px;
+  padding-top: 130px;
   color: white;
   font-size: 45px;
   font-weight: 600;
 }
 
-.inner-container {
-  width: 50%;
-  margin: 0 auto;
+.container-fluid {
+  margin-top: -30px;
 }
 
 .inner-box {
@@ -23,7 +22,9 @@
   margin-top: 70px;
   box-shadow: 15px 15px 5px rgba(22, 22, 22, 0.5);
   min-width: 200px;
-  margin-right: 120px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 50%;
 }
 
 .inner-box p {

@@ -8,7 +8,7 @@ export interface Order {
   paymentInfo: string;
   products: string;
   photo: string;
-  storeName: string;
+  store: string;
   storeId: number;
 }
 

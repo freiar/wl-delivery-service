@@ -35,7 +35,6 @@ export class OrderPageComponent implements OnInit {
 
   constructor(
     private orderService: OrderService,
-    // private productService: ProductService,
     private cartService: CartService,
     private storeService: StoreService
   ) {}
