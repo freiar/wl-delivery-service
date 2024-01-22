@@ -33,16 +33,7 @@ export class AllPlacedOrdersComponent implements OnInit {
     });
   }
 
-  viewOrderDetails(orderId: string) {
-    // Use getOrderById to fetch details of a single order
-    this.orderService.getOrderById(orderId).subscribe({
-      next: (orderDetails) => {
-        // Now you can navigate to a page or display the details as needed
-        console.log('Order Details:', orderDetails);
-      },
-      error: (error) => {
-        console.error('Error fetching order details:', error);
-      },
-    });
+  viewOrderDetails(orderId: number) {
+    this.router.navigate(['/order', orderId]);
   }
 }
