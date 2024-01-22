@@ -1,4 +1,4 @@
-import { RegisterComponent } from './components/register/register.component';
+
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { Component, inject } from '@angular/core';

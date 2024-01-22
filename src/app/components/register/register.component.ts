@@ -8,9 +8,12 @@ import {
   NgForm,
   ReactiveFormsModule,
   Validators} from '@angular/forms';
-  import { RegistrationService } from '../../services/registration.service';
+import { RegistrationService } from '../../services/registration.service';
 
 import { Registration } from '../../interfaces/registration';
+import { Router } from '@angular/router';
+import { User } from '../../interfaces/user';
+import { UserService } from '../../services/user.service';
 
 
 
@@ -19,14 +22,19 @@ import { Registration } from '../../interfaces/registration';
   standalone: true,
   imports: [CommonModule, FormsModule, ReactiveFormsModule],
   templateUrl: './register.component.html',
-  styleUrl: './register.component.css',
+  styleUrl: './register.component.css'
 })
 export class RegisterComponent implements OnInit {
   registerForm: FormGroup = new FormGroup({});
+  isUserRegistered: boolean = false;
+  
 
   constructor(
     private fromBuilder: FormBuilder,
-    private registrationService: RegistrationService) {
+    private registrationService: RegistrationService,
+    private router: Router,
+    private userService: UserService
+    ) {
 
   }
 
@@ -45,7 +53,28 @@ export class RegisterComponent implements OnInit {
       this.registrationService.addRegistration(registration)
       console.log("valid")
     }
-  } }
+  }
+  navigateToHome() {
+    this.router.navigate(['/home']);
+  }
+
+  registerUser() {
+    this.isUserRegistered = true;
+    const registeredUser: User = {
+      'first_name': this.registerForm.value.firstname,
+      id: 0,
+      avatar: '',
+      last_name: '',
+      email: '',
+      disabled: false
+    };
+  
+    this.userService.setRegisteredUser(registeredUser);
+    // Other registration logic as needed
+    
+  }
+
+}
   
 
 

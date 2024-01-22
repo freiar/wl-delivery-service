@@ -4,5 +4,6 @@ export interface Registration {
     firstname: string;
     lastname: string;
     email: string;
+    mobile: number;
     disabled: boolean;
 }

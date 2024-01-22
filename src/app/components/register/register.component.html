@@ -73,7 +73,7 @@
           <div>
             <label for="mobile" form="form-label">Telephone</label>
             <input
-            type="number"
+            type="tel"
             placeholder="Enter phone number"
             class="form-control"
             id="mobile"
@@ -97,7 +97,7 @@
             type="submit"
             [disabled]="registerForm.invalid"
       
-            class="btn btn-primary">
+            class="btn btn-primary" (click)="registerUser(); navigateToHome()">
             Submit
           </button>
         </div>
