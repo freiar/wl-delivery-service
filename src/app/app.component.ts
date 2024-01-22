@@ -29,7 +29,6 @@ import { HeaderComponent } from './core/header/header.component';
     StoreProductsComponent,
     CartComponent,
     UserComponent,
-    RegisterComponent,
     FormsModule,
     ReactiveFormsModule,
     FooterComponent,
