@@ -2,67 +2,49 @@
     {
         "id": 1,
         "name": "McDonald's",
-        "category": "FAST_FOOD",
-        "address": "Syntagma 15" 
-    },
-    {
-        "id": 12,
-        "name": "Pizza Fan",
-        "category": "PIZZA",
-        "address": "Ippokrateiou 35" 
-    },
-    {
-        "id": 8,
-        "name": "Roma Pizza",
-        "category": "PIZZA",
-        "address": "Menelaou 22" 
-    },
-    {
-        "id": 105,
-        "name": "Goodys Burger House",
-        "category": "FAST_FOOD",
-        "address": "Ampelokipous 23rd Av."
-    },
-    {
-        "id": 80,
-        "name": "The Big Bad Wolf",
-        "category": "SOUVLAKI",
-        "address": "Agioi Anargiroi 98" 
-    },
-    {
-        "id": 34,
-        "name": "Mikel",
-        "category": "COFFEE",
-        "address": "Ampelokipoi 72" 
+        "category": "Fast Food",
+        "address": "Syntagma 15",
+        "image": "/assets/images/goodys.jpg",
+        "rate": 5
     },
     {
         "id": 2,
         "name": "StreetWok",
-        "category": "ASIAN",
-        "address": "Glyfada Str. 203"
-    },
-    {
-        "id": 4,
-        "name": "Coffee Lab",
-        "category": "COFFEE",
-        "address": "Athinaion 15" 
-    },
-    {
-        "id": 5,
-        "name": "Gregory",
-        "category": "COFFEE",
-        "address": "Agisilaou 222" 
+        "category": "Asian",
+        "address": "Glyfada Str. 203",
+        "image": "/assets/images/goodys.jpg",
+        "rate": 5
     },
     {
         "id": 3,
         "name": "Nanou Donuts House",
-        "category": "DONUTS",
-        "address": "Ampelokipous 23rd Av."
+        "category": "Donuts",
+        "address": "Ampelokipous 23rd Av.",
+        "image": "/assets/images/goodys.jpg",
+        "rate": 5
     },
     {
-        "id": 18,
-        "name": "FoodTek",
-        "category": "OTHER",
-        "address": "Ioanninon 14" 
+        "id": 12,
+        "name": "Pizza Fan",
+        "category": "Pizza",
+        "address": "Ippokrateiou 35" ,
+        "image": "/assets/images/goodys.jpg",
+        "rate": 5
+    },
+    {
+        "id": 8,
+        "name": "Roma Pizza",
+        "category": "Pizza",
+        "address": "Menelaou 22" ,
+        "image": "/assets/images/goodys.jpg",
+        "rate": 5
+    },
+    {
+        "id": 105,
+        "name": "Goodys Burger House",
+        "category": "Fast Food",
+        "address": "Ampelokipous 23rd Av.",
+        "image": "/assets/images/goodys.jpg",
+        "rate": 5
     }
 ]

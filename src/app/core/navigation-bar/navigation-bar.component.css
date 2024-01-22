@@ -1,5 +1,8 @@
+.dropdown-menu h6 {
+  font-size: 1rem;
+}
 
-form {
-    justify-content: center;
-    align-content:center;
+.navbar-brand {
+  color: green;
+  font-weight: bold;
 }

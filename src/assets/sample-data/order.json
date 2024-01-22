@@ -1,0 +1,41 @@
+[
+  {
+    "orderId": "1",
+    "customerId": "1",
+    "orderDate": "...",
+    "price": 4.99,
+    "statusOfOrder": "lorem ipsum....",
+    "ingredients": "lorem ipsum...",
+    "paymentInfo": "...",
+    "products": "products list",
+    "photo": "/assets/images/store-order.jpg",
+    "store": "StreetWok",
+    "storeId": "1"
+  },
+  {
+    "orderId": "2",
+    "customerId": "1",
+    "orderDate": "...",
+    "price": 4.99,
+    "statusOfOrder": "lorem ipsum....",
+    "ingredients": "lorem ipsum...",
+    "paymentInfo": "...",
+    "products": "products list",
+    "photo": "/assets/images/store-order2.jpg",
+    "store": "Nanou Donuts House",
+    "storeId": "2"
+  },
+  {
+    "orderId": "3",
+    "customerId": "1",
+    "orderDate": "...",
+    "price": 4.99,
+    "statusOfOrder": "lorem ipsum....",
+    "ingredients": "lorem ipsum...",
+    "paymentInfo": "...",
+    "products": "products list",
+    "photo": "/assets/images/store-order3.jpg",
+    "store": "McDonald's",
+    "storeId": "3"
+  }
+]

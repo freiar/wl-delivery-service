@@ -1,0 +1,63 @@
+.container-fluid {
+  font-family: Arial, sans-serif;
+  background-color: #13482f;
+  padding: 30px;
+  border: 8px solid #e50909;
+}
+
+.error-code {
+  font-size: 6em;
+  color: #e50909;
+  justify-content: center;
+  text-align: center;
+  padding-top: 200px;
+}
+
+.error-message {
+  font-size: 1.5em;
+}
+
+.back-home-link {
+  text-decoration: none;
+  color: #13482f;
+  font-weight: bold;
+  display: inline-block;
+}
+
+img {
+  height: 150px;
+  width: 150px;
+}
+
+h1 {
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.image {
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+.link {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 70px;
+}
+
+a {
+  text-decoration: none;
+  color: grey;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #e5ad05;
+}

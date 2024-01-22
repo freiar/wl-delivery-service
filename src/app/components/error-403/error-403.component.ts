@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-error-403',
+  selector: 'app-error403',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './error-403.component.html',
-  styleUrl: './error-403.component.css'
+  styleUrl: './error-403.component.css',
 })
-export class Error403Component {
-
-}
+export class Error403Component {}

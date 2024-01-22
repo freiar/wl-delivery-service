@@ -1,0 +1,178 @@
+* {
+  background-color: #13482f;
+}
+
+.footer {
+  padding-top: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.footer-logo img {
+  width: 70px;
+  margin-right: 50px;
+}
+
+.footer-logo p {
+  color: white;
+  font-size: 46px;
+  font-weight: 700;
+  margin-left: -100px;
+  justify-content: center;
+}
+
+.footer-links {
+  display: block;
+  list-style: none;
+  gap: 50px;
+  color: grey;
+  font-size: 20px;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.footer-links li {
+  cursor: pointer;
+}
+
+.footer-social-icon {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-icons-container {
+  padding: 10px;
+  padding-bottom: 4px;
+  background: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 50px;
+}
+
+.footer-icons-container:hover,
+.footer-icons-container:active {
+  box-shadow: 7px 7px 10px rgba(15, 15, 15, 0.5);
+  background: white;
+  border: 5px solid #e5ad05;
+  padding-top: 6px;
+}
+
+.footer-social-icons img {
+  margin-left: 10px;
+}
+
+.col-md-6 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  margin-bottom: 35px;
+  margin-left: 10px;
+}
+
+.col-md-6 h4,
+.col-md-6 ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.col-md-6 h4 {
+  margin-bottom: 10px;
+}
+
+.footer-copyright {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  margin-bottom: 30px;
+  color: #1a1a1a;
+  font-size: 20px;
+}
+
+.footer-copyright hr {
+  width: 80%;
+  border: none;
+  border-radius: 10px;
+  height: 3px;
+  background: white;
+}
+
+p {
+  margin-left: 10px !important;
+}
+
+.footer-links a {
+  color: grey;
+  text-decoration: none;
+}
+
+.footer-links a:hover,
+.footer-links a:active {
+  color: #e5ad05;
+}
+
+h4 {
+  color: #e5ad05;
+  text-align: center;
+  justify-content: center;
+}
+
+.white-hr {
+  color: white;
+}
+
+.copyright-color {
+  color: grey;
+}
+
+a img {
+  width: 30px;
+  height: 30px;
+  color: white;
+  background-color: white;
+}
+
+a img:hover {
+  background-color: white;
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+footer .green-background {
+  display: inline-block;
+  background-color: white;
+  padding: -15px;
+  border-radius: 50%;
+  margin-left: 900px;
+  margin-top: -220px;
+  transition: background-color 0.3s ease;
+  width: 40px;
+  height: 40px;
+  box-shadow: 10px 10px 10px rgba(15, 15, 15, 0.5);
+}
+
+footer .green-background:hover {
+  background-color: #e5ad05;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.about {
+  margin-right: 30px;
+}

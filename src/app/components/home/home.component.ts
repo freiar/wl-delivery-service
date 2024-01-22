@@ -1,13 +1,26 @@
-import { Component } from '@angular/core';
-import { StoreComponent } from "../store/store.component";
+import { Component, Inject } from '@angular/core';
+import { StoreComponent } from '../store/store.component';
+import { TopStoresDrinkComponent } from '../top-stores-drink/top-stores-drink.component';
+import { DOCUMENT } from '@angular/common';
+import { RouterLink, RouterOutlet } from '@angular/router';
+import { TopStoresFoodComponent } from '../top-stores-food/top-stores-food.component';
+import { HeaderComponent } from "../../core/header/header.component";
+import { FamousStoresGeneralComponent } from "../famous-stores-general/famous-stores-general.component";
+
 
 @Component({
     selector: 'app-home',
     standalone: true,
     templateUrl: './home.component.html',
     styleUrl: './home.component.css',
-    imports: [StoreComponent]
+    imports: [StoreComponent, RouterLink, RouterOutlet, HeaderComponent, FamousStoresGeneralComponent]
 })
 export class HomeComponent {
+  constructor(@Inject(DOCUMENT) private document: Document) {}
 
+  // Method to scroll to the top of the page when called.
+  scrollToTop() {
+    this.document.body.scrollTop = 0;
+    this.document.documentElement.scrollTop = 0;
+  }
 }

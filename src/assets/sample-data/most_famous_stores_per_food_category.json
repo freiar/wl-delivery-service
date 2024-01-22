@@ -1,0 +1,394 @@
+[
+  {
+    "id": 1,
+    "name": "The Best",
+    "category": "Food",
+    "address": "Syntagma 15",
+    "rate": 5,
+    "photo": "/assets/images/famous-stores-food-card.jpg",
+    "products": [
+      {
+        "id": "1",
+        "name": "Big Mac",
+        "category": "BURGERS",
+        "price": 4.99
+      },
+      {
+        "id": "2",
+        "name": "Crispy McBacon",
+        "category": "BURGERS",
+        "price": 3.99
+      },
+      {
+        "id": "3",
+        "name": "Deluxe Burger",
+        "category": "BURGERS",
+        "price": 2.99
+      },
+      {
+        "id": "4",
+        "name": "Single Big Tasty Chicken Bacon",
+        "category": "BURGERS",
+        "price": 2.79
+      },
+      {
+        "id": "5",
+        "name": "Chicken McNuggets",
+        "category": "NUGGETS",
+        "price": 3.99
+      },
+      {
+        "id": "6",
+        "name": "Caesar Salad with crispy chicken",
+        "category": "SALADS",
+        "price": 4.5
+      },
+      {
+        "id": "7",
+        "name": "Caesar Salad with grilled chicken",
+        "category": "SALADS",
+        "price": 4.5
+      },
+      {
+        "id": "8",
+        "name": "Side Salad",
+        "category": "SALADS",
+        "price": 2.5
+      },
+      {
+        "id": "9",
+        "name": "Onion Rings",
+        "category": "FRIES_&_SIDES",
+        "price": 0.99
+      },
+      {
+        "id": "10",
+        "name": "Deluxe Fries",
+        "category": "FRIES_&_SIDES",
+        "price": 1.2
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "StreetWok",
+    "category": "Food",
+    "rate": 5,
+    "photo": "/assets/images/famous-stores-food-card.jpg",
+    "address": "Glyfada Str. 203",
+    "products": [
+      {
+        "id": "11",
+        "name": "Pork Noodles with teriyaki",
+        "category": "NOODLES",
+        "price": 7.2
+      },
+      {
+        "id": "12",
+        "name": "Chicken Egg Noodles with sweet chili",
+        "category": "NOODLES",
+        "price": 8.2
+      },
+      {
+        "id": "13",
+        "name": "Beef Rice Noodles with cantonese",
+        "category": "NOODLES",
+        "price": 7.2
+      },
+      {
+        "id": "14",
+        "name": "Shrimp White Rice with Coconut Curry",
+        "category": "RICE",
+        "price": 8.2
+      },
+      {
+        "id": "15",
+        "name": "Mushroom Brown Rice with satay",
+        "category": "RICE",
+        "price": 7.2
+      },
+      {
+        "id": "16",
+        "name": "Mixed ingredients with pineapple, brocoli, baby corn and black mushrooms",
+        "category": "OTHER",
+        "price": 5.2
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Nanou Donuts House",
+    "category": "Food",
+    "rate": 5,
+    "photo": "/assets/images/famous-stores-food-card.jpg",
+    "address": "Ampelokipous 23rd Av.",
+    "products": [
+      {
+        "id": "17",
+        "name": "Cinnamon Donut",
+        "category": "DONUT",
+        "price": 2.2
+      },
+      {
+        "id": "18",
+        "name": "Donut Bavaria",
+        "category": "DONUT",
+        "price": 1.99
+      },
+      {
+        "id": "19",
+        "name": "Blackberry Cronut",
+        "category": "CRONUT",
+        "price": 1.5
+      },
+      {
+        "id": "20",
+        "name": "Nanou Burger",
+        "category": "BURGER",
+        "price": 4.3
+      },
+      {
+        "id": "21",
+        "name": "Donut Delizioso",
+        "category": "DONUT",
+        "price": 2.5
+      },
+      {
+        "id": "22",
+        "name": "Donut Oreo",
+        "category": "DONUT",
+        "price": 1.99
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Lora's House",
+    "category": "Food",
+    "rate": 5,
+    "photo": "/assets/images/famous-stores-food-card.jpg",
+    "address": "Ampelokipous 23rd Av.",
+    "products": [
+      {
+        "id": "19",
+        "name": "Cinnamon Donut",
+        "category": "DONUT",
+        "price": 2.2
+      },
+      {
+        "id": "20",
+        "name": "Donut Bavaria",
+        "category": "DONUT",
+        "price": 1.99
+      },
+      {
+        "id": "21",
+        "name": "Blackberry Cronut",
+        "category": "CRONUT",
+        "price": 1.5
+      },
+      {
+        "id": "22",
+        "name": "Nanou Burger",
+        "category": "BURGER",
+        "price": 4.3
+      },
+      {
+        "id": "23",
+        "name": "Donut Delizioso",
+        "category": "DONUT",
+        "price": 2.5
+      },
+      {
+        "id": "24",
+        "name": "Donut Oreo",
+        "category": "DONUT",
+        "price": 1.99
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Yummies",
+    "category": "Food",
+    "rate": 5,
+    "photo": "/assets/images/famous-stores-food-card.jpg",
+    "address": "Ampelokipous 23rd Av.",
+    "products": [
+      {
+        "id": "25",
+        "name": "Cinnamon Donut",
+        "category": "DONUT",
+        "price": 2.2
+      },
+      {
+        "id": "26",
+        "name": "Donut Bavaria",
+        "category": "DONUT",
+        "price": 1.99
+      },
+      {
+        "id": "27",
+        "name": "Blackberry Cronut",
+        "category": "CRONUT",
+        "price": 1.5
+      },
+      {
+        "id": "28",
+        "name": "Nanou Burger",
+        "category": "BURGER",
+        "price": 4.3
+      },
+      {
+        "id": "29",
+        "name": "Donut Delizioso",
+        "category": "DONUT",
+        "price": 2.5
+      },
+      {
+        "id": "30",
+        "name": "Donut Oreo",
+        "category": "DONUT",
+        "price": 1.99
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Steak House",
+    "category": "Food",
+    "rate": 5,
+    "photo": "/assets/images/famous-stores-food-card.jpg",
+    "address": "Ampelokipous 23rd Av.",
+    "products": [
+      {
+        "id": "25",
+        "name": "Cinnamon Donut",
+        "category": "DONUT",
+        "price": 2.2
+      },
+      {
+        "id": "26",
+        "name": "Donut Bavaria",
+        "category": "DONUT",
+        "price": 1.99
+      },
+      {
+        "id": "27",
+        "name": "Blackberry Cronut",
+        "category": "CRONUT",
+        "price": 1.5
+      },
+      {
+        "id": "28",
+        "name": "Nanou Burger",
+        "category": "BURGER",
+        "price": 4.3
+      },
+      {
+        "id": "29",
+        "name": "Donut Delizioso",
+        "category": "DONUT",
+        "price": 2.5
+      },
+      {
+        "id": "30",
+        "name": "Donut Oreo",
+        "category": "DONUT",
+        "price": 1.99
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Pizza World",
+    "category": "Food",
+    "rate": 5,
+    "photo": "/assets/images/famous-stores-food-card.jpg",
+    "address": "Ampelokipous 23rd Av.",
+    "products": [
+      {
+        "id": "25",
+        "name": "Cinnamon Donut",
+        "category": "DONUT",
+        "price": 2.2
+      },
+      {
+        "id": "26",
+        "name": "Donut Bavaria",
+        "category": "DONUT",
+        "price": 1.99
+      },
+      {
+        "id": "27",
+        "name": "Blackberry Cronut",
+        "category": "CRONUT",
+        "price": 1.5
+      },
+      {
+        "id": "28",
+        "name": "Nanou Burger",
+        "category": "BURGER",
+        "price": 4.3
+      },
+      {
+        "id": "29",
+        "name": "Donut Delizioso",
+        "category": "DONUT",
+        "price": 2.5
+      },
+      {
+        "id": "30",
+        "name": "Donut Oreo",
+        "category": "DONUT",
+        "price": 1.99
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Pasta and All",
+    "category": "Food",
+    "rate": 5,
+    "photo": "/assets/images/famous-stores-food-card.jpg",
+    "address": "Ampelokipous 23rd Av.",
+    "products": [
+      {
+        "id": "25",
+        "name": "Cinnamon Donut",
+        "category": "DONUT",
+        "price": 2.2
+      },
+      {
+        "id": "26",
+        "name": "Donut Bavaria",
+        "category": "DONUT",
+        "price": 1.99
+      },
+      {
+        "id": "27",
+        "name": "Blackberry Cronut",
+        "category": "CRONUT",
+        "price": 1.5
+      },
+      {
+        "id": "28",
+        "name": "Nanou Burger",
+        "category": "BURGER",
+        "price": 4.3
+      },
+      {
+        "id": "29",
+        "name": "Donut Delizioso",
+        "category": "DONUT",
+        "price": 2.5
+      },
+      {
+        "id": "30",
+        "name": "Donut Oreo",
+        "category": "DONUT",
+        "price": 1.99
+      }
+    ]
+  }
+]

@@ -1,0 +1,31 @@
+body {
+  background-color: #13482f;
+}
+
+h1 {
+  padding-top: 150px;
+  text-align: center;
+  justify-content: center;
+  font-size: 45px;
+  font-weight: 600;
+  color: #e5ad05;
+  margin-bottom: 100px;
+}
+
+.store-card {
+  margin: 20px 10px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  box-shadow: 8px 8px 10px rgba(22, 22, 22, 0.5);
+  cursor: pointer;
+  border: 3px solid white;
+}
+
+.star-icon {
+  position: relative;
+  top: -2px;
+}
+
+.star-fill {
+  fill: green;
+}

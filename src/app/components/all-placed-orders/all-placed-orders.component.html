@@ -1,1 +1,35 @@
-<p>all-placed-orders works!</p>
+<div class="container-fluid d-flex flex-column align-items-center">
+  <img src="./assets/images/order-list.jpg" alt="food photo" />
+  <h1 class="heading">My Order List</h1>
+  <ng-template
+    *ngIf="hasLoaded; then orderBlock; else noOrderBlock"
+  ></ng-template>
+  <ng-template #orderBlock>
+    <div
+      style="display: flex; justify-content: center; cursor: pointer"
+      class="table"
+    >
+      <table>
+        <tr
+          *ngFor="let order of orders; let i = index"
+          (click)="viewOrderDetails(order.orderId)"
+          title="Click For Details"
+        >
+          <td>
+            <img
+              src="{{ order.photo }}"
+              class="store-img"
+              alt="order-card photo"
+            />
+          </td>
+          <td><span>Store:</span> {{ order.store }}</td>
+          <td><span>Customer ID:</span> {{ order.customerId }}</td>
+          <td><span>Order Id:</span> {{ order.orderId }}</td>
+        </tr>
+      </table>
+    </div>
+  </ng-template>
+  <ng-template #noOrderBlock>
+    <h1>Loading Orders...</h1>
+  </ng-template>
+</div>

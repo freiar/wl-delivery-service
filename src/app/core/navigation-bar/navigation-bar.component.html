@@ -1,27 +1,63 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg" style="background-color: #e5ad05">
   <div class="container-fluid">
     <a class="navbar-brand" routerLink="home">We Lead</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a routerLinkActive="active" class="nav-link active" aria-current="page" routerLink="home">Home</a>
+          <a
+            routerLinkActive="active"
+            class="nav-link active"
+            aria-current="page"
+            routerLink="home"
+            >Home</a
+          >
         </li>
         <li class="nav-item">
-          <a routerLinkActive="active" class="nav-link" routerLink="about-us">About us</a>
+          <a routerLinkActive="active" class="nav-link" routerLink="about-us"
+            >About</a
+          >
         </li>
+
         <li class="nav-item">
-          <a routerLinkActive="active" class="nav-link" routerLink="store">Stores</a>
+          <a routerLinkActive="active" class="nav-link" routerLink="contact"
+            >Contact</a
+          >
+        </li>
+
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdownMenuLink"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Stores
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <h6 class="dropdown-header">Categories</h6>
+            <li><a class="dropdown-item" routerLink="active" routerLink="foodStores">Food</a></li>
+            <li><a class="dropdown-item" routerLink="active" routerLink="drinkStores">Drink</a></li>
+            <li><a class="dropdown-item" routerLink="active" routerLink="store">View All Stores</a></li>
+          </ul>
         </li>
       </ul>
 
-      <form class="d-flex" style="width: 20%;">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+      <div class="search">
+        <app-search />
+      </div>
     </div>
   </div>
 </nav>
