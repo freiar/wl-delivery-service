@@ -1,6 +1,6 @@
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { OrderService } from '../../services/order.service';
 import { OrderList } from '../../interfaces/order';
 
@@ -11,16 +11,19 @@ import { OrderList } from '../../interfaces/order';
   templateUrl: './all-placed-orders.component.html',
   styleUrl: './all-placed-orders.component.css',
 })
-export class AllPlacedOrdersComponent {
+export class AllPlacedOrdersComponent implements OnInit {
   orders: OrderList[] = [];
   hasLoaded: boolean = false;
 
-  constructor(private orderService: OrderService, private router: Router) {}
+  constructor(
+    private orderService: OrderService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit() {
     this.orderService.getOrders().subscribe({
       next: (response: OrderList[]) => {
-        console.log('Orders: ', response);
         this.orders = response;
         this.hasLoaded = true;
       },

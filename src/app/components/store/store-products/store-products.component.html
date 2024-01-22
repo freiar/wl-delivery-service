@@ -1,13 +1,16 @@
-<div class="container-fluid d-flex flex-column align-items-center">
+<div
+  class="container-fluid d-flex flex-column align-items-center justify-content-center"
+>
   <img
     src="/assets/images/store-main-page.jpg"
     alt="Store Main page Photo"
     height="250px"
   />
   <br />
-  <h1>Our Menu</h1>
+
+  <h1 class="text-center">Our Menu</h1>
   <div class="row">
-    <div class="col-md-9">
+    <div class="col-md-6">
       @for (product of products; track $index) {
       <div class="card">
         <div class="card-body d-flex align-items-center">
@@ -33,7 +36,8 @@
       </div>
       }
     </div>
-    <div class="col-md-3">
+
+    <div class="col-lg-2 col-md-12">
       <app-cart />
     </div>
   </div>

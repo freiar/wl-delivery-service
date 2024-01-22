@@ -1,0 +1,33 @@
+* {
+  background-color: #13482f;
+}
+
+.container-fluid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: -30px;
+  padding-bottom: 160px;
+  background-color: #13482f;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.cart-container {
+  display: flex;
+}
+
+.order {
+  margin-bottom: 50px;
+  color: white;
+  font-size: 60px;
+  font-weight: 600;
+  margin-top: 300px;
+}

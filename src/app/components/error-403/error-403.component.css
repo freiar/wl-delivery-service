@@ -1,12 +1,8 @@
-.container {
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+.container-fluid {
   font-family: Arial, sans-serif;
   background-color: #13482f;
-  margin-top: 100px;
   padding: 30px;
-  margin-bottom: 20px;
-  border: 8px solid #e5ad05;
+  border: 8px solid #e50909;
 }
 
 .error-code {
