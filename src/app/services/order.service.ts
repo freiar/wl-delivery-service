@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Order } from '../interfaces/order';
-import { Observable, catchError } from 'rxjs';
+import { Observable, catchError, map } from 'rxjs';
 import { throwError } from 'rxjs';
 
 @Injectable({
@@ -42,6 +42,21 @@ export class OrderService {
     return this.http
       .post<Order>(this.endpointUrl, order, { headers })
       .pipe(catchError((error) => this.handleError(error)));
+  }
+
+  // Method to get a single order by its ID
+  getOrderById(orderId: string): Observable<Order | undefined> {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+    });
+
+    return this.http.get<Order[]>(this.endpointUrl, { headers }).pipe(
+      catchError((error) => this.handleError(error)),
+      // Filter the orders array based on orderId
+      map((orders: any) =>
+        orders.find((order: any) => order.orderId === orderId)
+      )
+    );
   }
 
   private handleError(error: any): Observable<never> {

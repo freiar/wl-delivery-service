@@ -13,6 +13,7 @@ import { TopStoresDrinkComponent } from './components/top-stores-drink/top-store
 import { DrinkStoresComponent } from './components/drink-stores/drink-stores.component';
 import { AllPlacedOrdersComponent } from './components/all-placed-orders/all-placed-orders.component';
 import { OrderPageComponent } from './components/order-page/order-page.component';
+import { OrderComponent } from './components/order/order.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -26,7 +27,9 @@ export const routes: Routes = [
   { path: 'topStoresDrink', component: TopStoresDrinkComponent },
   { path: 'drinkStores', component: DrinkStoresComponent },
   { path: 'foodStores', component: FoodStoresComponent },
+  { path: 'order/:orderId', component: OrderComponent },
   { path: 'order-page', component: OrderPageComponent },
+  { path: 'order', component: OrderComponent },
   { path: 'order/1/all-placed-orders', component: AllPlacedOrdersComponent },
   { path: 'order/2/all-placed-orders', component: AllPlacedOrdersComponent },
   { path: 'order/3/all-placed-orders', component: AllPlacedOrdersComponent },
