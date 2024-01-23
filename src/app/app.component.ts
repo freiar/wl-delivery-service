@@ -1,4 +1,3 @@
-
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { Component } from '@angular/core';
@@ -14,6 +13,7 @@ import { CartComponent } from './components/cart/cart.component';
 import { UserComponent } from './components/user/user.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './core/header/header.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @Component({
   selector: 'app-root',
