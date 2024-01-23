@@ -77,20 +77,16 @@
           <div>
             <label for="mobile" form="form-label">Telephone</label>
             <input
-              placeholder="Enter phone number"
-              class="form-control"
-              id="mobile"
-              formControlName="mobile"
-              required
-            />
-            <div
-              *ngIf="
-                registerForm.get('mobile')?.invalid &&
-                registerForm.get('mobile')?.touched
-              "
-            >
-              Telephone is required
-            </div>
+            type="tel"
+            placeholder="Enter phone number"
+            class="form-control"
+            id="mobile"
+            formControlName="mobile"
+            
+            
+            required>
+            <div *ngIf="registerForm.get('mobile')?.invalid && registerForm.get('mobile')?.touched">
+            Telephone is required </div>
           </div>
 
           <div class="form-text"></div>
@@ -104,8 +100,8 @@
           <button
             type="submit"
             [disabled]="registerForm.invalid"
-            class="btn btn-primary"
-          >
+      
+            class="btn btn-primary" (click)="registerUser(); navigateToHome()">
             Submit
           </button>
         </div>
