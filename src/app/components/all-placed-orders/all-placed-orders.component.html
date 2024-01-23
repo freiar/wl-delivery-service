@@ -12,6 +12,7 @@
       <table>
         <tr
           *ngFor="let order of orders; let i = index"
+          [routerLink]="['/order', order.orderId]"
           (click)="viewOrderDetails(order.orderId)"
           title="Click For Details"
         >
