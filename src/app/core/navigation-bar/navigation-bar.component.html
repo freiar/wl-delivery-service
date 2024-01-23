@@ -46,51 +46,82 @@
           >
             Stores
           </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <h6 class="dropdown-header">Categories</h6>
-              <li><a class="dropdown-item" routerLink="active" routerLink="foodStores">Food</a></li>
-              <li><a class="dropdown-item" routerLink="active" routerLink="drinkStores">Drink</a></li>
-              <li><a class="dropdown-item" routerLink="active" routerLink="store">View All Stores</a></li>
-            </ul>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <h6 class="dropdown-header">Categories</h6>
+            <li>
+              <a
+                class="dropdown-item"
+                routerLink="active"
+                routerLink="foodStores"
+                >Food</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                routerLink="active"
+                routerLink="drinkStores"
+                >Drink</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="active" routerLink="store"
+                >View All Stores</a
+              >
+            </li>
+          </ul>
         </li>
       </ul>
 
-      
-      
-     <div *ngIf="!isUserRegistered" routerLink="user">
-      <li class="nav-item dropdown list-unstyled">
-        <a
-          class="nav-link dropdown-toggle"
-          href="#"
-          id="navbarDropdownMenuLink"
-          role="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          Welcome, {{ registeredUser.firstName }}!
-          {{registerUser.name}}
-        </a>
-        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <h6 class="/profile">Profile</h6>
-          <li><a class="dropdown-item" routerLink="active" routerLink="/cart-page">My Orders</a></li>
-          <li><a class="dropdown-item" routerLink="active" routerLink="/home">Log out</a></li>
-          
-        </ul>
-      </li>
-    </div>
+      <div *ngIf="!isUserRegistered" routerLink="/user">
+        <li class="nav-item dropdown list-unstyled">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdownMenuLink"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Welcome, {{ registeredUser.firstName }}!
+            {{ registerUser.name }}
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <h6 class="/profile">My Profile</h6>
+            <li>
+              <a class="dropdown-item" routerLink="active" routerLink="/account"
+                >Account</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                routerLink="active"
+                routerLink="/all-placed-orders"
+                >Orders</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="active" routerLink="/home"
+                >Log out</a
+              >
+            </li>
+          </ul>
+        </li>
+      </div>
 
-    
       <div class="search">
         <app-search />
       </div>
-      <br>
+      <br />
 
       <div *ngIf="isUserRegistered" routerLink="user">
-        <button class="btn btn-outline-primary px-15"><a routerLinkActive="active" class="nav-link" routerLink="register">Register</a>
+        <button class="btn btn-outline-primary px-15">
+          <a routerLinkActive="active" class="nav-link" routerLink="register"
+            >Register</a
+          >
         </button>
       </div>
-    
-
     </div>
   </div>
 </nav>

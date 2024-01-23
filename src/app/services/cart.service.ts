@@ -37,10 +37,12 @@ export class CartService {
   }
 
   // Function to clear the cart
-  clearCart(): void {
+  clearCart(count: number = 0): void {
+    console.log('Clearing the cart...');
     this.cart = [];
     this.currentStoreId = null;
-    this.updateCart({ count: 0, products: [] }); // Pass the CartUpdate object
+    this.updateCart({ count, products: [] });
+    console.log('Cart cleared successfully.');
   }
 
   // Function to update the cart with new products

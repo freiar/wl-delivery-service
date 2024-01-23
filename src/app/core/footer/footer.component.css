@@ -176,3 +176,7 @@ footer .green-background:hover {
 .about {
   margin-right: 30px;
 }
+
+.green-background {
+  cursor: pointer;
+}

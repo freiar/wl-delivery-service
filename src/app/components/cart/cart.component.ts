@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { AddToCartPublisherService } from '../../services/add.to.cart.publisher.service';
 import { Product } from '../../interfaces/product';
 import { CommonModule } from '@angular/common';
@@ -11,7 +11,7 @@ import { CartOrderPageService } from '../../services/cart-order-page.service';
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.css',
 })
-export class CartComponent {
+export class CartComponent implements OnInit {
   @Input() isOrderPage: boolean = false;
 
   cartProducts: Product[] = [];
