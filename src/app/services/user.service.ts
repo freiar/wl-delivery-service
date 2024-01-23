@@ -18,4 +18,7 @@ export class UserService {
   clearRegisteredUser(): void {
     this.registeredUser = null;
   }
+
+
+
 }

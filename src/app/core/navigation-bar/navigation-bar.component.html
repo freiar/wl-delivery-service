@@ -73,21 +73,28 @@
         </li>
       </ul>
 
-      <div *ngIf="!isUserRegistered" routerLink="/user">
-        <li class="nav-item dropdown list-unstyled">
-          <a
+      <ng-container *ngIf="isUserRegistered"> 
+        
+          <!-- <button
             class="nav-link dropdown-toggle"
             href="#"
-            id="navbarDropdownMenuLink"
-            role="button"
             data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Welcome, {{ registeredUser.firstName }}!
-            {{ registerUser.name }}
-          </a>
+            aria-expanded="false"> 
+            Welcome 
+             /* {{ registeredUser.firstName }}!
+            {{ registerUser.name }} */
+          </button> -->
+        <div class="nav-item dropdown list-unstyled">
+          <button
+            class="nav-link dropdown-toggle"
+            href="#"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"> 
+            Welcome           
+          </button>
+
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <h6 class="/profile">My Profile</h6>
+            <h6 class="dropdown-header">My Profile</h6>
             <li>
               <a class="dropdown-item" routerLink="active" routerLink="/account"
                 >Account</a
@@ -102,26 +109,23 @@
               >
             </li>
             <li>
-              <a class="dropdown-item" routerLink="active" routerLink="/home"
-                >Log out</a
-              >
+              <a class="dropdown-item" routerLink="active" routerLink="/home" (click)="logoutUser(); deleteRegistration()"
+                >Log out</a>
             </li>
           </ul>
-        </li>
-      </div>
+        </div>
+      </ng-container>
 
       <div class="search">
         <app-search />
       </div>
       <br />
 
-      <div *ngIf="isUserRegistered" routerLink="user">
-        <button class="btn btn-outline-primary px-15">
-          <a routerLinkActive="active" class="nav-link" routerLink="register"
-            >Register</a
-          >
-        </button>
-      </div>
+      <ng-container *ngIf="!isUserRegistered">
+
+        <button class="btn btn-outline-primary px-15" routerLink="/register">Register</button>
+
+      </ng-container>
     </div>
   </div>
 </nav>
