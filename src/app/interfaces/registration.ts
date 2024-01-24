@@ -1,4 +1,7 @@
+import { User } from "./user";
+
 export interface Registration {
+    user: User;
     id: number;
     avatar: string;
     firstname: string;

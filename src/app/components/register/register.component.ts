@@ -22,7 +22,10 @@ import { UserService } from '../../services/user.service';
   standalone: true,
   imports: [CommonModule, FormsModule, ReactiveFormsModule],
   templateUrl: './register.component.html',
-  styleUrl: './register.component.css'
+  styleUrl: './register.component.css',
+
+  providers: [RegistrationService,
+  UserService]
 })
 export class RegisterComponent implements OnInit {
   registerForm: FormGroup = new FormGroup({});
@@ -30,7 +33,7 @@ export class RegisterComponent implements OnInit {
   
 
   constructor(
-    private fromBuilder: FormBuilder,
+    private formBuilder: FormBuilder,
     private registrationService: RegistrationService,
     private router: Router,
     private userService: UserService
@@ -39,7 +42,7 @@ export class RegisterComponent implements OnInit {
   }
 
   ngOnInit(): void {
-      this.registerForm = this.fromBuilder.group({
+      this.registerForm = this.formBuilder.group({
         firstname: ['', Validators.required],
         lastname: ['', Validators.required],
         email: ['', [Validators.required, Validators.email]],
@@ -52,6 +55,8 @@ export class RegisterComponent implements OnInit {
       let registration: Registration = this.registerForm.value;
       this.registrationService.addRegistration(registration)
       console.log("valid")
+      this.registerUser(); 
+      this.navigateToHome();
     }
   }
   navigateToHome() {
@@ -70,7 +75,7 @@ export class RegisterComponent implements OnInit {
     };
   
     this.userService.setRegisteredUser(registeredUser);
-    // Other registration logic as needed
+    
     
   }
 

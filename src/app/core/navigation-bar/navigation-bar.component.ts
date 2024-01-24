@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { SearchComponent } from '../../components/search/search.component';
 import { UserService } from '../../services/user.service';
+import { RegistrationService } from '../../services/registration.service';
 
 @Component({
   selector: 'app-navigation-bar',
@@ -10,18 +11,38 @@ import { UserService } from '../../services/user.service';
   imports: [CommonModule, RouterLink, RouterLinkActive, SearchComponent],
   templateUrl: './navigation-bar.component.html',
   styleUrl: './navigation-bar.component.css',
+
+  providers: [
+    UserService,
+    RegistrationService
+  ]
 })
+
 export class NavigationBarComponent {
+  
+deleteRegistration() {
+throw new Error('Method not implemented.');
+}
 
   isUserRegistered: boolean = false;
-  registeredUser: any; // Replace 'any' with the actual type of your user model
+  registeredUser: any; 
 
-  constructor(private userService: UserService) {
+  constructor(private userService: UserService,
+    private registrationService: RegistrationService) {
     this.registeredUser = this.userService.getRegisteredUser();
+    this.isUserRegistered = this.registeredUser!==null;
+    
   }
 
-  
+
+  /*
   registerUser() {
     this.isUserRegistered = true;
+  } */
+
+  logoutUser(){
+    this.registrationService.logoutUser();
+    this.isUserRegistered = false;
+    this.registeredUser = null;
   }
 }
