@@ -3,6 +3,7 @@ import { AddToCartPublisherService } from '../../services/add.to.cart.publisher.
 import { Product } from '../../interfaces/product';
 import { CommonModule } from '@angular/common';
 import { CartOrderPageService } from '../../services/cart-order-page.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-cart',
@@ -13,9 +14,11 @@ import { CartOrderPageService } from '../../services/cart-order-page.service';
 })
 export class CartComponent implements OnInit {
   @Input() isOrderPage: boolean = false;
+  @Input() currentStoreId: number | null = null;
 
   cartProducts: Product[] = [];
   totalPrice: number = 0;
+  private cartSubscription: Subscription | undefined;
 
   constructor(
     private addToCartPublisherService: AddToCartPublisherService,
@@ -23,7 +26,7 @@ export class CartComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.cartOrderPage.cart$.subscribe((cart: any) => {
+    this.cartSubscription = this.cartOrderPage.cart$.subscribe((cart: any) => {
       this.cartProducts = cart;
       this.calculateTotalPrice();
     });
@@ -35,21 +38,26 @@ export class CartComponent implements OnInit {
       });
   }
 
-  private defineProductAction(product: Product) {
-    let productIndex = this.findIndexOfProductInCart(product);
-    if (productIndex >= 0) {
-      let existingProduct = this.cartProducts[productIndex];
-      existingProduct.count = product.count;
-      if (existingProduct.count === 0) {
-        this.cartProducts.splice(productIndex, 1);
-      }
+  private defineProductAction(product: Product): void {
+    if (product.count === -1) {
+      this.cartProducts = [];
     } else {
-      this.cartProducts.push(product);
-    }
-    this.calculateTotalPrice();
+      let productIndex: number = this.findIndexOfProductInCart(product);
+      if (productIndex >= 0) {
+        let existingProduct: Product = this.cartProducts[productIndex];
+        existingProduct.count = product.count;
+        if (existingProduct.count === 0) {
+          this.cartProducts.splice(productIndex, 1);
+        }
+      } else {
+        this.cartProducts.push(product);
+      }
 
-    // Update the service only after modifying the array
-    this.cartOrderPage.updateCart(this.cartProducts);
+      this.calculateTotalPrice();
+
+      // Update the service only after modifying the array
+      this.cartOrderPage.updateCart(this.cartProducts);
+    }
   }
 
   private findIndexOfProductInCart(product: Product): number {

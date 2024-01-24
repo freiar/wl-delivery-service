@@ -6,7 +6,7 @@ import { Product } from '../../interfaces/product';
 import { Subscription } from 'rxjs';
 import { OrderService } from '../../services/order.service';
 import { StoreService } from '../../services/store.service';
-import { RouterLink } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { CartService } from '../../services/cart.service';
 
 @Component({
@@ -28,10 +28,14 @@ export class OrderComponent {
   constructor(
     private orderService: OrderService,
     private cartService: CartService,
-    private storeService: StoreService
+    private storeService: StoreService,
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
+    // Extract orderId from route parameters
+    // this.orderId = this.route.snapshot.paramMap.get('orderId');
+
     // Fetch the order based on orderId
     this.orderSubscription = this.orderService
       .getOrderById(this.orderId)

@@ -1,6 +1,12 @@
 import { Product } from './../interfaces/product';
 import { Injectable } from '@angular/core';
-import { Observable, Subject, catchError, throwError } from 'rxjs';
+import {
+  Observable,
+  ReplaySubject,
+  Subject,
+  catchError,
+  throwError,
+} from 'rxjs';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { CartUpdate } from '../interfaces/cart-update';
@@ -9,8 +15,10 @@ import { CartUpdate } from '../interfaces/cart-update';
   providedIn: 'root',
 })
 export class AddToCartPublisherService {
-  private addToCartPublisher = new Subject<Product>();
-  private cartSubject = new Subject<CartUpdate>();
+  private addToCartPublisher: ReplaySubject<Product> =
+    new ReplaySubject<Product>();
+  private cartSubject: ReplaySubject<CartUpdate> =
+    new ReplaySubject<CartUpdate>();
 
   constructor(private http: HttpClient, private router: Router) {}
 
@@ -24,6 +32,7 @@ export class AddToCartPublisherService {
 
   updateCart(update: CartUpdate): void {
     console.log('Updating cart:', update);
+    this.addToCartPublisher.next({ count: update.count } as Product);
     this.cartSubject.next(update);
   }
 
