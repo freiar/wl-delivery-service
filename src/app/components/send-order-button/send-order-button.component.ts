@@ -1,5 +1,5 @@
 import { Router } from '@angular/router';
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Product } from '../../interfaces/product';
 import { Order } from '../../interfaces/order';
 import { Store } from '../../interfaces/store';
@@ -19,6 +19,8 @@ export class SendOrderButtonComponent implements OnInit {
   store: Store[] = [];
   cart: Product[] = [];
 
+  @Output() orderSubmitted = new EventEmitter<void>();
+
   constructor(
     private cartService: CartService,
     private orderService: OrderService,
@@ -28,6 +30,6 @@ export class SendOrderButtonComponent implements OnInit {
   ngOnInit(): void {}
 
   submitOrder(): void {
-    this.router.navigate(['']);
+    this.orderSubmitted.emit();
   }
 }

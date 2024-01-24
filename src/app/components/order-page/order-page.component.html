@@ -1,7 +1,13 @@
-<div class="container-fluid align-items-center">
-  <h1 class="order">Order</h1>
-  <div class="cart-container">
-    <app-cart class="cart col-md-10 col-sm-12" [isOrderPage]="true" />
+<div class="container-fluid align-items-center just">
+  <div *ngIf="!isOrderSubmitted; else orderSubmitted">
+    <h1 class="order">Order</h1>
+    <div class="cart-container">
+      <app-cart class="cart col-md-10 col-sm-12" [isOrderPage]="true" />
+    </div>
+    <app-send-order-button class="button" (orderSubmitted)="submitOrder()" />
   </div>
-  <app-send-order-button class="button" />
+  <ng-template #orderSubmitted>
+    <h1>Your order is being sent.</h1>
+    <a routerLink="/home">Go back to home page</a>
+  </ng-template>
 </div>
