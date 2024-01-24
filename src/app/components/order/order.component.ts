@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Order } from '../../interfaces/order';
 import { Store } from '../../interfaces/store';
 import { Product } from '../../interfaces/product';
@@ -16,7 +16,7 @@ import { CartService } from '../../services/cart.service';
   templateUrl: './order.component.html',
   styleUrl: './order.component.css',
 })
-export class OrderComponent {
+export class OrderComponent implements OnInit {
   @Input() orderId: string = ''; // Input to specify the orderId
   order: Order | undefined;
   store: Store | undefined;
@@ -34,7 +34,19 @@ export class OrderComponent {
 
   ngOnInit(): void {
     // Extract orderId from route parameters
-    // this.orderId = this.route.snapshot.paramMap.get('orderId');
+    const orderIdParam = this.route.snapshot.paramMap.get('orderId');
+
+    if (orderIdParam !== null) {
+      this.orderId = orderIdParam;
+      // Fetch the order based on orderId
+      this.orderSubscription = this.orderService
+        .getOrderById(this.orderId)
+        .subscribe({
+          // ... rest of the code ...
+        });
+    } else {
+      console.error('Order ID not found in route parameters.');
+    }
 
     // Fetch the order based on orderId
     this.orderSubscription = this.orderService

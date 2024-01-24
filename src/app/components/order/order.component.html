@@ -1,8 +1,11 @@
 <div class="container-fluid">
   <h1 class="heading">Your Order</h1>
   <div class="inner-box">
-    <p>Store: {{ order?.store }}</p>
-    <p>Order Date: {{ order?.orderDate }}</p>
-    <p>Total Price: ...</p>
+    <p><span>Store:</span> {{ order?.store }}</p>
+    <p><span>Products:</span> {{ order?.products }}</p>
+    <p><span>Order Date:</span> {{ order?.orderDate }}</p>
+
+    <p><span>Total Price:</span> {{ order?.totalPrice }} €</p>
+    <p><span>Payment Info:</span> {{ order?.paymentInfo }}</p>
   </div>
 </div>

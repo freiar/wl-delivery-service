@@ -73,9 +73,13 @@
         </li>
       </ul>
 
-      <ng-container *ngIf="isUserRegistered"> 
-        
-          <!-- <button
+      <div class="search">
+        <app-search />
+      </div>
+      <br />
+
+      <ng-container *ngIf="isUserRegistered">
+        <!-- <button
             class="nav-link dropdown-toggle"
             href="#"
             data-bs-toggle="dropdown"
@@ -89,8 +93,9 @@
             class="nav-link dropdown-toggle"
             href="#"
             data-bs-toggle="dropdown"
-            aria-expanded="false"> 
-            Welcome           
+            aria-expanded="false"
+          >
+            Welcome
           </button>
 
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -109,22 +114,22 @@
               >
             </li>
             <li>
-              <a class="dropdown-item" routerLink="active" routerLink="/home" (click)="logoutUser(); deleteRegistration()"
-                >Log out</a>
+              <a
+                class="dropdown-item"
+                routerLink="active"
+                routerLink="/home"
+                (click)="logoutUser(); deleteRegistration()"
+                >Log out</a
+              >
             </li>
           </ul>
         </div>
       </ng-container>
 
-      <div class="search">
-        <app-search />
-      </div>
-      <br />
-
       <ng-container *ngIf="!isUserRegistered">
-
-        <button class="btn btn-outline-primary px-15" routerLink="/register">Register</button>
-
+        <button class="btn btn-outline-primary px-15" routerLink="/register">
+          Register
+        </button>
       </ng-container>
     </div>
   </div>
