@@ -1,7 +1,7 @@
 import { SendOrderButtonComponent } from './../send-order-button/send-order-button.component';
 import { CartComponent } from './../cart/cart.component';
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { OrderComponent } from '../order/order.component';
 import { Order } from '../../interfaces/order';
@@ -25,13 +25,14 @@ import { StoreService } from '../../services/store.service';
   templateUrl: './order-page.component.html',
   styleUrl: './order-page.component.css',
 })
-export class OrderPageComponent implements OnInit {
+export class OrderPageComponent implements OnInit, OnDestroy {
   product: Product[] = [];
   order: Order[] = [];
   store: Store | undefined;
   cart: Product[] = [];
   private orderSubscription: Subscription | undefined;
   private storeSubscription: Subscription | undefined;
+  isOrderSubmitted: boolean = false;
 
   constructor(
     private orderService: OrderService,
@@ -89,6 +90,7 @@ export class OrderPageComponent implements OnInit {
   // Submit the order and clear the cart
   submitOrder(): void {
     this.cartService.clearCart();
+    this.isOrderSubmitted = true;
   }
 
   ngOnDestroy(): void {
