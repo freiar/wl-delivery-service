@@ -1,27 +1,27 @@
-# WlDeliveryService
+# Angular 17 We Lead Food Delivery App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0.
+Welcome to our Angular 17 Food Delivery App! This project is a collaborative effort by our development team to create a modern and user-friendly food delivery application.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Ordering System:** Users can browse the menu, add products to their cart, and place orders seamlessly.
+- **Order History:** View a comprehensive list of all placed orders for easy tracking.
+- **Shopping Cart:** Users can add, update, and delete items in their shopping cart.
+-**Search Functionality:** Users can search for stores by name and category to find their desired options quickly.
+-**Discover Famous Stores:** The app showcases famous stores in general and famous stores by category to enhance user experience.
+- **Pages:**   
+  - **About Us:** Learn more about our food delivery service and team.
+  - **Contact:** Reach out to us easily through the provided contact information.
+  - **Account:** Manage your account settings and preferences.
 
-## Code scaffolding
+## Technologies Used
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Angular 17
+- Bootstrap
 
-## Build
+## Acknowledgments
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+We would like to express our gratitude to the Angular community and other open-source contributors for their invaluable resources and tools.
 
-## Running unit tests
+Happy coding!
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
