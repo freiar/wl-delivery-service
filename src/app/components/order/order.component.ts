@@ -17,7 +17,7 @@ import { CartService } from '../../services/cart.service';
   styleUrl: './order.component.css',
 })
 export class OrderComponent implements OnInit {
-  @Input() orderId: string = ''; // Input to specify the orderId
+ @Input() orderId: string = ''; // Input to specify the orderId
   order: Order | undefined;
   store: Store | undefined;
   cart: Product[] = [];

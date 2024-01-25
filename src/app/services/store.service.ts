@@ -47,7 +47,7 @@ export class StoreService {
         return stores.find((s) => s.id == id)!;
       })
     );
-  }
+  
 
   getStoreByName(name: string): Observable<Store | undefined> {
     // Header

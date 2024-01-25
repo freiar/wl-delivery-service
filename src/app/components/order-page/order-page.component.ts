@@ -26,7 +26,7 @@ import { CartComponent } from '../cart/cart.component';
   styleUrl: './order-page.component.css',
 })
 export class OrderPageComponent implements OnInit, OnDestroy {
-  product: Product[] = [];
+   product: Product[] = [];
   order: Order[] = [];
   store: Store | undefined;
   cart: Product[] = [];

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, inject } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { Product } from '../../../interfaces/product';
 import { AddToCartPublisherService } from '../../../services/add.to.cart.publisher.service';
