@@ -41,12 +41,13 @@ export class StoreService {
     );
   }
 
-  getStoreById(id: number): Observable<Store | null> {
+  getStoreById(id: number): Observable<Store> {
     return this.http.get<Store[]>(this.EndpointUrl).pipe(
-      map((stores) => stores.find((s) => s.id === id) || null),
-      catchError(this.handleError)
+      map((stores) => {
+        return stores.find((s) => s.id == id)!;
+      })
     );
-  }
+  
 
   getStoreByName(name: string): Observable<Store | undefined> {
     // Header
