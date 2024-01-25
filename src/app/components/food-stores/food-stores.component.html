@@ -1,4 +1,6 @@
+<!-- Container for the food stores -->
 <div class="container-fluid">
+  <!-- Main photo for the header -->
   <img
     src="./assets/images/foodStores.jpg"
     alt="food photo"
@@ -6,8 +8,13 @@
     width="100%"
     class="main-photo"
   />
+
+  <!-- Heading for the food stores section -->
   <h1>Food Stores</h1>
+
+  <!-- Displaying food stores in a flex container -->
   <div style="display: flex; gap: 20px; flex-wrap: wrap">
+    <!-- Card for each food store using ngFor to iterate through the 'stores' array -->
     <div
       *ngFor="let store of stores; let i = index"
       class="card"
@@ -21,6 +28,7 @@
       routerLinkActive="active"
       [routerLink]="['/storeProducts', store.id]"
     >
+      <!-- Image for the food store -->
       <img
         [src]="store.photo"
         class="card-img-top"
@@ -28,18 +36,25 @@
         style="width: 100%; height: 60%; object-fit: cover"
       />
 
+      <!-- Card body containing store details -->
       <div
         class="card-body"
         style="height: 40%; display: flex; flex-direction: column"
       >
+        <!-- Store name as card title -->
         <h5 class="card-title">{{ store.name }}</h5>
+
+        <!-- Flex container for additional store details -->
         <div style="display: flex; background-color: white">
+          <!-- Store category -->
           <p
             class="card-store-category"
             style="padding-right: 10px; background-color: white"
           >
             {{ store.category }}
           </p>
+
+          <!-- Star rating using Font Awesome -->
           <p class="card-rating">
             <svg
               class="star-icon"

@@ -11,10 +11,6 @@ img {
   object-fit: cover;
 }
 
-.container-fluid {
-  margin-bottom: -20px;
-}
-
 * {
   background-color: #13482f;
 }

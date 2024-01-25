@@ -59,6 +59,7 @@ export class OrderService {
     );
   }
 
+  // to be used during implementation with backend
   private handleError(error: any): Observable<never> {
     let errorMessage = 'Something went wrong';
 
@@ -113,6 +114,6 @@ export class OrderService {
     console.error(error);
 
     // Pass the error message to the caller
-    return throwError(() => new Error(errorMessage));
+    return throwError(() => Error(errorMessage));
   }
 }

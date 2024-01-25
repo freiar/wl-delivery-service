@@ -10,8 +10,10 @@ import { CommonModule, DOCUMENT } from '@angular/common';
   styleUrl: './footer.component.css',
 })
 export class FooterComponent {
+  // Inject the DOCUMENT token to access the DOM
   constructor(@Inject(DOCUMENT) private document: Document) {}
 
+  // Method to scroll to the top of the page
   scrollToTop() {
     this.document.body.scrollTop = 0;
     this.document.documentElement.scrollTop = 0;

@@ -39,7 +39,6 @@ export class CounterComponent {
   }
 
   // Method to decrement the count (if it's greater than 0) and emit the updated count to the parent component.
-
   decrement(): void {
     if (this.count > 0) {
       this.count--;

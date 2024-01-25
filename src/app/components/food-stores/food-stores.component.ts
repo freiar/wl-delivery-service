@@ -14,12 +14,16 @@ import { CommonModule } from '@angular/common';
 export class FoodStoresComponent implements OnInit {
   stores: Store[] = [];
 
+  // Constructor injecting the StoreService for fetching food store data
   constructor(private storeService: StoreService) {}
 
+  // Angular lifecycle hook - ngOnInit, called after the component is initialized
   ngOnInit() {
+    // Subscribing to the food store service to fetch data
     this.storeService.getFoodStores().subscribe({
+      // Handling the response data
       next: (data: any) => {
-        // console.log(data);
+        // Updating the 'stores' array with the fetched data
         this.stores = data;
       },
     });

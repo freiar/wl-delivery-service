@@ -1,14 +1,25 @@
+<!-- Container for the 403 Error page with fluid layout -->
 <div class="container-fluid">
+  <!-- Heading for the error code -->
   <h1 class="error-code">403 Error</h1>
+
+  <!-- Container for the error image -->
   <div class="image">
+    <!-- Image element for the error icon -->
     <img src="../assets/images/error.png" alt="error 403 icon" />
   </div>
+
+  <!-- Paragraph for displaying the error message -->
   <p class="error-message">
+    <!-- Actual error message content -->
     Access Denied - You don't have permission to access this resource.
   </p>
+
+  <!-- Container for the link to go back to the register page -->
   <div class="link">
-    <a routerLink="/register" routerLinkActive="active"
-      >Go back to register page</a
-    >
+    <!-- Anchor tag with routerLink to navigate to the register page -->
+    <a routerLink="/register" routerLinkActive="active">
+      Go back to register page
+    </a>
   </div>
 </div>
