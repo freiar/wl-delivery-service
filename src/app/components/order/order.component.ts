@@ -82,7 +82,7 @@ export class OrderComponent implements OnInit {
   createOrder(order: Order): void {
     if (this.product) {
       this.orderService.createOrder(order).subscribe({
-        next: (createdOrder: any) => {
+        next: (createdOrder: Order) => {
           console.log('Order created successfully:', createdOrder);
         },
         error: (error: any) => {

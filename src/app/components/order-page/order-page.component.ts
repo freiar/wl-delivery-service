@@ -55,7 +55,7 @@ export class OrderPageComponent implements OnInit, OnDestroy {
             this.storeSubscription = this.storeService
               .getStoreById(orderStoreId)
               .subscribe({
-                next: (storeResponse: Store) => {
+                next: (storeResponse: Store | undefined) => {
                   this.store = storeResponse;
                 },
               });
@@ -75,7 +75,7 @@ export class OrderPageComponent implements OnInit, OnDestroy {
   createOrder(order: Order): void {
     if (this.product) {
       this.orderService.createOrder(order).subscribe({
-        next: (createdOrder: any) => {
+        next: (createdOrder: Order) => {
           console.log('Order created successfully:', createdOrder);
         },
         error: (error: any) => {
