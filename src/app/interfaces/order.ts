@@ -10,6 +10,7 @@ export interface Order {
   photo: string;
   store: string;
   storeId: number;
+  totalPrice: number;
 }
 
 export interface OrderList {
@@ -25,4 +26,5 @@ export interface OrderList {
   photo: string;
   store: string;
   storeId: number;
+  totalPrice: number;
 }

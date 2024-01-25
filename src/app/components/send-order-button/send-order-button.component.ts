@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Product } from '../../interfaces/product';
 import { Order } from '../../interfaces/order';
 import { Store } from '../../interfaces/store';
 import { CartService } from '../../services/cart.service';
+import { OrderService } from '../../services/order.service';
 
 @Component({
   selector: 'app-send-order-button',
@@ -17,11 +19,17 @@ export class SendOrderButtonComponent implements OnInit {
   store: Store[] = [];
   cart: Product[] = [];
 
-  constructor(private cartService: CartService) {}
+  @Output() orderSubmitted = new EventEmitter<void>();
+
+  constructor(
+    private cartService: CartService,
+    private orderService: OrderService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {}
 
   submitOrder(): void {
-    this.cartService.clearCart();
+    this.orderSubmitted.emit();
   }
 }

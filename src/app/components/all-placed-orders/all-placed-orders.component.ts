@@ -1,4 +1,4 @@
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { OrderService } from '../../services/order.service';
@@ -7,7 +7,7 @@ import { OrderList } from '../../interfaces/order';
 @Component({
   selector: 'app-all-placed-orders',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './all-placed-orders.component.html',
   styleUrl: './all-placed-orders.component.css',
 })

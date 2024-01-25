@@ -10,7 +10,7 @@ import { throwError } from 'rxjs';
   providedIn: 'root',
 })
 export class OrderService {
-  private endpointUrl = '../../assets/sample-data/order.json';
+  private endpointUrl = '/assets/sample-data/order.json';
 
   constructor(private http: HttpClient, private router: Router) {}
 

@@ -8,6 +8,8 @@ import {
   CounterComponent,
   CounterUpdate,
 } from '../../counter/counter.component';
+import { CartService } from '../../../services/cart.service';
+import { take } from 'rxjs';
 
 @Component({
   selector: 'app-store-products',
@@ -17,21 +19,24 @@ import {
   imports: [CartComponent, RouterLink, CounterComponent],
 })
 export class StoreProductsComponent implements OnInit {
-  activatedRoute: ActivatedRoute = inject(ActivatedRoute);
-  storeService: StoreService = inject(StoreService);
-
   @Input() products: Product[] = [];
   @Input() isOrderPage: boolean = false;
   @Input() isOrder: boolean = false;
 
   constructor(
     private router: Router,
-    private addToCartPublisherService: AddToCartPublisherService
+    private addToCartPublisherService: AddToCartPublisherService,
+    private cartService: CartService,
+    private activatedRoute: ActivatedRoute,
+    private storeService: StoreService
   ) {}
 
   ngOnInit() {
     this.activatedRoute.params.subscribe({
       next: (params: any) => {
+        // Clear the cart when changing stores
+        this.cartService.clearCart();
+
         this.storeService
           .getStoreById(params.id)
           .subscribe((r) => (this.products = r.products));

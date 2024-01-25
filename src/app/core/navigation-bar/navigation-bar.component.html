@@ -43,20 +43,72 @@
             role="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
+            >Stores</a
           >
-            Stores
-          </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <h6 class="dropdown-header">Categories</h6>
-            <li><a class="dropdown-item" routerLink="active" routerLink="foodStores">Food</a></li>
-            <li><a class="dropdown-item" routerLink="active" routerLink="drinkStores">Drink</a></li>
-            <li><a class="dropdown-item" routerLink="active" routerLink="store">View All Stores</a></li>
+            <li>
+              <a
+                class="dropdown-item"
+                routerLink="active"
+                routerLink="foodStores"
+                >Food</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                routerLink="active"
+                routerLink="drinkStores"
+                >Drink</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="active" routerLink="store"
+                >View All Stores</a
+              >
+            </li>
           </ul>
         </li>
       </ul>
 
       <div class="search">
         <app-search />
+      </div>
+      <br />
+
+      <div *ngIf="!isUserRegistered" class="ml-auto">
+        <button class="btn btn-outline-primary px-15" routerLink="/register">
+          Register
+        </button>
+      </div>
+
+      <div *ngIf="isUserRegistered" class="ml-auto">
+        <div class="nav-item dropdown">
+          <!-- <button
+            class="nav-link dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Welcome {{ registeredUser?.first_name }}!
+          </button> -->
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <h6 class="dropdown-header">My Profile</h6>
+            <li>
+              <a class="dropdown-item" routerLink="/account">Account</a>
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="/all-placed-orders"
+                >Orders</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="/home" (click)="logoutUser()"
+                >Log Out</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>

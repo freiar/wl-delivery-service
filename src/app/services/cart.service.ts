@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Product } from '../interfaces/product';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { BehaviorSubject, Observable, throwError } from 'rxjs';
+import { BehaviorSubject, Observable, ReplaySubject, throwError } from 'rxjs';
 import { CartUpdate } from '../interfaces/cart-update';
 
 @Injectable({
@@ -11,8 +11,10 @@ import { CartUpdate } from '../interfaces/cart-update';
 })
 export class CartService {
   // BehaviorSubject to track the count of items in the cart
-  private cartCountSubject = new BehaviorSubject<number>(0);
-  cartCount$ = this.cartCountSubject.asObservable();
+  private cartCountSubject: ReplaySubject<number> = new ReplaySubject<number>(
+    0
+  );
+  cartCount$: Observable<number> = this.cartCountSubject.asObservable();
 
   // Array to store the products in the cart
   private cart: Product[] = [];
@@ -37,10 +39,10 @@ export class CartService {
   }
 
   // Function to clear the cart
-  clearCart(): void {
+  clearCart(count: number = 0): void {
     this.cart = [];
     this.currentStoreId = null;
-    this.updateCart({ count: 0, products: [] }); // Pass the CartUpdate object
+    this.addToCartPublisherService.updateCart({ count: -1, products: [] });
   }
 
   // Function to update the cart with new products

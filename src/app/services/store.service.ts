@@ -1,6 +1,6 @@
 import { Store } from '../interfaces/store';
 import { inject, Injectable } from '@angular/core';
-import { Observable, catchError, map } from 'rxjs';
+import { Observable, Subject, catchError, map } from 'rxjs';
 import { throwError } from 'rxjs';
 import {
   HttpClient,
@@ -14,6 +14,8 @@ import { StoreWithoutProducts } from '../interfaces/store-without-products';
   providedIn: 'root',
 })
 export class StoreService {
+  private storeIdSubject = new Subject<number>();
+
   constructor(private router: Router) {}
 
   private http = inject(HttpClient);
@@ -39,11 +41,9 @@ export class StoreService {
 
   getStoreById(id: number): Observable<Store> {
     return this.http.get<Store[]>(this.EndpointUrl).pipe(
-      map(
-        stores => {
-          return stores.find(s => s.id == id)!
-        }
-      )
+      map((stores) => {
+        return stores.find((s) => s.id == id)!;
+      })
     );
   }
 

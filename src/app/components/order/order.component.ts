@@ -1,12 +1,12 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Order } from '../../interfaces/order';
 import { Store } from '../../interfaces/store';
 import { Product } from '../../interfaces/product';
 import { Subscription } from 'rxjs';
 import { OrderService } from '../../services/order.service';
 import { StoreService } from '../../services/store.service';
-import { RouterLink } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { CartService } from '../../services/cart.service';
 
 @Component({
@@ -16,7 +16,7 @@ import { CartService } from '../../services/cart.service';
   templateUrl: './order.component.html',
   styleUrl: './order.component.css',
 })
-export class OrderComponent {
+export class OrderComponent implements OnInit {
   @Input() orderId: string = ''; // Input to specify the orderId
   order: Order | undefined;
   store: Store | undefined;
@@ -28,10 +28,26 @@ export class OrderComponent {
   constructor(
     private orderService: OrderService,
     private cartService: CartService,
-    private storeService: StoreService
+    private storeService: StoreService,
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
+    // Extract orderId from route parameters
+    const orderIdParam = this.route.snapshot.paramMap.get('orderId');
+
+    if (orderIdParam !== null) {
+      this.orderId = orderIdParam;
+      // Fetch the order based on orderId
+      this.orderSubscription = this.orderService
+        .getOrderById(this.orderId)
+        .subscribe({
+          // ... rest of the code ...
+        });
+    } else {
+      console.error('Order ID not found in route parameters.');
+    }
+
     // Fetch the order based on orderId
     this.orderSubscription = this.orderService
       .getOrderById(this.orderId)
