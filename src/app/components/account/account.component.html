@@ -1,13 +1,22 @@
+<!-- Container with flex properties, aligning items at the center -->
 <div class="container-fluid d-flex flex-column align-items-center">
+  <!-- Image for the account page -->
   <img
     src="./assets/images/food-account.jpg"
     alt="Food Account Image"
     width="95%"
   />
+
+  <!-- Heading for the account page -->
   <h1 class="account-page-title">My Account</h1>
+
+  <!-- Inner container for the table -->
   <div class="inner-container">
+    <!-- Responsive table container -->
     <div class="table-responsive">
+      <!-- Table with a specific styling class -->
       <table class="table table-title">
+        <!-- Table header with column names -->
         <thead>
           <tr>
             <th>Firstname</th>
@@ -16,7 +25,10 @@
             <th>Phone</th>
           </tr>
         </thead>
+
+        <!-- Table body for user data -->
         <tbody>
+          <!-- Loop through each user and display their information -->
           <tr *ngFor="let user of user; let i = index">
             <td>{{ user.first_name }}</td>
             <td>{{ user.last_name }}</td>

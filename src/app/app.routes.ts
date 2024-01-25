@@ -32,6 +32,7 @@ export const routes: Routes = [
   { path: 'drinkStores', component: DrinkStoresComponent },
   { path: 'foodStores', component: FoodStoresComponent },
   { path: 'order/:orderId', component: OrderComponent },
+  { path: 'order', component: OrderComponent },
   { path: 'order-page', component: OrderPageComponent },
   { path: 'order/1/all-placed-orders', component: AllPlacedOrdersComponent },
   { path: 'order/2/all-placed-orders', component: AllPlacedOrdersComponent },

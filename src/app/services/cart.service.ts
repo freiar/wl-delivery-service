@@ -1,20 +1,22 @@
 import { AddToCartPublisherService } from './add.to.cart.publisher.service';
 import { Injectable } from '@angular/core';
 import { Product } from '../interfaces/product';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { BehaviorSubject, Observable, ReplaySubject, throwError } from 'rxjs';
+import { Observable, ReplaySubject, catchError, throwError } from 'rxjs';
 import { CartUpdate } from '../interfaces/cart-update';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CartService {
-  // BehaviorSubject to track the count of items in the cart
+  // BehaviorSubject to track the count of items in the cart with error handling
   private cartCountSubject: ReplaySubject<number> = new ReplaySubject<number>(
     0
   );
-  cartCount$: Observable<number> = this.cartCountSubject.asObservable();
+  cartCount$: Observable<number> = this.cartCountSubject
+    .asObservable()
+    .pipe(catchError((error: HttpErrorResponse) => this.handleError(error)));
 
   // Array to store the products in the cart
   private cart: Product[] = [];
@@ -22,14 +24,12 @@ export class CartService {
   private currentStoreId: number | null = null;
 
   constructor(
-    private http: HttpClient,
     private router: Router,
     private addToCartPublisherService: AddToCartPublisherService
   ) {}
 
   // Function to update the cart count
   updateCartCount(count: number): void {
-    console.log('Updating cart count:', count);
     this.cartCountSubject.next(count);
   }
 
@@ -55,6 +55,7 @@ export class CartService {
     this.addToCartPublisherService.updateCart(cartUpdate);
   }
 
+  // to be used during implementation with backend
   private handleError(error: HttpErrorResponse): Observable<never> {
     let errorMessage = 'Something went wrong';
 
@@ -109,6 +110,6 @@ export class CartService {
     console.error(error);
 
     // Pass the error message to the caller
-    return throwError(() => new Error(errorMessage));
+    return throwError(() => Error(errorMessage));
   }
 }

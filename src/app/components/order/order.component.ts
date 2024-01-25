@@ -17,7 +17,7 @@ import { CartService } from '../../services/cart.service';
   styleUrl: './order.component.css',
 })
 export class OrderComponent implements OnInit {
-  @Input() orderId: string = ''; // Input to specify the orderId
+ @Input() orderId: string = ''; // Input to specify the orderId
   order: Order | undefined;
   store: Store | undefined;
   cart: Product[] = [];
@@ -41,9 +41,7 @@ export class OrderComponent implements OnInit {
       // Fetch the order based on orderId
       this.orderSubscription = this.orderService
         .getOrderById(this.orderId)
-        .subscribe({
-          // ... rest of the code ...
-        });
+        .subscribe({});
     } else {
       console.error('Order ID not found in route parameters.');
     }
@@ -80,11 +78,11 @@ export class OrderComponent implements OnInit {
     this.cart = this.cartService.getCart();
   }
 
-  // Create a new order
+  // Create a new order - to be used during implementation with backend
   createOrder(order: Order): void {
     if (this.product) {
       this.orderService.createOrder(order).subscribe({
-        next: (createdOrder: any) => {
+        next: (createdOrder: Order) => {
           console.log('Order created successfully:', createdOrder);
         },
         error: (error: any) => {

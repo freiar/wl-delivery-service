@@ -1,21 +1,33 @@
+<!-- Container for the component with flex-column layout -->
 <div class="container-fluid d-flex flex-column align-items-center">
+  <!-- Image element displaying the order-list photo -->
   <img src="./assets/images/order-list.jpg" alt="food photo" />
+
+  <!-- Heading for the order list -->
   <h1 class="heading">My Order List</h1>
+
+  <!-- ngIf directive to conditionally render content based on 'hasLoaded' variable -->
   <ng-template
     *ngIf="hasLoaded; then orderBlock; else noOrderBlock"
   ></ng-template>
+
+  <!-- ng-template for rendering orders when 'hasLoaded' is true -->
   <ng-template #orderBlock>
+    <!-- Container for the order table with flex layout -->
     <div
       style="display: flex; justify-content: center; cursor: pointer"
       class="table"
     >
+      <!-- Table displaying order details -->
       <table>
+        <!-- ngFor directive to iterate over each order and create a table row -->
         <tr
           *ngFor="let order of orders; let i = index"
           [routerLink]="['/order', order.orderId]"
           (click)="viewOrderDetails(order.orderId)"
           title="Click For Details"
         >
+          <!-- Table cell displaying the order photo -->
           <td>
             <img
               src="{{ order.photo }}"
@@ -23,13 +35,21 @@
               alt="order-card photo"
             />
           </td>
+
+          <!-- Table cell displaying store information -->
           <td><span>Store:</span> {{ order.store }}</td>
+
+          <!-- Table cell displaying customer ID -->
           <td><span>Customer ID:</span> {{ order.customerId }}</td>
+
+          <!-- Table cell displaying order ID -->
           <td><span>Order Id:</span> {{ order.orderId }}</td>
         </tr>
       </table>
     </div>
   </ng-template>
+
+  <!-- ng-template for rendering a loading message when 'hasLoaded' is false -->
   <ng-template #noOrderBlock>
     <h1>Loading Orders...</h1>
   </ng-template>

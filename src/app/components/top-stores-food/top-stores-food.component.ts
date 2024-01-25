@@ -12,13 +12,17 @@ import { StoreService } from '../../services/store.service';
   styleUrl: './top-stores-food.component.css',
 })
 export class TopStoresFoodComponent implements OnInit {
-   // Define an array to store the retrieved stores
+  // Define an array to store the retrieved stores
   stores: Store[] = [];
 
+  // Constructor to inject the 'StoreService'
   constructor(private storeService: StoreService) {}
 
+  // Lifecycle hook called after the component is initialized
   ngOnInit() {
+    // Subscribe to the 'getTop8StoresByFoodCategory()' method of 'StoreService'
     this.storeService.getTop8StoresByFoodCategory().subscribe({
+      // Callback when data is successfully retrieved
       next: (data: any) => {
         // Update the 'stores' array with the retrieved data
         this.stores = data;

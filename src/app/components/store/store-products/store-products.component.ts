@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, inject } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { Product } from '../../../interfaces/product';
 import { AddToCartPublisherService } from '../../../services/add.to.cart.publisher.service';
@@ -9,7 +9,6 @@ import {
   CounterUpdate,
 } from '../../counter/counter.component';
 import { CartService } from '../../../services/cart.service';
-import { take } from 'rxjs';
 
 @Component({
   selector: 'app-store-products',
@@ -39,7 +38,7 @@ export class StoreProductsComponent implements OnInit {
 
         this.storeService
           .getStoreById(params.id)
-          .subscribe((r) => (this.products = r.products));
+          .subscribe((r) => (this.products = r!.products));
       },
     });
   }
