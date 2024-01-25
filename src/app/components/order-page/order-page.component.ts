@@ -1,5 +1,4 @@
 import { SendOrderButtonComponent } from './../send-order-button/send-order-button.component';
-import { CartComponent } from './../cart/cart.component';
 import { CommonModule } from '@angular/common';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
@@ -11,6 +10,7 @@ import { Subscription } from 'rxjs';
 import { OrderService } from '../../services/order.service';
 import { CartService } from '../../services/cart.service';
 import { StoreService } from '../../services/store.service';
+import { CartComponent } from '../cart/cart.component';
 
 @Component({
   selector: 'app-order-page',
@@ -71,7 +71,7 @@ export class OrderPageComponent implements OnInit, OnDestroy {
     this.cart = this.cartService.getCart();
   }
 
-  // Create a new order
+  // Create a new order - to be used during implementation with backend
   createOrder(order: Order): void {
     if (this.product) {
       this.orderService.createOrder(order).subscribe({

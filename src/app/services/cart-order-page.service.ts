@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, throwError } from 'rxjs';
+import { BehaviorSubject, Observable, catchError, throwError } from 'rxjs';
 import { Product } from '../interfaces/product';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
@@ -10,8 +10,10 @@ import { Router } from '@angular/router';
 export class CartOrderPageService {
   // Subject to manage the state of the shopping cart
   private cartSubject = new BehaviorSubject<Product[]>([]);
-  // Observable exposed for components to subscribe to changes in the cart
-  public cart$: Observable<Product[]> = this.cartSubject.asObservable();
+  // Observable exposed for components to subscribe to changes in the cart with error handling
+  public cart$: Observable<Product[]> = this.cartSubject
+    .asObservable()
+    .pipe(catchError((error: HttpErrorResponse) => this.handleError(error)));
 
   constructor(private router: Router) {}
 
@@ -29,6 +31,7 @@ export class CartOrderPageService {
     this.cartSubject.next(updatedCart);
   }
 
+  // to be used during implementation with backend
   private handleError(error: HttpErrorResponse): Observable<never> {
     let errorMessage = 'Something went wrong';
 
@@ -83,6 +86,6 @@ export class CartOrderPageService {
     console.error(error);
 
     // Pass the error message to the caller
-    return throwError(() => new Error(errorMessage));
+    return throwError(() => Error(errorMessage));
   }
 }

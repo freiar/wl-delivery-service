@@ -14,11 +14,13 @@ import { StoreWithoutProducts } from '../interfaces/store-without-products';
   providedIn: 'root',
 })
 export class StoreService {
+  // Subject to notify about changes in store ID
   private storeIdSubject = new Subject<number>();
 
   constructor(private router: Router) {}
 
   private http = inject(HttpClient);
+
   private EndpointUrl = '../assets/sample-data/stores.json';
   private endpointGetTop8StoresPerFoodCategory =
     'assets/sample-data/most_famous_stores_per_food_category.json';
@@ -39,11 +41,10 @@ export class StoreService {
     );
   }
 
-  getStoreById(id: number): Observable<Store> {
+  getStoreById(id: number): Observable<Store | null> {
     return this.http.get<Store[]>(this.EndpointUrl).pipe(
-      map((stores) => {
-        return stores.find((s) => s.id == id)!;
-      })
+      map((stores) => stores.find((s) => s.id === id) || null),
+      catchError(this.handleError)
     );
   }
 
@@ -91,6 +92,7 @@ export class StoreService {
     return this.http.get<Store[]>(this.endpointGetFoodStores);
   }
 
+  // to be used during implementation with backend
   private handleError(error: HttpErrorResponse): Observable<never> {
     let errorMessage = 'Something went wrong';
 

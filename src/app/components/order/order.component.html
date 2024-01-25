@@ -1,11 +1,22 @@
 <div class="container-fluid">
+  <!-- Heading for the order section -->
   <h1 class="heading">Your Order</h1>
+
+  <!-- Container for displaying order details -->
   <div class="inner-box">
+    <!-- Displaying the store information -->
     <p><span>Store:</span> {{ order?.store }}</p>
+
+    <!-- Displaying the products in the order -->
     <p><span>Products:</span> {{ order?.products }}</p>
+
+    <!-- Displaying the order date -->
     <p><span>Order Date:</span> {{ order?.orderDate }}</p>
 
+    <!-- Displaying the total price of the order -->
     <p><span>Total Price:</span> {{ order?.totalPrice }} €</p>
+
+    <!-- Displaying payment information -->
     <p><span>Payment Info:</span> {{ order?.paymentInfo }}</p>
   </div>
 </div>

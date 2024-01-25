@@ -1,13 +1,18 @@
+<!-- Container for the search form -->
 <div class="search-container">
+  <!-- Form for handling store search -->
   <form [formGroup]="form" (submit)="onSubmit()">
+    <!-- Input field for entering search data -->
     <input
       formControlName="searchData"
       placeholder="Search Stores"
       class="search-input"
     />
+
+    <!-- Magnifying glass icon for search -->
     <img
       src="assets/images/magnifying-glass-solid.svg"
-      alt="mangifying glass icon"
+      alt="magnifying glass icon"
       class="search-icon"
     />
   </form>

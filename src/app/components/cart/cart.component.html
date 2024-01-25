@@ -1,14 +1,27 @@
+<!-- Container for the cart page -->
 <div class="container-fluid cart-container">
+  <!-- Heading for the cart page with dynamic class binding -->
   <h1 [ngClass]="{ 'order-page': isOrderPage }">Cart</h1>
+
+  <!-- Check if there are products in the cart -->
   <div *ngIf="cartProducts && cartProducts.length > 0">
+    <!-- Iterate over each cart item -->
     <div *ngFor="let cartItem of cartProducts; let i = index">
+      <!-- Display product name -->
       <h5>{{ cartItem.name }}</h5>
+      <!-- Display product price -->
       <span> Price: $ {{ cartItem.price }}</span>
+      <!-- Display product quantity -->
       <p>Product Quantity: {{ cartItem.count || 1 }}</p>
+      <!-- Horizontal line as a separator -->
       <hr class="hr" />
     </div>
+
+    <!-- Display the total price of all items in the cart -->
     <strong>Total Price: $ {{ totalPrice }}</strong>
   </div>
+
+  <!-- Display a message if the cart is empty -->
   <div class="empty" *ngIf="!cartProducts || cartProducts.length === 0">
     Your cart is empty.
   </div>

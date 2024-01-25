@@ -22,8 +22,8 @@ export class SendOrderButtonComponent implements OnInit {
   @Output() orderSubmitted = new EventEmitter<void>();
 
   constructor(
-    private cartService: CartService,
-    private orderService: OrderService,
+    private cartService: CartService, // to be used during implementation with backend
+    private orderService: OrderService, // to be used during implementation with backend
     private router: Router
   ) {}
 
