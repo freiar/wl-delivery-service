@@ -77,59 +77,39 @@
       </div>
       <br />
 
-      <ng-container *ngIf="isUserRegistered">
-        <!-- <button
+      <div *ngIf="!isUserRegistered" class="ml-auto">
+        <button class="btn btn-outline-primary px-15" routerLink="/register">
+          Register
+        </button>
+      </div>
+
+      <div *ngIf="isUserRegistered" class="ml-auto">
+        <div class="nav-item dropdown">
+          <!-- <button
             class="nav-link dropdown-toggle"
-            href="#"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"> 
-            Welcome 
-             /* {{ registeredUser.firstName }}!
-            {{ registerUser.name }} */
-          </button> -->
-        <div class="nav-item dropdown list-unstyled">
-          <button
-            class="nav-link dropdown-toggle"
-            href="#"
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            Welcome
-          </button>
-
+            Welcome {{ registeredUser?.first_name }}!
+          </button> -->
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <h6 class="dropdown-header">My Profile</h6>
             <li>
-              <a class="dropdown-item" routerLink="active" routerLink="/account"
-                >Account</a
-              >
+              <a class="dropdown-item" routerLink="/account">Account</a>
             </li>
             <li>
-              <a
-                class="dropdown-item"
-                routerLink="active"
-                routerLink="/all-placed-orders"
+              <a class="dropdown-item" routerLink="/all-placed-orders"
                 >Orders</a
               >
             </li>
             <li>
-              <a
-                class="dropdown-item"
-                routerLink="active"
-                routerLink="/home"
-                (click)="logoutUser(); deleteRegistration()"
-                >Log out</a
+              <a class="dropdown-item" routerLink="/home" (click)="logoutUser()"
+                >Log Out</a
               >
             </li>
           </ul>
         </div>
-      </ng-container>
-
-      <ng-container *ngIf="!isUserRegistered">
-        <button class="btn btn-outline-primary px-15" routerLink="/register">
-          Register
-        </button>
-      </ng-container>
+      </div>
     </div>
   </div>
 </nav>

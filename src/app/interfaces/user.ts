@@ -1,8 +1,9 @@
 export interface User {
-    id: number;
-    avatar: string;
-    first_name: string;
-    last_name: string;
-    email: string;
-    disabled: boolean;
+  id: number;
+  avatar: string;
+  first_name: string;
+  last_name: string;
+  email: string;
+  disabled: boolean;
+  phone: string;
 }

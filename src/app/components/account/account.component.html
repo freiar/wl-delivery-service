@@ -1,1 +1,30 @@
-<p>account works!</p>
+<div class="container-fluid d-flex flex-column align-items-center">
+  <img
+    src="./assets/images/food-account.jpg"
+    alt="Food Account Image"
+    width="95%"
+  />
+  <h1 class="account-page-title">My Account</h1>
+  <div class="inner-container">
+    <div class="table-responsive">
+      <table class="table table-title">
+        <thead>
+          <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+            <th>Phone</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of user; let i = index">
+            <td>{{ user.first_name }}</td>
+            <td>{{ user.last_name }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.phone }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
