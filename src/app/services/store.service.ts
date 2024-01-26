@@ -48,6 +48,10 @@ export class StoreService {
       })
     );
   }
+<<<<<<< HEAD
+=======
+  
+>>>>>>> 8fc4811c018ca5d5bee6b0d18cfe844872578967
 
   getStoreByName(name: string): Observable<Store | undefined> {
     // Header
