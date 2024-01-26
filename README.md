@@ -1,4 +1,4 @@
-# Angular 17 Food Delivery App
+# Angular 17 -  We Lead Food Delivery App
 
 Welcome to our Angular 17 Food Delivery App! This project is a collaborative effort by our development team to create a modern and user-friendly food delivery application.
 
@@ -11,6 +11,8 @@ Welcome to our Angular 17 Food Delivery App! This project is a collaborative eff
   - **About Us:** Learn more about our food delivery service and team.
   - **Contact:** Reach out to us easily through the provided contact information.
   - **Account:** User Info.
+- **Search Functionality:** Users can search for stores by name and category to find their desired options quickly.
+- **Discover Famous Stores:** The app showcases famous stores in general and famous stores by category to enhance user experience
 
 ## Technologies Used
 
@@ -22,3 +24,4 @@ Welcome to our Angular 17 Food Delivery App! This project is a collaborative eff
 We would like to express our gratitude to the Angular community and other open-source contributors for their invaluable resources and tools.
 
 Happy coding!
+
