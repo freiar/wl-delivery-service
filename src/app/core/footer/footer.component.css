@@ -3,7 +3,7 @@
 }
 
 .footer {
-  padding-top: 200px;
+  padding-top: 150px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,16 +17,10 @@
   gap: 50px;
 }
 
-.footer-logo img {
-  width: 70px;
-  margin-right: 50px;
-}
-
 .footer-logo p {
   color: white;
   font-size: 46px;
   font-weight: 700;
-  margin-left: -100px;
   justify-content: center;
 }
 
@@ -179,4 +173,37 @@ footer .green-background:hover {
 
 .green-background {
   cursor: pointer;
+}
+
+.know {
+  margin-top: -65px;
+}
+
+/* Media Queries for Extra Small, Small, and Medium Screens */
+@media screen and (max-width: 575px) {
+  footer .green-background {
+    margin-left: 250px;
+    margin-top: 10px;
+  }
+}
+
+/* Media Queries for Large and Extra Large Screens */
+@media screen and (min-width: 576px) and (max-width: 991px) {
+  footer .green-background {
+    margin-top: 20px;
+    margin-left: 250px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  footer .green-background {
+    margin-left: 300px;
+    margin-top: -30px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  footer .green-background {
+    margin-left: 630px;
+  }
 }

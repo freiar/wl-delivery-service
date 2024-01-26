@@ -1,36 +1,41 @@
 <div class="container-fluid">
   <app-header></app-header>
-  <app-famous-stores-general/>
+  <app-famous-stores-general />
   <h1 class="categories">
     Most Famous Stores <br />
     by Category
   </h1>
   <h1>Food - Drink</h1>
-  <div>
-    <a
-      (click)="scrollToTop()"
-      class="link-offset-1 link-underline link-underlinea-opacity-0"
-      routerLink="/topStoresFood"
-      routerLinkActive="active"
-    >
-      <img
-        src="./assets/images/food-home.jpg"
-        width="400px"
-        height="250px"
-        alt="Food Image"
-    /></a>
-    <a
-      (click)="scrollToTop()"
-      class="link-offset-1 link-underline link-underline-opacity-0"
-      routerLink="/topStoresDrink"
-      routerLinkActive="active"
-    >
-      <img
-        src="./assets/images/drink-home.jpg"
-        width="400px"
-        height="250px"
-        alt="Drink Image"
-    /></a>
-  </div>  
-  <app-store></app-store>
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-auto">
+      <div>
+        <a
+          (click)="scrollToTop()"
+          class="link-offset-1 link-underline link-underlinea-opacity-0"
+          routerLink="/topStoresFood"
+          routerLinkActive="active"
+          style="justify-content: center"
+        >
+          <img
+            src="./assets/images/food-home.jpg"
+            width="400px"
+            height="250px"
+            alt="Food Image"
+        /></a>
+        <a
+          (click)="scrollToTop()"
+          class="link-offset-1 link-underline link-underline-opacity-0"
+          routerLink="/topStoresDrink"
+          routerLinkActive="active"
+        >
+          <img
+            src="./assets/images/drink-home.jpg"
+            width="400px"
+            height="250px"
+            alt="Drink Image"
+        /></a>
+      </div>
+      <app-store></app-store>
+    </div>
+  </div>
 </div>
