@@ -1,8 +1,12 @@
 .cart-container {
   border: 2px solid white;
   border-radius: 5px;
+<<<<<<< HEAD
   width: auto;
   min-width: 400px;
+=======
+  width: 100%;
+>>>>>>> 6860756355086d33e4754df23f59ca020308ce4e
   background-color: white;
   height: auto;
   overflow: hidden;
