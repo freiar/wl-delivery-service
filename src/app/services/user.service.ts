@@ -1,7 +1,11 @@
 import { Injectable } from '@angular/core';
 import { User } from '../interfaces/user';
-import { Observable, throwError } from 'rxjs';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { Observable, catchError, retry, throwError } from 'rxjs';
+import {
+  HttpClient,
+  HttpErrorResponse,
+  HttpHeaders,
+} from '@angular/common/http';
 import { Router } from '@angular/router';
 
 @Injectable({
@@ -9,24 +13,31 @@ import { Router } from '@angular/router';
 })
 export class UserService {
   private endpointUrl = 'assets/sample-data/user.json';
-  private registeredUser: User | null = null;
 
   constructor(private http: HttpClient, private router: Router) {}
 
-  getRegisteredUser(): User | null {
-    return this.registeredUser;
-  }
-
-  setRegisteredUser(user: User): void {
-    this.registeredUser = user;
-  }
-
-  clearRegisteredUser(): void {
-    this.registeredUser = null;
-  }
-
   getUser(): Observable<User[]> {
     return this.http.get<User[]>(this.endpointUrl);
+  }
+
+  getUserById(id: number): Observable<User[]> {
+    return this.http.get<User[]>(this.endpointUrl + '/' + id);
+  }
+
+  postUser(data: User): Observable<User> {
+    const options = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      }),
+    };
+
+    return this.http
+      .post<User>(this.endpointUrl, JSON.stringify(data), options)
+      .pipe(
+        retry(1),
+        catchError((error) => this.handleError(error))
+      );
   }
 
   // Handle HTTP errors - to be used during implementation with backend

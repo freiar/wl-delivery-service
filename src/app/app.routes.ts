@@ -6,7 +6,6 @@ import { Error404Component } from './components/error-404/error-404.component';
 import { StoreComponent } from './components/store/store.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { StoreProductsComponent } from './components/store/store-products/store-products.component';
-import { UserComponent } from './components/user/user.component';
 import { RegisterComponent } from './components/register/register.component';
 import { Error403Component } from './components/error-403/error-403.component';
 import { TopStoresFoodComponent } from './components/top-stores-food/top-stores-food.component';
@@ -22,7 +21,6 @@ export const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'about-us', component: AboutUsComponent },
   { path: 'account', component: AccountComponent },
-  { path: 'user', component: UserComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'store', component: StoreComponent },
