@@ -26,6 +26,15 @@ button:hover {
   color: #e5ad05;
 }
 
-.navbar-toggler {
-  background-color: #e5ad05;
+.arrow {
+  height: 12px;
+  width: auto;
+  color: grey;
+}
+
+img {
+  cursor: pointer;
+  height: 40px;
+  width: auto;
+  margin-right: 10px;
 }
