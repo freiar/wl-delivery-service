@@ -7,8 +7,6 @@ import { HttpErrorResponse } from '@angular/common/http';
   providedIn: 'root',
 })
 export class RegistrationService {
-
- 
   private isRegisteredSubject: BehaviorSubject<boolean>;
 
   constructor(private router: Router) {
@@ -41,9 +39,9 @@ export class RegistrationService {
     return this.isRegisteredSubject.value;
   }
 
-  logoutUser(){
+  logoutUser() {
     localStorage.removeItem('registrations');
-    this.isRegisteredSubject.next(false);    
+    this.isRegisteredSubject.next(false);
   }
 
   private handleError(error: HttpErrorResponse): Observable<never> {
