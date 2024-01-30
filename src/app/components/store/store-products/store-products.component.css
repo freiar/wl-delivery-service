@@ -14,6 +14,10 @@ img {
   margin-top: 20px;
 }
 
+.container-fluid {
+  padding-top: 80px;
+}
+
 .menu-img {
   width: 70px;
   height: 70px;

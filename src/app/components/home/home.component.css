@@ -8,6 +8,10 @@
   margin-top: 25px;
 }
 
+.container-fluid {
+  padding-top: 80px;
+}
+
 .categories {
   padding-bottom: 10px;
   margin-top: 220px;

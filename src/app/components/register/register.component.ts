@@ -2,25 +2,21 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import {
   FormBuilder,
-  FormControl,
   FormGroup,
-  FormsModule,
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
 import { RegistrationService } from '../../services/registration.service';
 import { User } from '../../interfaces/user';
 import { UserService } from '../../services/user.service';
-import { Router } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [CommonModule, FormsModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, RouterOutlet],
   templateUrl: './register.component.html',
   styleUrl: './register.component.css',
-
-  providers: [RegistrationService, UserService],
 })
 export class RegisterComponent implements OnInit {
   user: User[] = [];
@@ -45,6 +41,7 @@ export class RegisterComponent implements OnInit {
 
   onSubmit() {
     if (this.registrationForm.valid) {
+      console.log('submit');
       // If the form is valid, submit user details to the UserService
       const userDetails = this.registrationForm.value;
       this.userService.postUser(userDetails).subscribe({
@@ -78,9 +75,8 @@ export class RegisterComponent implements OnInit {
   }
 
   register() {
+    console.log('register');
     // Trigger the registration process in the RegistrationService
     this.registrationService.registerUser();
-
-    this.router.navigate(['/home']);
   }
 }

@@ -51,10 +51,12 @@ export class NavigationBarComponent implements OnInit {
     this.registrationService
       .isRegistered()
       .subscribe((isRegistered: boolean) => {
+        console.log('isRegistered:', isRegistered);
         this.isRegistered = isRegistered;
       });
 
     this.isRegistered = this.registrationService.isUserRegistered();
+    console.log(this.isRegistered);
 
     this.router.events.subscribe((event: any) => {
       if (event instanceof NavigationEnd) {

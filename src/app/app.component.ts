@@ -33,6 +33,7 @@ import { RegisterComponent } from './components/register/register.component';
     ContactComponent,
     RegisterComponent,
     HeaderComponent,
+    RegisterComponent,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],

@@ -79,15 +79,16 @@
 
       <div class="navbar-actions">
         <div
-          class="navbar-item2"
+          class="navbar-item"
           *ngIf="!isRegistered && !isRegistrationPage"
           routerLink="/register"
           routerLinkActive="active"
         >
           <button>Register</button>
         </div>
+
         <div
-          class="navbar-item2 dropdown"
+          class="navbar-item dropdown"
           *ngIf="isRegistered"
           (mouseenter)="toggleDropdown('account', true)"
           (mouseleave)="toggleDropdown('account', false)"
