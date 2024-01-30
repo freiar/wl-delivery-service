@@ -7,6 +7,9 @@ body::before {
   content: "";
   height: 60px;
 }
+.container-fluid {
+  padding-top: 160px;
+}
 
 #map {
   width: 100%;

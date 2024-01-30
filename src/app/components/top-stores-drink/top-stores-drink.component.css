@@ -11,6 +11,10 @@ h1 {
   margin-bottom: 80px;
 }
 
+.container-fluid {
+  padding-top: 80px;
+}
+
 .main-photo {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;

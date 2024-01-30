@@ -29,3 +29,7 @@ h1 {
 .star-fill {
   fill: green;
 }
+
+.container-fluid {
+  padding-top: 140px;
+}
