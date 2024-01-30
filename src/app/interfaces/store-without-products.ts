@@ -4,5 +4,5 @@ export interface StoreWithoutProducts {
   category: string;
   address: string;
   rate: number;
-  image: string;
+  photo: string;
 }

@@ -30,3 +30,8 @@ h1 {
 .star-fill {
   fill: green;
 }
+
+.card-img-top {
+  max-height: 240px;
+  object-fit: cover;
+}
