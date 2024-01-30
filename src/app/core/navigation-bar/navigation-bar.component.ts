@@ -29,6 +29,13 @@ export class NavigationBarComponent implements OnInit {
   isRegistrationPage: boolean = false;
   isMobileScreen: boolean = false;
 
+  isUserRegistered: boolean = false;
+  registeredUser: any; 
+
+  deleteRegistration() {
+    throw new Error('Method not implemented.');
+    }
+
   @HostListener('window:resize', ['$event'])
   onResize(event: any): void {
     this.isMobileScreen = window.innerWidth <= 1199.99;
@@ -45,6 +52,12 @@ export class NavigationBarComponent implements OnInit {
   toggleDropdown(key: string, isOpen?: boolean) {
     this.isDropdownOpen[key] =
       isOpen !== undefined ? isOpen : !this.isDropdownOpen[key];
+  }
+
+  logoutUser(){
+    this.registrationService.logoutUser();
+    this.isUserRegistered = false;
+    this.registeredUser = null;
   }
 
   ngOnInit() {
