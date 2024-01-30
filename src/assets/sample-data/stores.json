@@ -5,6 +5,7 @@
     "category": "Fast Food",
     "address": "Syntagma 15",
     "rate": 5,
+    "photo": "/assets/images/goodys.jpg",
     "products": [
       {
         "id": "1",
@@ -66,8 +67,7 @@
         "category": "FRIES_&_SIDES",
         "price": 1.2
       }
-    ],
-    "image": "/assets/images/goodys.jpg"
+    ]
   },
   {
     "id": 2,
@@ -75,6 +75,7 @@
     "category": "Asian",
     "address": "Glyfada Str. 203",
     "rate": 5,
+    "photo": "/assets/images/streetwok.jpeg",
     "products": [
       {
         "id": "11",
@@ -112,8 +113,7 @@
         "category": "OTHER",
         "price": 5.2
       }
-    ],
-    "image": "/assets/images/goodys.jpg"
+    ]  
   },
   {
     "id": 3,
@@ -121,6 +121,7 @@
     "category": "Donuts",
     "address": "Ampelokipous 23rd Av.",
     "rate": 5,
+    "photo": "/assets/images/donuts.jpeg",
     "products": [
       {
         "id": "17",
@@ -158,8 +159,7 @@
         "category": "DONUT",
         "price": 1.99
       }
-    ],
-    "image": "/assets/images/goodys.jpg"
+    ]
   },
   {
     "id": 4,
@@ -167,6 +167,7 @@
     "category": "Coffee",
     "address": "Athinaion 15",
     "rate": 5,
+    "photo": "/assets/images/coffee.jpg",
     "products": [
       {
         "id": "1",
@@ -228,8 +229,7 @@
         "category": "FRIES_&_SIDES",
         "price": 1.2
       }
-    ],
-    "image": "/assets/images/goodys.jpg"
+    ]
   },
   {
     "id": 5,
@@ -237,6 +237,7 @@
     "category": "Coffee",
     "address": "Agisilaou 222",
     "rate": 5,
+    "photo": "/assets/images/coffee.jpg",
     "products": [
       {
         "id": "11",
@@ -274,8 +275,7 @@
         "category": "OTHER",
         "price": 5.2
       }
-    ],
-    "image": "/assets/images/goodys.jpg"
+    ]
   },
   {
     "id": 12,
@@ -283,6 +283,7 @@
     "category": "Pizza",
     "address": "Ippokrateiou 35",
     "rate": 5,
+    "photo": "/assets/images/pizza.jpg",
     "products": [
       {
         "id": "17",
@@ -320,8 +321,7 @@
         "category": "DONUT",
         "price": 1.99
       }
-    ],
-    "image": "/assets/images/goodys.jpg"
+    ]
   },
   {
     "id": 105,
@@ -329,6 +329,7 @@
     "category": "Fast Food",
     "address": "Ampelokipous 23rd Av.",
     "rate": 5,
+    "photo": "/assets/images/goodys.jpg",
     "products": [
       {
         "id": "1",
@@ -390,8 +391,7 @@
         "category": "FRIES_&_SIDES",
         "price": 1.2
       }
-    ],
-    "image": "/assets/images/goodys.jpg"
+    ]
   },
   {
     "id": 34,
@@ -399,6 +399,7 @@
     "category": "Coffee",
     "address": "Ampelokipoi 72",
     "rate": 5,
+    "photo": "/assets/images/coffee.jpg",
     "products": [
       {
         "id": "1",
@@ -460,8 +461,7 @@
         "category": "FRIES_&_SIDES",
         "price": 1.2
       }
-    ],
-    "image": "/assets/images/goodys.jpg"
+    ]
   },
   {
     "id": 8,
@@ -469,6 +469,7 @@
     "category": "Pizza",
     "address": "Menelaou 22",
     "rate": 5,
+    "photo": "/assets/images/pizza.jpg",
     "products": [
       {
         "id": "1",
@@ -530,8 +531,7 @@
         "category": "FRIES_&_SIDES",
         "price": 1.2
       }
-    ],
-    "image": "/assets/images/goodys.jpg"
+    ]  
   },
   {
     "id": 1,
