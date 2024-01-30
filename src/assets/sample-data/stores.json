@@ -113,7 +113,7 @@
         "category": "OTHER",
         "price": 5.2
       }
-    ]  
+    ]
   },
   {
     "id": 3,
@@ -237,7 +237,7 @@
     "category": "Coffee",
     "address": "Agisilaou 222",
     "rate": 5,
-    "photo": "/assets/images/coffee.jpg",
+    "photo": "/assets/images/coffee3.jpg",
     "products": [
       {
         "id": "11",
@@ -531,7 +531,7 @@
         "category": "FRIES_&_SIDES",
         "price": 1.2
       }
-    ]  
+    ]
   },
   {
     "id": 1,
@@ -608,7 +608,7 @@
     "name": "Drink it",
     "category": "Drink",
     "rate": 5,
-    "photo": "/assets/images/famous-drink-stores-card.jpg",
+    "photo": "/assets/images/drinkit.jpg",
     "address": "Glyfada Str. 203",
     "products": [
       {
@@ -654,7 +654,7 @@
     "name": "Drinks House",
     "category": "Drink",
     "rate": 5,
-    "photo": "/assets/images/famous-drink-stores-card.jpg",
+    "photo": "/assets/images/drinkshouse.jpg",
     "address": "Ampelokipous 23rd Av.",
     "products": [
       {
@@ -700,7 +700,7 @@
     "name": "Street Drinks",
     "category": "Drink",
     "rate": 5,
-    "photo": "/assets/images/famous-drink-stores-card.jpg",
+    "photo": "/assets/images/streetdrink.jpg",
     "address": "Ampelokipous 23rd Av.",
     "products": [
       {
@@ -746,7 +746,7 @@
     "name": "Fedra's Bar",
     "category": "Drink",
     "rate": 5,
-    "photo": "/assets/images/famous-drink-stores-card.jpg",
+    "photo": "/assets/images/fedra.jpg",
     "address": "Ampelokipous 23rd Av.",
     "products": [
       {
@@ -792,7 +792,7 @@
     "name": "Smoothies World",
     "category": "Drink",
     "rate": 5,
-    "photo": "/assets/images/famous-drink-stores-card.jpg",
+    "photo": "/assets/images/smoothies.jpg",
     "address": "Ampelokipous 23rd Av.",
     "products": [
       {
@@ -838,7 +838,7 @@
     "name": "Juices House",
     "category": "Drink",
     "rate": 5,
-    "photo": "/assets/images/famous-drink-stores-card.jpg",
+    "photo": "/assets/images/juices.jpg",
     "address": "Ampelokipous 23rd Av.",
     "products": [
       {
@@ -884,7 +884,7 @@
     "name": "Drink it Like You Mean It",
     "category": "Drink",
     "rate": 5,
-    "photo": "/assets/images/famous-drink-stores-card.jpg",
+    "photo": "/assets/images/coffee2.jpg",
     "address": "Ampelokipous 23rd Av.",
     "products": [
       {
@@ -997,10 +997,10 @@
   },
   {
     "id": 3,
-    "name": "Nanou Donuts House",
+    "name": "Foodies World",
     "category": "Food",
     "rate": 5,
-    "photo": "/assets/images/famous-stores-food-card.jpg",
+    "photo": "/assets/images/nanou.jpg",
     "address": "Ampelokipous 23rd Av.",
     "products": [
       {
@@ -1046,7 +1046,7 @@
     "name": "Lora's House",
     "category": "Food",
     "rate": 5,
-    "photo": "/assets/images/famous-stores-food-card.jpg",
+    "photo": "/assets/images/lora.jpg",
     "address": "Ampelokipous 23rd Av.",
     "products": [
       {
@@ -1092,7 +1092,7 @@
     "name": "Yummies",
     "category": "Food",
     "rate": 5,
-    "photo": "/assets/images/famous-stores-food-card.jpg",
+    "photo": "/assets/images/yummies.jpg",
     "address": "Ampelokipous 23rd Av.",
     "products": [
       {
@@ -1138,7 +1138,7 @@
     "name": "Steak House",
     "category": "Food",
     "rate": 5,
-    "photo": "/assets/images/famous-stores-food-card.jpg",
+    "photo": "/assets/images/steak.jpg",
     "address": "Ampelokipous 23rd Av.",
     "products": [
       {
@@ -1184,7 +1184,7 @@
     "name": "Pizza World",
     "category": "Food",
     "rate": 5,
-    "photo": "/assets/images/famous-stores-food-card.jpg",
+    "photo": "/assets/images/pizza.jpg",
     "address": "Ampelokipous 23rd Av.",
     "products": [
       {
@@ -1230,7 +1230,7 @@
     "name": "Pasta and All",
     "category": "Food",
     "rate": 5,
-    "photo": "/assets/images/famous-stores-food-card.jpg",
+    "photo": "/assets/images/pasta.jpg",
     "address": "Ampelokipous 23rd Av.",
     "products": [
       {
