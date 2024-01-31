@@ -1,4 +1,4 @@
-<div class="container-fluid align-items-center just">
+<div class="container-fluid align-items-center justify-content-center">
   <!-- Check if the order has not been submitted -->
   <div *ngIf="!isOrderSubmitted; else orderSubmitted">
     <!-- Heading for the order section -->
@@ -16,7 +16,7 @@
   <!-- Template for when the order is submitted -->
   <ng-template #orderSubmitted>
     <!-- Message when the order is being sent -->
-    <h1>Your order is being sent.</h1>
+    <h1 class="sent">Your order is being sent.</h1>
 
     <!-- Link to go back to the home page -->
     <a routerLink="/home">Go back to home page</a>

@@ -14,6 +14,10 @@ img {
   margin-top: 20px;
 }
 
+.container-fluid {
+  padding-top: 80px;
+}
+
 .menu-img {
   width: 70px;
   height: 70px;
@@ -34,7 +38,7 @@ h1 {
   color: white;
   font-weight: 600;
   margin-top: 100px;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
   font-size: 55px;
 }
 
@@ -89,6 +93,10 @@ h1 {
 
 .card {
   margin-bottom: 30px;
+}
+
+.cart {
+  width: auto;
 }
 
 @media screen and (max-width: 991px) {

@@ -1,77 +1,82 @@
 import { CommonModule } from '@angular/common';
-import { Component, NgModule, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {
   FormBuilder,
-  FormControl,
   FormGroup,
-  FormsModule,
-  NgForm,
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
 import { RegistrationService } from '../../services/registration.service';
-
-import { Registration } from '../../interfaces/registration';
-import { Router } from '@angular/router';
 import { User } from '../../interfaces/user';
 import { UserService } from '../../services/user.service';
+import { Router, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [CommonModule, FormsModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, RouterOutlet],
   templateUrl: './register.component.html',
   styleUrl: './register.component.css',
-
-  providers: [RegistrationService, UserService],
 })
 export class RegisterComponent implements OnInit {
-  registerForm: FormGroup = new FormGroup({});
-  isUserRegistered: boolean = false;
+  user: User[] = [];
+  registrationForm!: FormGroup;
 
   constructor(
-    private formBuilder: FormBuilder,
+    private userService: UserService,
     private registrationService: RegistrationService,
-    private router: Router,
-    private userService: UserService
+    private fb: FormBuilder,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
-    this.registerForm = this.formBuilder.group({
-      firstname: ['', Validators.required],
-      lastname: ['', Validators.required],
+    // Initialize the registration form with form controls and validation
+    this.registrationForm = this.fb.group({
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      mobile: [
-        '',
-        [Validators.required, Validators.pattern('^((\\+91-?) |0)?[0-9]{10}$')],
-      ],
+      phone: ['', [Validators.required, Validators.pattern(/^\d{10}$/)]],
     });
   }
+
   onSubmit() {
-    if (this.registerForm.valid) {
-      let registration: Registration = this.registerForm.value;
-      this.registrationService.addRegistration(registration);
-      console.log('valid');
-      this.registerUser();
-      this.navigateToHome();
+    if (this.registrationForm.valid) {
+      console.log('submit');
+      // If the form is valid, submit user details to the UserService
+      const userDetails = this.registrationForm.value;
+      this.userService.postUser(userDetails).subscribe({
+        next: (response: any) => {
+          // Handle successful registration
+          this.registrationService.setRegistrationStatus(true);
+
+          // Redirect to the account page after successful registration
+          this.router.navigate(['/home']);
+        },
+        error: (error: any) => {
+          // Handle registration error
+          console.error('Registration failed:', error);
+        },
+      });
+    } else {
+      // If the form is invalid, mark all form controls as touched
+      this.markFormGroupTouched(this.registrationForm);
     }
   }
-  navigateToHome() {
-    this.router.navigate(['/home']);
+
+  markFormGroupTouched(formGroup: FormGroup) {
+    // Recursively mark all controls in the form group as touched
+    Object.values(formGroup.controls).forEach((control) => {
+      control.markAsTouched();
+
+      if (control instanceof FormGroup) {
+        this.markFormGroupTouched(control);
+      }
+    });
   }
 
-  registerUser() {
-    this.isUserRegistered = true;
-    const registeredUser: User = {
-      first_name: this.registerForm.value.firstname,
-      id: 0,
-      avatar: '',
-      last_name: '',
-      email: '',
-      disabled: false,
-      phone: '',
-    };
-
-    this.userService.setRegisteredUser(registeredUser);
+  register() {
+    console.log('register');
+    // Trigger the registration process in the RegistrationService
+    this.registrationService.registerUser();
   }
 }

@@ -7,8 +7,15 @@
   font-weight: bold;
 }
 
+.navbar {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  margin-bottom: 120px;
+}
+
 .search {
-  margin-right: 420px;
+  margin-right: 30px;
 }
 
 button {
@@ -26,6 +33,19 @@ button:hover {
   color: #e5ad05;
 }
 
-.navbar-toggler {
-  background-color: #e5ad05;
+.arrow {
+  height: 12px;
+  width: auto;
+  color: grey;
+}
+
+img {
+  cursor: pointer;
+  height: 40px;
+  width: auto;
+  margin-right: 10px;
+}
+
+.navbar-actions {
+  margin-top: 10px;
 }

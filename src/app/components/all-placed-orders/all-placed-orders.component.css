@@ -11,6 +11,10 @@ img {
   object-fit: cover;
 }
 
+.container-fluid {
+  padding-top: 80px;
+}
+
 * {
   background-color: #13482f;
 }

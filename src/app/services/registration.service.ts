@@ -1,57 +1,103 @@
 import { Injectable } from '@angular/core';
-import { Registration } from '../interfaces/registration';
-import { User } from '../interfaces/user';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable, throwError } from 'rxjs';
 import { Router } from '@angular/router';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
 })
 export class RegistrationService {
-  userChange = new BehaviorSubject<User | null>(null);
-
-  private registrations: Registration[] = [];
+  private isRegisteredSubject: BehaviorSubject<boolean>;
 
   constructor(private router: Router) {
-    let savedRegistrations = localStorage.getItem('registrations');
-    this.registrations = savedRegistrations
-      ? JSON.parse(savedRegistrations)
-      : [];
+    // Initialize with the value from local storage or default to false
+    const isRegistered =
+      localStorage.getItem('isRegistered') === 'true' || false;
+    this.isRegisteredSubject = new BehaviorSubject<boolean>(isRegistered);
   }
 
-  // CRUD
-  getRegistrations(): Registration[] {
-    return this.registrations;
+  isRegistered(): Observable<boolean> {
+    return this.isRegisteredSubject.asObservable();
   }
 
-  getRegistration(id: number): Registration | undefined {
-    return this.registrations.find((res) => res.id === id);
+  registerUser() {
+    // Update the local storage and notify subscribers
+    localStorage.setItem('isRegistered', 'true');
+    this.isRegisteredSubject.next(true);
+
+    this.router.navigate(['/home']);
   }
 
-  addRegistration(registration: Registration): void {
-    this.registrations.push(registration);
-    console.log(this.registrations);
-    localStorage.setItem('registrations', JSON.stringify(this.registrations));
-    const user: User = registration.user;
-    this.userChange.next(user);
+  setRegistrationStatus(isRegistered: boolean) {
+    // Update the local storage and notify subscribers
+    localStorage.setItem('isRegistered', isRegistered.toString());
+    this.isRegisteredSubject.next(isRegistered);
   }
 
-  deleteRegistration(id: number): void {
-    let index = this.registrations.findIndex((res) => res.id === id);
-    this.registrations.splice(index, 1);
-    localStorage.setItem('registrations', JSON.stringify(this.registrations));
-  }
-
-  updateRegistration(updatedRegistration: Registration): void {
-    let index = this.registrations.findIndex(
-      (res) => res.id === updatedRegistration.id
-    );
-    this.registrations[index] = updatedRegistration;
-    localStorage.setItem('registrations', JSON.stringify(this.registrations));
+  // Add a method to check if the user is registered (e.g., for the initial check)
+  isUserRegistered(): boolean {
+    return this.isRegisteredSubject.value;
   }
 
   logoutUser() {
     localStorage.removeItem('registrations');
-    this.userChange.next(null);
+    this.isRegisteredSubject.next(false);
+  }
+
+  private handleError(error: HttpErrorResponse): Observable<never> {
+    let errorMessage = 'Something went wrong';
+
+    if (error.status) {
+      switch (error.status) {
+        // Successful responses
+        case 200:
+          console.log('Request successful:', error.url);
+          break;
+        case 201:
+          console.log('Resource created successfully:', error.url);
+          break;
+        case 202:
+          console.log('Request accepted:', error.url);
+          break;
+        case 204:
+          console.log('Request successful with no content:', error.url);
+          break;
+
+        // Client errors
+        case 400:
+          errorMessage = 'Bad Request';
+          break;
+        case 401:
+          errorMessage = 'Unauthorized';
+          // Redirect to the login page
+          this.router.navigate(['/register']);
+          break;
+        case 403:
+          errorMessage = 'Forbidden';
+          // Redirect to the Error403 component
+          this.router.navigate(['/error403']);
+          break;
+        case 404:
+          errorMessage = 'Not Found';
+          // Redirect to the error404 page
+          this.router.navigate(['/error404']);
+          break;
+
+        // Server error
+        case 500:
+          errorMessage = 'Internal Server Error';
+          break;
+
+        // Default case for other status codes
+        default:
+          errorMessage = `Error ${error.status}`;
+          break;
+      }
+    }
+    // Logs the detailed error for debugging purposes
+    console.error(error);
+
+    // Pass the error message to the caller
+    return throwError(() => new Error(errorMessage));
   }
 }

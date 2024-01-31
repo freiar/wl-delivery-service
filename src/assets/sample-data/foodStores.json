@@ -74,7 +74,7 @@
     "name": "StreetWok",
     "category": "Food",
     "rate": 5,
-    "photo": "/assets/images/food-stores-card.jpg",
+    "photo": "/assets/images/streetwok.jpg",
     "address": "Glyfada Str. 203",
     "products": [
       {
@@ -120,7 +120,7 @@
     "name": "Nanou Donuts House",
     "category": "Food",
     "rate": 5,
-    "photo": "/assets/images/food-stores-card.jpg",
+    "photo": "/assets/images/nanou.jpg",
     "address": "Ampelokipous 23rd Av.",
     "products": [
       {
@@ -166,7 +166,7 @@
     "name": "Lora's House",
     "category": "Food",
     "rate": 5,
-    "photo": "/assets/images/food-stores-card.jpg",
+    "photo": "/assets/images/lora.jpg",
     "address": "Ampelokipous 23rd Av.",
     "products": [
       {
@@ -212,7 +212,7 @@
     "name": "Yummies",
     "category": "Food",
     "rate": 5,
-    "photo": "/assets/images/food-stores-card.jpg",
+    "photo": "/assets/images/yum.jpg",
     "address": "Ampelokipous 23rd Av.",
     "products": [
       {
@@ -258,7 +258,7 @@
     "name": "Steak House",
     "category": "Food",
     "rate": 5,
-    "photo": "/assets/images/food-stores-card.jpg",
+    "photo": "/assets/images/steak.jpg",
     "address": "Ampelokipous 23rd Av.",
     "products": [
       {
@@ -304,7 +304,7 @@
     "name": "Pizza World",
     "category": "Food",
     "rate": 5,
-    "photo": "/assets/images/food-stores-card.jpg",
+    "photo": "/assets/images/pizza.jpg",
     "address": "Ampelokipous 23rd Av.",
     "products": [
       {
@@ -350,7 +350,7 @@
     "name": "Pasta and All",
     "category": "Food",
     "rate": 5,
-    "photo": "/assets/images/food-stores-card.jpg",
+    "photo": "/assets/images/pasta.jpg",
     "address": "Ampelokipous 23rd Av.",
     "products": [
       {

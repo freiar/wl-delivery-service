@@ -11,6 +11,10 @@ img {
   height: 250px;
 }
 
+.container-fluid {
+  padding-top: 80px;
+}
+
 .text-center {
   color: white;
 }

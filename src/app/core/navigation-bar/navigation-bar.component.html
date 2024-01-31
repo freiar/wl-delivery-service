@@ -28,13 +28,11 @@
             >About</a
           >
         </li>
-
         <li class="nav-item">
           <a routerLinkActive="active" class="nav-link" routerLink="contact"
             >Contact</a
           >
         </li>
-
         <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
@@ -50,7 +48,7 @@
             <li>
               <a
                 class="dropdown-item"
-                routerLink="active"
+                routerLinkActive="active"
                 routerLink="foodStores"
                 >Food</a
               >
@@ -58,13 +56,16 @@
             <li>
               <a
                 class="dropdown-item"
-                routerLink="active"
+                routerLinkActive="active"
                 routerLink="drinkStores"
                 >Drink</a
               >
             </li>
             <li>
-              <a class="dropdown-item" routerLink="active" routerLink="store"
+              <a
+                class="dropdown-item"
+                routerLinkActive="active"
+                routerLink="store"
                 >View All Stores</a
               >
             </li>
@@ -73,41 +74,54 @@
       </ul>
 
       <div class="search">
-        <app-search />
-      </div>
-      <br />
-
-      <div *ngIf="!isUserRegistered" class="ml-auto">
-        <button class="btn btn-outline-primary px-15" routerLink="/register">
-          Register
-        </button>
+        <app-search></app-search>
       </div>
 
-      <div *ngIf="isUserRegistered" class="ml-auto">
-        <div class="nav-item dropdown">
-          <!-- <button
-            class="nav-link dropdown-toggle"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
+      <div class="navbar-actions">
+        <div
+          class="navbar-item"
+          *ngIf="!isRegistered && !isRegistrationPage"
+          routerLink="/register"
+          routerLinkActive="active"
+        >
+          <button>Register</button>
+        </div>
+
+        <div
+          class="navbar-item dropdown"
+          *ngIf="isRegistered"
+          (mouseenter)="toggleDropdown('account', true)"
+          (mouseleave)="toggleDropdown('account', false)"
+        >
+          <div class="avatar-container" (click)="toggleDropdown('account')">
+            <img src="/assets/images/avatar.png" alt="avatar icon" />
+            My Profile
+            <img
+              class="arrow"
+              src="/assets/images/down-arrow.png"
+              alt=" navigation arrow down icon"
+            />
+          </div>
+          <div
+            class="dropdown-menu"
+            [ngClass]="{ show: isDropdownOpen['account'] }"
+            (mouseenter)="toggleDropdown('account', true)"
+            (mouseleave)="toggleDropdown('account', false)"
           >
-            Welcome {{ registeredUser?.first_name }}!
-          </button> -->
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <h6 class="dropdown-header">My Profile</h6>
+            <div class="dropdown-item" routerLink="/account">Account</div>
+            <div class="dropdown-item" routerLink="/all-placed-orders">
+              Orders
+            </div>
             <li>
-              <a class="dropdown-item" routerLink="/account">Account</a>
-            </li>
-            <li>
-              <a class="dropdown-item" routerLink="/all-placed-orders"
-                >Orders</a
+              <a
+                class="dropdown-item"
+                routerLink="/home"
+                (click)="logoutUser(); deleteRegistration()"
               >
+                Log out
+              </a>
             </li>
-            <li>
-              <a class="dropdown-item" routerLink="/home" (click)="logoutUser()"
-                >Log Out</a
-              >
-            </li>
-          </ul>
+          </div>
         </div>
       </div>
     </div>
